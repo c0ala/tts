@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <CheckBox
+            android:id="@+id/play_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+	
+    <TextView
+		android:id="@+id/text_view"
+		android:layout_width="0dip"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:layout_weight="1"
+		android:textAppearance="?android:attr/textAppearanceLarge" />
+
+	<ImageView
+        android:id="@+id/user_sex_image"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/sex_icon"
+        android:layout_gravity="center" />
+    
+    <!-- Button
+        android:id="@+id/edit_button"
+        android:layout_margin="5dp"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/plus" / -->
+    
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_margin="5dp"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/x" />
+</LinearLayout>

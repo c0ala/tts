@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/head_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:padding="10dip"
+    android:orientation="vertical" >
+
+    <at.coala.games.tts.LinearSwipeLayout
+		android:id="@+id/main_region"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:paddingBottom="20dp" >
+
+			<Button
+	            android:id="@+id/main_play_button"
+	            android:layout_width="match_parent"
+	            android:layout_height="50dp"
+	        	android:background="@drawable/arrow" />
+	
+	        <TextView
+	            android:id="@+id/choose_some_player"
+	            android:visibility="gone"
+			    android:textColor="#FF5555"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="center"
+	            android:text="@string/choose_some_player" />
+		
+		</LinearLayout>
+		
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal" >
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+            	android:layout_height="match_parent" >
+            
+				<RadioButton
+	                android:id="@+id/radio_m"
+	                android:layout_width="50dp"
+	                android:layout_height="match_parent"
+	                android:button="@drawable/m_radio" />
+	
+				<RadioButton
+					android:id="@+id/radio_w"
+					android:layout_width="50dp"
+					android:layout_height="match_parent"
+					android:button="@drawable/f_radio" />
+				
+            </RadioGroup>
+            
+			<EditText
+		    	android:id="@+id/new_user_name"
+			    android:layout_width="0dip"
+			    android:layout_height="match_parent"
+			    android:layout_weight="1"
+			    android:layout_marginLeft="5dp"
+			    android:layout_marginRight="5dp"
+			    android:inputType="textCapWords"
+			    android:imeOptions="actionDone"
+				android:hint="@string/new_user_hint" >
+			</EditText>
+	            
+            <Button
+				android:id="@+id/new_user_button"
+				android:layout_width="50dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="center"
+        		android:background="@drawable/plus" />
+	            
+        </LinearLayout>
+    </at.coala.games.tts.LinearSwipeLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+
+</LinearLayout>

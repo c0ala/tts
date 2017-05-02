@@ -1,0 +1,294 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .idea\
+* .idea\.name
+* .idea\compiler.xml
+* .idea\copyright\
+* .idea\copyright\profiles_settings.xml
+* .idea\misc.xml
+* .idea\modules.xml
+* .idea\vcs.xml
+* .idea\workspace.xml
+* app\
+* app\build.gradle
+* app\src\
+* app\src\main\
+* app\src\main\AndroidManifest.xml
+* app\src\main\java\
+* app\src\main\java\at\
+* app\src\main\java\at\coala\
+* app\src\main\java\at\coala\games\
+* app\src\main\java\at\coala\games\tts\
+* app\src\main\java\at\coala\games\tts\MainActivity.java
+* app\src\main\java\at\coala\games\tts\PlayActivity.java
+* app\src\main\java\at\coala\games\tts\SettingsActivity.java
+* app\src\main\java\at\coala\games\tts\UserAdapter.java
+* app\src\main\java\at\coala\games\tts\data\
+* app\src\main\java\at\coala\games\tts\data\Background.java
+* app\src\main\java\at\coala\games\tts\data\Quest.java
+* app\src\main\java\at\coala\games\tts\data\QuestList.java
+* app\src\main\java\at\coala\games\tts\data\UpdateDBData.java
+* app\src\main\java\at\coala\games\tts\data\User.java
+* app\src\main\java\at\coala\games\tts\dba\
+* app\src\main\java\at\coala\games\tts\dba\DBAHelper.java
+* app\src\main\java\at\coala\games\tts\dba\DBAccess.java
+* app\src\main\java\at\coala\games\tts\game\
+* app\src\main\java\at\coala\games\tts\game\GameDataManager.java
+* app\src\main\res\
+* app\src\main\res\drawable-hdpi\
+* app\src\main\res\drawable-hdpi\arrow_normal.png
+* app\src\main\res\drawable-hdpi\arrow_pressed.png
+* app\src\main\res\drawable-hdpi\f.png
+* app\src\main\res\drawable-hdpi\f_checked.png
+* app\src\main\res\drawable-hdpi\f_checked_pressed.png
+* app\src\main\res\drawable-hdpi\f_unchecked.png
+* app\src\main\res\drawable-hdpi\f_unchecked_pressed.png
+* app\src\main\res\drawable-hdpi\guinnes.png
+* app\src\main\res\drawable-hdpi\m.png
+* app\src\main\res\drawable-hdpi\m_checked.png
+* app\src\main\res\drawable-hdpi\m_checked_pressed.png
+* app\src\main\res\drawable-hdpi\m_unchecked.png
+* app\src\main\res\drawable-hdpi\m_unchecked_pressed.png
+* app\src\main\res\drawable-hdpi\plus_normal.png
+* app\src\main\res\drawable-hdpi\plus_pressed.png
+* app\src\main\res\drawable-hdpi\velli10_l.png
+* app\src\main\res\drawable-hdpi\velli10_p.png
+* app\src\main\res\drawable-hdpi\velli11_l.png
+* app\src\main\res\drawable-hdpi\velli11_p.png
+* app\src\main\res\drawable-hdpi\velli12_l.png
+* app\src\main\res\drawable-hdpi\velli12_p.png
+* app\src\main\res\drawable-hdpi\velli2_l.png
+* app\src\main\res\drawable-hdpi\velli2_p.png
+* app\src\main\res\drawable-hdpi\velli3_l.png
+* app\src\main\res\drawable-hdpi\velli3_p.png
+* app\src\main\res\drawable-hdpi\velli4_l.png
+* app\src\main\res\drawable-hdpi\velli4_p.png
+* app\src\main\res\drawable-hdpi\velli5_l.png
+* app\src\main\res\drawable-hdpi\velli5_p.png
+* app\src\main\res\drawable-hdpi\velli6_l.png
+* app\src\main\res\drawable-hdpi\velli6_p.png
+* app\src\main\res\drawable-hdpi\velli7_l.png
+* app\src\main\res\drawable-hdpi\velli7_p.png
+* app\src\main\res\drawable-hdpi\velli8_l.png
+* app\src\main\res\drawable-hdpi\velli8_p.png
+* app\src\main\res\drawable-hdpi\velli9_l.png
+* app\src\main\res\drawable-hdpi\velli9_p.png
+* app\src\main\res\drawable-hdpi\velli_l.png
+* app\src\main\res\drawable-hdpi\velli_p.png
+* app\src\main\res\drawable-hdpi\vk_l.png
+* app\src\main\res\drawable-hdpi\vk_p.png
+* app\src\main\res\drawable-hdpi\x_normal.png
+* app\src\main\res\drawable-hdpi\x_pressed.png
+* app\src\main\res\drawable-ldpi\
+* app\src\main\res\drawable-ldpi\arrow_normal.png
+* app\src\main\res\drawable-ldpi\arrow_pressed.png
+* app\src\main\res\drawable-ldpi\f.png
+* app\src\main\res\drawable-ldpi\f_checked.png
+* app\src\main\res\drawable-ldpi\f_checked_pressed.png
+* app\src\main\res\drawable-ldpi\f_unchecked.png
+* app\src\main\res\drawable-ldpi\f_unchecked_pressed.png
+* app\src\main\res\drawable-ldpi\m.png
+* app\src\main\res\drawable-ldpi\m_checked.png
+* app\src\main\res\drawable-ldpi\m_checked_pressed.png
+* app\src\main\res\drawable-ldpi\m_unchecked.png
+* app\src\main\res\drawable-ldpi\m_unchecked_pressed.png
+* app\src\main\res\drawable-ldpi\plus_normal.png
+* app\src\main\res\drawable-ldpi\plus_pressed.png
+* app\src\main\res\drawable-ldpi\velli10_l.png
+* app\src\main\res\drawable-ldpi\velli10_p.png
+* app\src\main\res\drawable-ldpi\velli11_l.png
+* app\src\main\res\drawable-ldpi\velli11_p.png
+* app\src\main\res\drawable-ldpi\velli12_l.png
+* app\src\main\res\drawable-ldpi\velli12_p.png
+* app\src\main\res\drawable-ldpi\velli2_l.png
+* app\src\main\res\drawable-ldpi\velli2_p.png
+* app\src\main\res\drawable-ldpi\velli3_l.png
+* app\src\main\res\drawable-ldpi\velli3_p.png
+* app\src\main\res\drawable-ldpi\velli4_l.png
+* app\src\main\res\drawable-ldpi\velli4_p.png
+* app\src\main\res\drawable-ldpi\velli5_l.png
+* app\src\main\res\drawable-ldpi\velli5_p.png
+* app\src\main\res\drawable-ldpi\velli6_l.png
+* app\src\main\res\drawable-ldpi\velli6_p.png
+* app\src\main\res\drawable-ldpi\velli7_l.png
+* app\src\main\res\drawable-ldpi\velli7_p.png
+* app\src\main\res\drawable-ldpi\velli8_l.png
+* app\src\main\res\drawable-ldpi\velli8_p.png
+* app\src\main\res\drawable-ldpi\velli9_l.png
+* app\src\main\res\drawable-ldpi\velli9_p.png
+* app\src\main\res\drawable-ldpi\velli_l.png
+* app\src\main\res\drawable-ldpi\velli_p.png
+* app\src\main\res\drawable-ldpi\vk_l.png
+* app\src\main\res\drawable-ldpi\vk_p.png
+* app\src\main\res\drawable-ldpi\x_normal.png
+* app\src\main\res\drawable-ldpi\x_pressed.png
+* app\src\main\res\drawable-mdpi\
+* app\src\main\res\drawable-mdpi\arrow_normal.png
+* app\src\main\res\drawable-mdpi\arrow_pressed.png
+* app\src\main\res\drawable-mdpi\f.png
+* app\src\main\res\drawable-mdpi\f_checked.png
+* app\src\main\res\drawable-mdpi\f_checked_pressed.png
+* app\src\main\res\drawable-mdpi\f_unchecked.png
+* app\src\main\res\drawable-mdpi\f_unchecked_pressed.png
+* app\src\main\res\drawable-mdpi\guinnes.png
+* app\src\main\res\drawable-mdpi\m.png
+* app\src\main\res\drawable-mdpi\m_checked.png
+* app\src\main\res\drawable-mdpi\m_checked_pressed.png
+* app\src\main\res\drawable-mdpi\m_unchecked.png
+* app\src\main\res\drawable-mdpi\m_unchecked_pressed.png
+* app\src\main\res\drawable-mdpi\plus_normal.png
+* app\src\main\res\drawable-mdpi\plus_pressed.png
+* app\src\main\res\drawable-mdpi\velli10_l.png
+* app\src\main\res\drawable-mdpi\velli10_p.png
+* app\src\main\res\drawable-mdpi\velli11_l.png
+* app\src\main\res\drawable-mdpi\velli11_p.png
+* app\src\main\res\drawable-mdpi\velli12_l.png
+* app\src\main\res\drawable-mdpi\velli12_p.png
+* app\src\main\res\drawable-mdpi\velli2_l.png
+* app\src\main\res\drawable-mdpi\velli2_p.png
+* app\src\main\res\drawable-mdpi\velli3_l.png
+* app\src\main\res\drawable-mdpi\velli3_p.png
+* app\src\main\res\drawable-mdpi\velli4_l.png
+* app\src\main\res\drawable-mdpi\velli4_p.png
+* app\src\main\res\drawable-mdpi\velli5_l.png
+* app\src\main\res\drawable-mdpi\velli5_p.png
+* app\src\main\res\drawable-mdpi\velli6_l.png
+* app\src\main\res\drawable-mdpi\velli6_p.png
+* app\src\main\res\drawable-mdpi\velli7_l.png
+* app\src\main\res\drawable-mdpi\velli7_p.png
+* app\src\main\res\drawable-mdpi\velli8_l.png
+* app\src\main\res\drawable-mdpi\velli8_p.png
+* app\src\main\res\drawable-mdpi\velli9_l.png
+* app\src\main\res\drawable-mdpi\velli9_p.png
+* app\src\main\res\drawable-mdpi\velli_l.png
+* app\src\main\res\drawable-mdpi\velli_p.png
+* app\src\main\res\drawable-mdpi\vk_l.png
+* app\src\main\res\drawable-mdpi\vk_p.png
+* app\src\main\res\drawable-mdpi\x_normal.png
+* app\src\main\res\drawable-mdpi\x_pressed.png
+* app\src\main\res\drawable-xhdpi\
+* app\src\main\res\drawable-xhdpi\arrow_normal.png
+* app\src\main\res\drawable-xhdpi\arrow_pressed.png
+* app\src\main\res\drawable-xhdpi\f.png
+* app\src\main\res\drawable-xhdpi\f_checked.png
+* app\src\main\res\drawable-xhdpi\f_checked_pressed.png
+* app\src\main\res\drawable-xhdpi\f_unchecked.png
+* app\src\main\res\drawable-xhdpi\f_unchecked_pressed.png
+* app\src\main\res\drawable-xhdpi\guinnes.png
+* app\src\main\res\drawable-xhdpi\m.png
+* app\src\main\res\drawable-xhdpi\m_checked.png
+* app\src\main\res\drawable-xhdpi\m_checked_pressed.png
+* app\src\main\res\drawable-xhdpi\m_unchecked.png
+* app\src\main\res\drawable-xhdpi\m_unchecked_pressed.png
+* app\src\main\res\drawable-xhdpi\plus_normal.png
+* app\src\main\res\drawable-xhdpi\plus_pressed.png
+* app\src\main\res\drawable-xhdpi\velli10_l.png
+* app\src\main\res\drawable-xhdpi\velli10_p.png
+* app\src\main\res\drawable-xhdpi\velli11_l.png
+* app\src\main\res\drawable-xhdpi\velli11_p.png
+* app\src\main\res\drawable-xhdpi\velli12_l.png
+* app\src\main\res\drawable-xhdpi\velli12_p.png
+* app\src\main\res\drawable-xhdpi\velli2_l.png
+* app\src\main\res\drawable-xhdpi\velli2_p.png
+* app\src\main\res\drawable-xhdpi\velli3_l.png
+* app\src\main\res\drawable-xhdpi\velli3_p.png
+* app\src\main\res\drawable-xhdpi\velli4_l.png
+* app\src\main\res\drawable-xhdpi\velli4_p.png
+* app\src\main\res\drawable-xhdpi\velli5_l.png
+* app\src\main\res\drawable-xhdpi\velli5_p.png
+* app\src\main\res\drawable-xhdpi\velli6_l.png
+* app\src\main\res\drawable-xhdpi\velli6_p.png
+* app\src\main\res\drawable-xhdpi\velli7_l.png
+* app\src\main\res\drawable-xhdpi\velli7_p.png
+* app\src\main\res\drawable-xhdpi\velli8_l.png
+* app\src\main\res\drawable-xhdpi\velli8_p.png
+* app\src\main\res\drawable-xhdpi\velli9_l.png
+* app\src\main\res\drawable-xhdpi\velli9_p.png
+* app\src\main\res\drawable-xhdpi\velli_l.png
+* app\src\main\res\drawable-xhdpi\velli_p.png
+* app\src\main\res\drawable-xhdpi\vk_l.png
+* app\src\main\res\drawable-xhdpi\vk_p.png
+* app\src\main\res\drawable-xhdpi\x_normal.png
+* app\src\main\res\drawable-xhdpi\x_pressed.png
+* app\src\main\res\drawable-xxhdpi\
+* app\src\main\res\drawable-xxhdpi\guinnes.png
+* app\src\main\res\drawable\
+* app\src\main\res\drawable\arrow.xml
+* app\src\main\res\drawable\f_radio.xml
+* app\src\main\res\drawable\m_radio.xml
+* app\src\main\res\drawable\plus.xml
+* app\src\main\res\drawable\x.xml
+* app\src\main\res\layout\
+* app\src\main\res\layout\activity_main.xml
+* app\src\main\res\layout\activity_play.xml
+* app\src\main\res\layout\activity_settings.xml
+* app\src\main\res\layout\user_item.xml
+* app\src\main\res\menu\
+* app\src\main\res\menu\main.xml
+* app\src\main\res\menu\play.xml
+* app\src\main\res\menu\settings.xml
+* app\src\main\res\values-sw600dp\
+* app\src\main\res\values-sw600dp\dimens.xml
+* app\src\main\res\values-sw720dp-land\
+* app\src\main\res\values-sw720dp-land\dimens.xml
+* app\src\main\res\values\
+* app\src\main\res\values\dimens.xml
+* app\src\main\res\values\strings.xml
+* app\src\main\res\values\styles.xml
+* app\src\main\res\xml\
+* app\src\main\res\xml\quest_schema.xsd
+* app\src\main\res\xml\tts_data.xml
+* build.gradle
+* gradle\
+* gradle\wrapper\
+* gradle\wrapper\gradle-wrapper.jar
+* gradle\wrapper\gradle-wrapper.properties
+* gradlew
+* gradlew.bat
+* ic_launcher-web.png
+* proguard-project.txt
+* settings.gradle
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:18.0.0
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

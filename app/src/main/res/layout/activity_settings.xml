@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/head_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dip" >
+        
+	    <Button
+	        android:id="@+id/play_button"
+	        android:layout_width="match_parent"
+	        android:layout_height="50dp"
+        	android:background="@drawable/arrow" />
+	
+	</LinearLayout>
+    
+    <ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" >
+	    
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+		  
+	        <CheckBox
+		             android:id="@+id/custom_options"
+		             android:layout_width="wrap_content"
+		             android:layout_height="wrap_content"
+		             android:text="@string/custom_options" />
+        
+		    <RadioGroup
+		        android:id="@+id/radio_place"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+				
+		        <RadioButton
+		            android:id="@+id/radio_private_game"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:checked="true"
+		            android:text="@string/private_game" />
+		
+		        <RadioButton
+		            android:id="@+id/radio_public_game"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/public_game" />
+			</RadioGroup>
+
+			<View
+			    android:layout_width="match_parent"
+				android:layout_height="7dp"
+				android:background="?android:attr/listDivider" />
+			
+			<RadioGroup
+		        android:id="@+id/radio_friendship_level"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		
+		        <RadioButton
+		            android:id="@+id/friends_loose"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:checked="true"
+		            android:text="@string/friends_loose" />
+		        
+		        <RadioButton
+		            android:id="@+id/friends_good"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/friends_good" />
+		
+		        <RadioButton
+		            android:id="@+id/friends_benefits"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/friends_benefits" />
+		    </RadioGroup>
+		    
+			<View
+			    android:layout_width="match_parent"
+				android:layout_height="7dp"
+				android:background="?android:attr/listDivider" />
+
+			<CheckBox
+				android:id="@+id/requirement_ice_cube"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/requirement_ice_cube" />
+
+			<CheckBox
+				android:id="@+id/requirement_cream"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/requirement_cream" />
+
+			<CheckBox
+				android:id="@+id/requirement_pool"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/requirement_pool" />
+
+			<CheckBox
+				android:id="@+id/requirement_dance"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/requirement_dance" />
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="7dp"
+				android:background="?android:attr/listDivider" />
+			
+			<TextView
+			    android:id="@+id/quest_count"
+			    android:layout_width="match_parent"
+				android:layout_height="wrap_content" />
+			
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

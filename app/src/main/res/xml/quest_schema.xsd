@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- @author Klaus -->
+<!-- @version 2 -->
+<!-- @since 12.07.2015. -->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!-- tts_data contains two sections. -->
+	<!-- The first section is called questions and contains quest-data. -->
+	<!-- The second section stores a list of rules which can be applied to quests with rule ids. -->
+	<xsd:element name="tts_data">
+	    <xsd:complexType>
+	        <xsd:sequence>
+	            <xsd:element name="questions" type="questionsType" />
+	            <xsd:element name="rules" type="rulesType" minOccurs="0" />
+	        </xsd:sequence>
+	    </xsd:complexType>
+	    <xsd:key name="key_rule_identifier">
+			<xsd:selector xpath="rules/rule" />
+			<xsd:field xpath=".//@id" />
+		</xsd:key>
+		<xsd:keyref name="keyref_rule_id" refer="key_rule_identifier">
+			<xsd:selector xpath="questions/quest/apply_rule" />
+			<xsd:field xpath=".//@rule" />
+		</xsd:keyref>
+	</xsd:element>
+
+	<xsd:complexType name="questionsType">
+		<xsd:sequence>
+			<!-- A quest always has at least one category and sometimes requirement elements -->
+			<!-- A quest always contains quest text and configuration. -->
+			<!-- The quest text is stored inside a language element, in which it should be written. -->
+			<!-- The quest should be written in the language -->
+			<!-- Optional the language element can take comments -->
+			<!-- Also optional in quest elements are a source, related ids to rules, and additional configurations. -->
+			<xsd:element name="quest" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:sequence>
+						<!-- For every language the same information should be stored inside. -->
+					    <xsd:element name="language" maxOccurs="unbounded">
+					        <xsd:complexType>
+					            <xsd:sequence>
+									<!-- If more exist, each should describe a similar quest. -->
+									<!-- Only one is shown in the application. -->
+									<!-- xXx will be replaced with the partners name. -->
+									<xsd:element name="quest_text" type="string_not_null" maxOccurs="unbounded" />
+									<!-- The order of following comments is important. -->
+									<!-- All comments are shown. -->
+									<xsd:element name="comment" type="string_not_null" minOccurs="0" maxOccurs="unbounded" />
+								</xsd:sequence>
+								<xsd:attribute name="lang_code" type="languageType" use="required" />
+					        </xsd:complexType>
+					    </xsd:element>
+						<xsd:element name="category" maxOccurs="unbounded">
+							<xsd:complexType>
+								<xsd:attribute name="category_name" type="categoryType" use="required" />
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="requirement" minOccurs="0" maxOccurs="unbounded">
+							<xsd:complexType >
+								<xsd:attribute name="requires" type="requirementType" use="required" />
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="apply_rule" minOccurs="0" maxOccurs="unbounded">
+					        <xsd:complexType>
+								<!-- The attribute has to match one of the rule ids. -->
+					            <xsd:attribute name="rule" type="string_not_null" use="required" />
+					        </xsd:complexType>
+					    </xsd:element>
+						<!-- The order of following confs and public_confs is important. -->
+						<!-- Not named attributes will inherit the values from the confs above. -->
+						<!-- Required configuration, the first configuration will be filled up with default values. -->
+						<!-- For default values read commends at attribute type definitions. -->
+					    <xsd:element name="conf" type="confType" maxOccurs="unbounded" />
+						<!-- Configuration for public use. -->
+						<!-- If no public_conf exists, the private configuration will be used for public locations. -->
+					    <xsd:element name="public_conf" type="confType" minOccurs="0" maxOccurs="unbounded" />
+					    <xsd:element name="source" type="string_not_null" minOccurs="0" />
+					</xsd:sequence>
+				</xsd:complexType>
+				<xsd:unique name="unique_text_lang">
+					<xsd:selector xpath="language" />
+					<xsd:field xpath=".//@lang_code" />
+				</xsd:unique>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="rulesType">
+		<xsd:sequence>
+			<!-- ! rule contains several rule_text elements. -->
+			<xsd:element name="rule" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:sequence>
+						<!-- Each rule element should describe the same rule, but in different languages. -->
+					    <xsd:element name="rule_text" maxOccurs="unbounded">
+					        <xsd:complexType>
+					            <xsd:simpleContent>
+					                <xsd:extension base="string_not_null">
+										<xsd:attribute name="lang_code" type="languageType" use="required" />
+					                </xsd:extension>
+					            </xsd:simpleContent>
+					        </xsd:complexType>
+					    </xsd:element>
+					</xsd:sequence>
+					<!-- The id has to be unique because quests will be related to rules through this id. -->
+					<xsd:attribute name="id" type="xsd:string" use="required" />
+				</xsd:complexType>
+				<xsd:unique name="unique_rule_lang">
+					<xsd:selector xpath="rule_text" />
+					<xsd:field xpath=".//@lang_code" />
+				</xsd:unique>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<!-- The only required attribute is level, which takes an integer between 0 and 10. -->
+	<!-- Level 0 means that this quest is not to use for this location.  -->
+	<!-- Player, partner & friends take enumerations. -->
+	<!-- Skip is a flag that allows user to skip or abort the quest. -->
+	<!-- Allow_delete allows to set a delete flag after the quest was asked. -->
+	<xsd:complexType name="confType">
+		<xsd:attribute name="level" type="levelType" use="required" />
+		<xsd:attribute name="player" type="playerType" />
+		<xsd:attribute name="partner" type="partnerType" />
+		<xsd:attribute name="friends" type="friendsType" />
+		<!-- Values are coded in at.coala.games.tts.data.Quest -->
+		<!-- Default value can change through changes in java, but latest default value is: false -->
+		<xsd:attribute name="skip" type="xsd:boolean" />
+		<!-- Values are coded in at.coala.games.tts.data.Quest -->
+		<!-- Default value can change through changes in java, but latest default value is: false -->
+		<xsd:attribute name="allow_delete" type="xsd:boolean" />
+	</xsd:complexType>
+
+	<xsd:simpleType name="levelType">
+		<xsd:restriction base="xsd:integer">
+			<xsd:minInclusive value="0" />
+			<xsd:maxInclusive value="10" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- Values are coded in at.coala.games.tts.data.quest.Quest -->
+	<!-- Default value can change through changes in java, but latest default value is: ALL -->
+	<xsd:simpleType name="playerType">
+		<xsd:restriction base="xsd:string">
+			<!-- Flag describing a quest for all players. -->
+			<xsd:enumeration value="ALL" />
+			<!-- Flag describing a player that has to be female. -->
+			<xsd:enumeration value="A_FEMALE" />
+			<!-- Flag describing a player that has to be male. -->
+			<xsd:enumeration value="A_MALE" />
+			<!-- Flag describing a quest that needs males to be played. -->
+			<xsd:enumeration value="BOYS" />
+			<!-- Flag describing a quest that needs females to be played. -->
+			<xsd:enumeration value="GIRLS" />
+			<!-- Flag describing a quest that has to have one player. -->
+			<xsd:enumeration value="ONE" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- Values are coded in at.coala.games.tts.data.quest.Quest -->
+	<!-- Default value can change through changes in java, but latest default value is: NO -->
+	<xsd:simpleType name="partnerType">
+		<xsd:restriction base="xsd:string">
+			<!-- Flag describing a quest where all players are partner. -->
+			<xsd:enumeration value="ALL" />
+			<!-- Flag describing a quest where the partners have to be the opposite sex as the first player. -->
+			<xsd:enumeration value="ALL_OPPOSITE" />
+			<!-- Flag describing a quest with males as quest partners. -->
+			<xsd:enumeration value="BOYS" />
+			<!-- Flag describing a quest with a female as second player. -->
+			<xsd:enumeration value="FEMALE" />
+			<!-- Flag describing a quest with girls as quest partners. -->
+			<xsd:enumeration value="GIRLS" />
+			<!-- Flag describing a quest with a male as second player. -->
+			<xsd:enumeration value="MALE" />
+			<!-- Flag describing a quest without a second player. -->
+			<xsd:enumeration value="NO" />
+			<!-- Flag describing a quest where the second player has to be the opposite sex as the first player. -->
+			<xsd:enumeration value="OPPOSITE_SEX" />
+			<!-- Flag describing a quest with a second player. -->
+			<xsd:enumeration value="YES" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- Values are coded in at.coala.games.tts.data.Game -->
+	<!-- Default value can change through changes in java, but latest default value is: LOOSE -->
+	<xsd:simpleType name="friendsType">
+		<xsd:restriction base="xsd:string">
+			<!-- Flag setting the friendship to a very close and intimate one. -->
+			<xsd:enumeration value="BENEFITS" />
+			<!-- Flag setting the friendship to a good one. -->
+			<xsd:enumeration value="GOOD" />
+			<!-- Flag setting the friendship to a loose level. -->
+			<xsd:enumeration value="LOOSE" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="ttsBoolean">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="true" />
+			<xsd:enumeration value="false" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="languageType">
+		<xsd:restriction base="xsd:language" >
+			<xsd:enumeration value="DE" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- Values are coded in at.coala.games.tts.data.quest.Quest.java -->
+	<xsd:simpleType name="categoryType">
+		<xsd:restriction base="xsd:string">
+			<!-- Flag describing a category to put on clothes. -->
+			<xsd:enumeration value="CLOTHES_BACK_ON" />
+			<!-- Flag describing a category to drink if you are or have got something. -->
+			<xsd:enumeration value="CONDITION" />
+			<!-- Flag describing a category for dares. -->
+			<xsd:enumeration value="DARE" />
+			<!-- Flag describing a category where at least somebody always has to drink. -->
+			<xsd:enumeration value="DRINKING" />
+			<!-- Flag describing a category to do funny things. -->
+			<xsd:enumeration value="DO_FUNNY_THINGS" />
+			<!-- Flag describing a category to kiss. -->
+			<xsd:enumeration value="KISSING" />
+			<!-- Flag describing a category to make some exercise or move around. -->
+			<xsd:enumeration value="MOVE_IT" />
+			<!-- Flag describing a category to do naughty stuff. -->
+			<xsd:enumeration value="NAUGHTY" />
+			<!-- Flag describing a category to drink if you have or have not done something. -->
+			<xsd:enumeration value="NEVER_HAVE_I" />
+			<!-- Flag describing a category to drink something without alcohol. -->
+			<xsd:enumeration value="NON_ALK_DRINKING" />
+			<!-- Flag describing a category to undress. -->
+			<xsd:enumeration value="STRIP_CLOTHES" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- Values are coded in at.coala.games.tts.data.quest.Quest.java -->
+	<!-- Default value can change through changes in java, but latest default value is: NONE -->
+	<xsd:simpleType name="requirementType" >
+		<xsd:restriction base="xsd:string">
+			<!-- Flag to use cream or something comparable. -->
+			<xsd:enumeration value="CREAM" />
+			<!-- Flag to use if something to dance (club, dance floor) is required. -->
+			<xsd:enumeration value="DANCE" />
+			<!-- Flag to use ice cubes. -->
+			<xsd:enumeration value="ICE_CUBE" />
+			<!-- Flag to use something you can swim in. -->
+			<xsd:enumeration value="POOL" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="string_not_null">
+	    <xsd:restriction base="xsd:string">
+	        <xsd:minLength value="1" />
+	    </xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>

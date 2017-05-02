@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="at.coala.games.tts"
+    android:versionCode="1"
+    android:versionName="1.0"
+    android:installLocation="auto">
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/guinnes"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Black.NoTitleBar" >
+        
+        <activity
+            android:name="at.coala.games.tts.MainActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+            <intent-filter>
+                
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            
+            </intent-filter>
+            
+        </activity>
+        
+        <activity
+            android:name="at.coala.games.tts.PlayActivity"
+            android:label="@string/title_activity_play"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        
+        <activity
+            android:name="at.coala.games.tts.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+
+    </application>
+
+</manifest>

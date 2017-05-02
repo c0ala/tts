@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Des Teufels Spiel</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="title_activity_play">Spiel</string>
+    <string name="title_activity_settings">Einstellungen</string>
+
+    <!-- activity_main.xml -->
+    <string name="choose_some_player">Wähle mindestens zwei Spieler</string>
+    <string name="new_user_hint">Neuer Spieler</string>
+    <string name="empty">""</string>
+    <string name="sex_icon">Hier wird das Geschlecht angezeigt</string>
+    <string name="press_double_to_exit">Drücke noch einmal zurück um %1$s zu beenden.</string>
+
+    <!-- activity_settings.xml -->
+    <string name="custom_options">Benutzerdefinierte Einstellungen</string>
+    <string name="private_game">Daheim, geschlossene Gesellschaft</string>
+    <string name="public_game">In der Öffentlichkeit spielen</string>
+    <string name="friends_loose">Spiel mit Freunden und Bekannten</string>
+    <string name="friends_good">Spiel mit guten Freunden</string>
+    <string name="friends_benefits">Freundschaft+, Erotik</string>
+    <!-- insert the number of quests available with String.format() -->
+    <string name="space_questcount">%1$d Aufgaben vorhanden.</string>
+    <string name="requirement_ice_cube">Eiswürfel vorhanden</string>
+    <string name="requirement_cream">cremige oder füssige Substanzen wie Sahne, Honig, flüssige Schokolade, Marmelade, ...</string>
+    <string name="requirement_pool">Swimming Pool / See vorhanden</string>
+    <string name="requirement_dance">Tanzfläche / Tanzmöglichkeit vorhanden</string>
+
+    <!-- activity_play.xml -->
+    <string name="abort_button">Lieber nicht</string>
+    <string name="done_button">Aufgabe erledigt</string>
+    <string name="skip">Überspringen</string>
+    <string name="n">\n</string>
+    <string name="nn">\n\n</string>
+    <string name="name_placeholder">xXx</string>
+    <string name="new_game_level">Neues Level erreicht.</string>
+    <string name="quests_are_available">%1$d Aufgaben sind nun freigeschalten.</string>
+    <string name="avg_level">Spiellevel: %1$d</string>
+    <string name="player_level">dein Level: %1$d</string>
+    <string name="quest_level">Aufgabenlevel: %1$d</string>
+    <string name="all_round">Allgemeine Runde</string>
+    <string name="go">Auf gehts!</string>
+    <string name="all_ready">seid ihr bereit?</string>
+    <string name="one_ready">bist du bereit?</string>
+    <string name="do_you_dare">traust du dich?</string>
+    <!-- TODO support <b></b> -->
+    <string name="partner_f">deine Partnerin diese Runde:  <b>%1$s</b></string>
+    <string name="partner_m">dein Partner diese Runde:  <b>%1$s</b></string>
+    <string name="give_phone_to">Gib das Handy weiter an</string>
+
+    <string name="on_resume">Soll das Spiel fortgesetzt werden?</string>
+    <string name="resume_button">Fortsetzen</string>
+    <string name="new_game">Neues Spiel</string>
+
+    <string name="rules">Spielregeln</string>
+    <string name="rules_text">*Getrunken wird in Schlücken oder Shots aus einem Pot.\n*Erledigte Aufgaben bringen Punkte.\n*Bei nicht erledigte Aufgaben werden die Punkte abgezogen.\n*Mit jedem Level werden neue Aufgaben freigeschalten.\n*Was während dem Spiel passiert bleibt ein Geheimnis zwischen den anwesenden Personen.\n*Betrunken ist alles erlaubt. Gerade die peinlichen Aufgaben bringen viele Punkte.\n</string>
+    <string name="rules_comments">Dieses Spiel ist nicht für den übermäßigen Konsum an Alkohol gedacht. Steigt bei längerem Gameplay auf schwächere Getränke um. Jeder Spieler ist für sich und seinen Alkoholkonsum selbst verantwortlich.</string>
+
+
+</resources>
