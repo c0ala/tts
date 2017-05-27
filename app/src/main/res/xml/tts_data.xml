@@ -2164,6 +2164,29 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Kategorie/Thema. "Die erogenen Zonen der Frau". Du beginnst. Im Kreis herum muss nun jede Person einen Begriff nennen. Jeder Begriff darf nur einmal genannt weren. Die Person die nichts mehr weiß, muss zwei trinken.</quest_text>
+                <quest_text>Kategorie/Thema. "Die erogenen Zonen des Mannes". Du beginnst. Im Kreis herum muss nun jede Person einen Begriff nennen. Jeder Begriff darf nur einmal genannt weren. Die Person die nichts mehr weiß, muss zwei trinken.</quest_text>
+                <quest_text>Kategorie/Thema. "Vorteile ein Mann zu sein". Du beginnst. Im Kreis herum muss nun jede Person einen Begriff nennen. Jeder Begriff darf nur einmal genannt weren. Die Person die nichts mehr weiß, muss zwei trinken.</quest_text>
+                <quest_text>Kategorie/Thema. "Vorteile eine Frau zu sein". Du beginnst. Im Kreis herum muss nun jede Person einen Begriff nennen. Jeder Begriff darf nur einmal genannt weren. Die Person die nichts mehr weiß, muss zwei trinken.</quest_text>
+                <quest_text>Kategorie/Thema. "Nachteile ein Mann zu sein". Du beginnst. Im Kreis herum muss nun jede Person einen Begriff nennen. Jeder Begriff darf nur einmal genannt weren. Die Person die nichts mehr weiß, muss zwei trinken.</quest_text>
+                <quest_text>Kategorie/Thema. "Nachteile eine Frau zu sein". Du beginnst. Im Kreis herum muss nun jede Person einen Begriff nennen. Jeder Begriff darf nur einmal genannt weren. Die Person die nichts mehr weiß, muss zwei trinken.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="5" player="ONE" partner="ALL" friends="good" allow_delete="true" />
+            <source>(Android-App) Picolo Trinkspiel (von Marmelapp)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Synonym. Sage ein anderes Wort für Brüste. Im Kreis herum muss nun jede Person einen Synonym-Begriff dafür nennen. Jeder Begriff darf nur einmal genannt weren. Die Person die nichts mehr weiß, muss zwei trinken.</quest_text>
+                <quest_text>Synonym. Sage ein anderes Wort für Penis. Im Kreis herum muss nun jede Person einen Synonym-Begriff dafür nennen. Jeder Begriff darf nur einmal genannt weren. Die Person die nichts mehr weiß, muss zwei trinken.</quest_text>
+                <quest_text>Synonym. Sage ein anderes Wort für Masturbieren. Im Kreis herum muss nun jede Person einen Synonym-Begriff dafür nennen. Jeder Begriff darf nur einmal genannt weren. Die Person die nichts mehr weiß, muss zwei trinken.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="5" player="ONE" partner="ALL" friends="good" allow_delete="true" />
+            <source>(Android-App) Picolo Trinkspiel (von Marmelapp)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Lass dir die Augen verbinden. Wähle eine Person die an der Kleidung von xXx fünf Wäscheklammern befestigen soll. Versuche diese durch ertasten zu finden und zu entfernen.</quest_text>
                 <comment>Die Anzahl kann natürlich variieren, es müssen auch keine Wäscheklammern sein. Wichtig ist, dass die Person angefasst wird, vielleicht ja auch an Orten die man sonst nicht betatschen darf.</comment>
             </language>
@@ -3838,6 +3861,35 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle trinken die bereits ein elektrisches Masturbationsgerät benutzt haben.</quest_text>
+                <quest_text>Alle trinken die noch nie ein elektrisches Masturbationsgerät benutzt haben.</quest_text>
+                <comment>klassische Vibratoren, Vibratoreier, ...</comment>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="5" friends="GOOD" allow_delete="true" />
+            <source>aus Privacy Quickie FAN-Edition</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die ein fernsteuerbares Masturbationsgerät (Ohmibod, Lush, ..) bereits in der Öffentlichkeit getragen haben.</quest_text>
+                <quest_text>Alle trinken die bereits ein fernsteuerbares Masturbationsgerät (Ohmibod, Lush, ..) benutzt haben.</quest_text>
+                <quest_text>Alle trinken die noch nie ein fernsteuerbares Masturbationsgerät (Ohmibod, Lush, ..) benutzt haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="5" friends="GOOD" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die einen Butt-Plug bereits in der Öffentlichkeit getragen haben.</quest_text>
+                <quest_text>Alle trinken die bereits ein Butt-Plug getragen haben.</quest_text>
+                <quest_text>Alle trinken die noch nie einen Butt-Plug getragen haben.</quest_text>
+                <comment>Stöpsel fürn Arsch.</comment>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="5" friends="GOOD" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle trinken die schon mal erregt waren während sie von ihrem ihrem Arzt abgetastet wurden.</quest_text>
                 <quest_text>Alle trinken die noch nie erregt waren während sie von ihrem ihrem Arzt abgetastet wurden.</quest_text>
             </language>
@@ -5149,6 +5201,16 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle legen bis auf die Unterwäsche alle Kleidungsstücke ab die sie noch tragen.</quest_text>
+            </language>
+            <category category_name="STRIP_CLOTHES" />
+            <apply_rule rule="clothes_def" />
+            <apply_rule rule="stripped_clothes" />
+            <conf level="10" player="ALL" friends="GOOD" allow_delete="true" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Spiele nackt weiter.</quest_text>
                 <comment>Anders gesagt: ziehe alle Kleidungsstücke aus. Auch die Unterwäsche.</comment>
             </language>
@@ -5523,8 +5585,8 @@
                 <quest_text>Alle Spieler müssen ihre Brüste (für mehr als drei Sekunden) zeigen. Jeder der sich nicht traut muss für jeden anderen Mitspieler trinken.</quest_text>
                 <comment>TITS OR GTFO</comment>
             </language>
-            <category category_name="NAUGHTY" />
             <category category_name="DARE" />
+            <category category_name="NAUGHTY" />
             <conf level="9" player="GIRLS" friends="GOOD" />
             <public_conf level="0" />
             <source>4Chan Drinking Game</source>
@@ -5533,10 +5595,22 @@
             <language lang_code="DE">
                 <quest_text>Mache ein heißes Foto von dir in Unterwäsche und versteigere es unter den Spielern. Das Foto ist vertraulich zu behandeln und darf nicht an nicht anwesende Leute weitergegeben werden.</quest_text>
             </language>
+            <category category_name="DARE" />
             <category category_name="NAUGHTY" />
             <apply_rule rule="what_happens_stays" />
             <apply_rule rule="you_may_go_somewhere_private" />
             <conf level="9" player="ONE" friends="GOOD" skip="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Mache ein heißes Foto von dir in Unterwäsche und lade es auf ein gemeinsam gewähltes Online-Imageboard. Du musst auf dem Foto nicht erkennbar sein.</quest_text>
+                <comment>Das Gesicht sollte aus Datenschutzgründen nicht erkennbar sein.</comment>
+            </language>
+            <category category_name="DARE" />
+            <category category_name="NAUGHTY" />
+            <apply_rule rule="what_happens_stays" />
+            <apply_rule rule="you_may_go_somewhere_private" />
+            <conf level="10" player="ONE" friends="GOOD" skip="true" />
         </quest>
         <quest>
             <language lang_code="DE">
@@ -5716,6 +5790,18 @@
             <language lang_code="DE">
                 <quest_text>Mache ein heißes Nacktfoto (komplett nackt) von dir und versteigere es unter den Spielern. Das Foto ist vertraulich zu behandeln und darf nicht an nicht anwesende Leute weitergegeben werden. Du musst auf dem Foto nicht erkennbar sein.</quest_text>
             </language>
+            <category category_name="DARE" />
+            <category category_name="NAUGHTY" />
+            <apply_rule rule="what_happens_stays" />
+            <apply_rule rule="you_may_go_somewhere_private" />
+            <conf level="10" player="ONE" friends="BENEFITS" skip="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Mache ein heißes Nacktfoto (komplett nackt) von dir und lade es auf ein gemeinsam gewähltes Online-Imageboard. Du musst auf dem Foto nicht erkennbar sein.</quest_text>
+                <comment>Das Gesicht sollte aus Datenschutzgründen nicht erkennbar sein.</comment>
+            </language>
+            <category category_name="DARE" />
             <category category_name="NAUGHTY" />
             <apply_rule rule="what_happens_stays" />
             <apply_rule rule="you_may_go_somewhere_private" />
@@ -5725,6 +5811,7 @@
             <language lang_code="DE">
                 <quest_text>Nimm das Smartphone von xXx und mache von dir in fünf verschiedenen Posen Nacktfotos (dein Gesicht muss nicht sichtbar/erkennbar sein)</quest_text>
             </language>
+            <category category_name="DARE" />
             <category category_name="NAUGHTY" />
             <apply_rule rule="what_happens_stays" />
             <apply_rule rule="you_may_go_somewhere_private" />
@@ -5815,7 +5902,7 @@
 
 </tts_data>
 
-<!-- notes
+<!-- notes TODO
 kontinuierliche Aufgaben aus Picolo Trinkspiel - Marmelapp:
 Klaus, du darfst nicht mehr aus deinem Glas trinken. Du musst jedes Mal, wenn du dran bist aus dem Glas einer anderen Person trinken.
 Velli darf keine Pronomen (ich, du, er...) mehr benutzen, sonst muss er/sie jedes Mal 4 trinken.
@@ -5829,24 +5916,14 @@ Anna ist ein Paparazzi! Jedes Mal, wenn du unbemerkt von jemandem ein Foto machs
 Die Mädels kümmern sich um den Service (Essen, Trinken...)!
 Velli darf keine Pronomen (ich, du, er...) mehr benutzen, sonst muss er/sie jedes Mal 5 trinken
 Neue Regel! Wie Yoda ihr sprecht, 3 Schlucke ihr sonst trinkt!
-Synonyme für Brust. Die Person, die keine Ideen mehr hat, oder ein Wort wiederholt, trinkt 4! Klaus beginnt!
 Klaus muss jetzt mit einem chinesischen Akzent reden
 Ab jetzt müsst ihr beim sprechen immer Lispeln
 Zurück in die Zukunft für Velli! Du musst von jetzt an ausschließlich in der Zukunftsform reden. Bei jedem Fehler trinkst du 2!
-Zählt auf Vorteile ein Mann zu sein - wem nichts mehr einfällt, trinkt.
 Velli, wähle deinen Sklaven. Dieser muss über zwei Runden deine Schlucke trinken.
-Wörter für 'masturbieren'.
 Buffallo-Regel! NIEMAND darf sein Glas mit seiner/ihrer stärkeren Hand halten.
-"Die erogenen Zonen der Frau". Die Person, die keine Ideen mehr hat, oder eine Ide wiederholt, trinkt 3! Anna beginnt!
 
 
-ideen während privacy-abschreibung
-ohmibod ich hab noch nie
-wer hat dildo, vibratorei, ...
-nackt besser als angezogen?
-nacktfotos online stellen
-bis auf die unterwäsche ausziehen
-alle bis auf die unterwäsche ausziehen
+ideen
 oben ohne küssen
 twerking
 facesitting

@@ -16,6 +16,7 @@
     <string name="custom_options">Benutzerdefinierte Einstellungen</string>
     <string name="private_game">Daheim, geschlossene Gesellschaft</string>
     <string name="public_game">In der Öffentlichkeit spielen</string>
+    <string name="already_drunk">Wir sind bereits betrunken</string>
     <string name="friends_loose">Spiel mit Freunden und Bekannten</string>
     <string name="friends_good">Spiel mit guten Freunden</string>
     <string name="friends_benefits">Freundschaft+, Erotik</string>

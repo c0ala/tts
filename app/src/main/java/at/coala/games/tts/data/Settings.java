@@ -66,7 +66,8 @@ public class Settings {
     private int location = Game.LOCATION_PRIVATE;
 
     // TODO documentation
-    public static final int ATTRIBUTE_CUSTOM_SETTINGS = 0;
+    public static final int ATTRIBUTE_ALREADY_DRUNK = 0;
+    public static final int ATTRIBUTE_CUSTOM_SETTINGS = ATTRIBUTE_ALREADY_DRUNK + 1;
     public static final int ATTRIBUTE_FRIENDSHIP_LEVEL = ATTRIBUTE_CUSTOM_SETTINGS + 1;
     public static final int ATTRIBUTE_GAME_LOCATION = ATTRIBUTE_FRIENDSHIP_LEVEL + 1;
     public static final int ATTRIBUTE_REQUIREMENT_CREAM = ATTRIBUTE_GAME_LOCATION + 1;
@@ -75,6 +76,7 @@ public class Settings {
     public static final int ATTRIBUTE_REQUIREMENT_POOL = ATTRIBUTE_REQUIREMENT_ICE_CUBE + 1;
 
     // TODO documentation
+    private static final String ATTRIBUTE_STRING_ALREADY_DRUNK = "already_drunk";
     private static final String ATTRIBUTE_STRING_CUSTOM_SETTINGS = "custom_settings";
     private static final String ATTRIBUTE_STRING_FRIENDSHIP_LEVEL = "friendship_level";
     private static final String ATTRIBUTE_STRING_GAME_LOCATION = "game_location";

@@ -138,6 +138,16 @@ public class GameDataManager {
 	 */
 	public static boolean enoughPlayer() { return game.enoughPlayer(); }
 
+	//TODO
+	public static String getGameDataAttributeString(int gameData_attribute) {
+		switch (gameData_attribute) {
+			case ATTRIBUTE_GAME_DATA_LAST_GAME_ACTION_TIMESTAMP:
+				return ATTRIBUTE_GAME_DATA_LAST_GAME_ACTION_TIMESTAMP_STRING;
+			default:
+				return null;
+		}
+	}
+
 	/**
 	 * Returns the text that should be shown on the go_button.
 	 *
@@ -333,13 +343,10 @@ public class GameDataManager {
 	//TODO
 	public static void saveGameData(Context context) { currentState.saveGameData(context); }
 
-	//TODO
-	public static String getGameDataAttributeString(int gameData_attribute) {
-		switch (gameData_attribute) {
-			case ATTRIBUTE_GAME_DATA_LAST_GAME_ACTION_TIMESTAMP:
-				return ATTRIBUTE_GAME_DATA_LAST_GAME_ACTION_TIMESTAMP_STRING;
-			default:
-				return null;
-		}
+	/**
+	 * TODO documentation
+	 */
+	public static void startDrunk() {
+		game.startDrunk();
 	}
 }

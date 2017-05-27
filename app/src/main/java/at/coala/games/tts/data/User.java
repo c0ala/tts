@@ -326,4 +326,11 @@ public class User {
 		points /= categories.size();
 		return addPoints(points, quest_level, full_points);
 	}
+
+	/**
+	 * TODO documentation
+	 */
+	void startDrunk() {
+		level = level > 4 ? level : 4;
+	}
 }

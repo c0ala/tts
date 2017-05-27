@@ -22,6 +22,11 @@ import at.coala.games.tts.game.GameDataManager;
 public class Game {
 
     /**
+     * TODO
+     */
+    private boolean already_drunk = false;
+
+    /**
      * A local variable containing the average level of all player.
      */
     private double avg_level = 1.0;
@@ -253,6 +258,26 @@ public class Game {
     }
 
     /**
+     * TODO
+     *
+     * @param friends_string
+     * @return
+     */
+    public static Integer getFriendsField(String friends_string) {
+        if (friends_string == null) return null;
+        switch (friends_string) {
+            case FRIENDS_BENEFITS_STRING:
+                return FRIENDS_BENEFITS;
+            case FRIENDS_GOOD_STRING:
+                return FRIENDS_GOOD;
+            case FRIENDS_LOOSE_STRING:
+                return FRIENDS_LOOSE;
+            default:
+                return null;
+        }
+    }
+
+    /**
      * Returns the rounded current average level of all players.
      *
      * @return a level.
@@ -359,7 +384,10 @@ public class Game {
         //for (User m : player_m) m.setGame();
 
         if (reset) {
-            for (User u : player_all) u.resetGame();
+            for (User u : player_all) {
+                u.resetGame();
+                if (already_drunk) u.startDrunk();
+            }
             changedUserList.addAll(player_all);
         }
 
@@ -652,22 +680,11 @@ public class Game {
     }
 
     /**
-     * TODO
-     *
-     * @param friends_string
-     * @return
+     * TODO documentation
      */
-    public static Integer getFriendsField(String friends_string) {
-        if (friends_string == null) return null;
-        switch (friends_string) {
-            case FRIENDS_BENEFITS_STRING:
-                return FRIENDS_BENEFITS;
-            case FRIENDS_GOOD_STRING:
-                return FRIENDS_GOOD;
-            case FRIENDS_LOOSE_STRING:
-                return FRIENDS_LOOSE;
-            default:
-                return null;
-        }
+    public void startDrunk() {
+        already_drunk = true;
+        for (User p : player_all)
+            p.startDrunk();
     }
 }

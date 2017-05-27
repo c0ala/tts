@@ -36,6 +36,12 @@ import at.coala.games.tts.game.GameDataManager;
 public class SettingsActivity extends Activity {
 
 	/**
+	 * A CheckBox checked if new players start wth a higher level.
+	 *
+	 * @see CheckBox
+	 */
+	CheckBox already_drunk;
+	/**
 	 * Items and Views that can be made invisible of custom options are not
 	 * available.
 	 *
@@ -155,6 +161,16 @@ public class SettingsActivity extends Activity {
 		this.radio_private_game.setOnCheckedChangeListener(locationChangeListener);
 		this.radio_public_game.setOnCheckedChangeListener(locationChangeListener);
 		this.collapsible_options.add(this.radio_public_game);
+
+		/**
+		 * Checkbox already_drunk
+		 */
+		this.already_drunk = (CheckBox)findViewById(R.id.already_drunk);
+		if (DataAccess.getSetting(
+				this, Settings.ATTRIBUTE_ALREADY_DRUNK, false)) {
+			this.requirement_ice_cube.setChecked(true);
+		}
+		this.collapsible_options.add(this.already_drunk);
 
 		/**
 		 * Friendship Level Radio Group
@@ -288,6 +304,7 @@ public class SettingsActivity extends Activity {
 				} else {
 					radio_private_game.setChecked(true);
 					friends_loose.setChecked(true);
+					already_drunk.setChecked(false);
 					requirement_ice_cube.setChecked(false);
 					requirement_cream.setChecked(false);
 					requirement_pool.setChecked(false);
@@ -318,6 +335,7 @@ public class SettingsActivity extends Activity {
 			 */
 			@Override
 			public void onClick(View v) {
+				if (already_drunk.isChecked()) GameDataManager.startDrunk();
 				startActivity(new Intent(SettingsActivity.this, PlayActivity.class));
 			}
 		});
