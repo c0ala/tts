@@ -1,3 +1,6 @@
+# Update 01.07.2017:
+I have chosen to restart developing the devils game. There are some features that will be much easier to integrate by starting from the beginning. The next version of the devil's game will hav a new github repository, so this will be marked as deprecated and may be deleted at some point, and it wont get updates any more.
+
 # The Devil's Game / Des Teufels Spiel
 This android-application is for everybody who loves to party and play drinking games. This App is for everyone who got bored by existing games and apps, like I did, and who wants to have a game that can be played anywhere and anytime.
 
