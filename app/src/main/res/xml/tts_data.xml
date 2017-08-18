@@ -2652,7 +2652,7 @@
             </language>
             <category category_name="NAUGHTY" />
             <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" />
-			<conf level="6" player="FEMALE" />
+			<conf level="6" partner="FEMALE" />
             <public_conf level="0" />
             <source>(Android-App) Drinking Games - Trinkspiele (von CireraCake)</source>
         </quest>
@@ -2773,8 +2773,6 @@
         </quest>
         <quest>
             <language lang_code="DE">
-                <quest_text>Trinke und küsse die nächste Person links von dir.</quest_text>
-                <quest_text>Trinke und küsse die nächste Person rechts von dir.</quest_text>
                 <quest_text>Trinke und küsse die nächste männliche Person links von dir.</quest_text>
                 <quest_text>Trinke und küsse die nächste männliche Person rechts von dir.</quest_text>
             </language>
@@ -2782,6 +2780,16 @@
             <category category_name="DRINKING" />
             <apply_rule rule="kiss_def" />
             <conf level="4" player="A_FEMALE" partner="BOYS" friends="GOOD" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Trinke und küsse die nächste Person links von dir.</quest_text>
+                <quest_text>Trinke und küsse die nächste Person rechts von dir.</quest_text>
+            </language>
+            <category category_name="KISSING" />
+            <category category_name="DRINKING" />
+            <apply_rule rule="kiss_def" />
+            <conf level="4" player="A_FEMALE" friends="GOOD" />
         </quest>
         <quest>
             <language lang_code="DE">
@@ -2903,7 +2911,16 @@
 				<comment>Youngins</comment>
             </language>
             <category category_name="KISSING" />
-            <conf level="6" player="FEMALE" friends="GOOD" />
+            <conf level="6" player="A_FEMALE" partner="BOYS" friends="GOOD" />
+			<source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Finde die jüngste Person die dieses Spiel spielt und gib ihr einen langen Kuss (~10 Sekunden).</quest_text>
+				<comment>Youngins</comment>
+            </language>
+            <category category_name="KISSING" />
+            <conf level="6" player="A_FEMALE" friends="GOOD" />
 			<source>www.tordol.com</source>
         </quest>
         <quest>
@@ -2915,8 +2932,14 @@
         </quest>
         <quest>
             <language lang_code="DE">
-                <quest_text>Küsse die erste Person die du heute auf dieser Party/in dieser Runde gesehen hast.</quest_text>
                 <quest_text>Küsse die erste männliche Person die du heute auf dieser Party/in dieser Runde gesehen hast.</quest_text>
+            </language>
+            <category category_name="KISSING" />
+            <conf level="6" player="A_FEMALE" partner="BOYS" friends="GOOD" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Küsse die erste Person die du heute auf dieser Party/in dieser Runde gesehen hast.</quest_text>
             </language>
             <category category_name="KISSING" />
             <conf level="6" player="A_FEMALE" friends="GOOD" />
@@ -2927,7 +2950,7 @@
             </language>
             <category category_name="KISSING" />
             <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" />
-			<conf level="6" player="FEMALE" />
+			<conf level="6" partner="FEMALE" />
         </quest>
         <quest>
             <language lang_code="DE">
@@ -2935,7 +2958,7 @@
             </language>
             <category category_name="KISSING" />
             <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" />
-			<conf level="6" player="FEMALE" />
+			<conf level="6" partner="FEMALE" />
 			<public_conf level="0" />
         </quest>
         <quest>
@@ -3262,6 +3285,7 @@
                 <quest_text>xXx darf dir vier Eiswürfel an Körperstellen seiner/ihrer Wahl platzieren. Diese dürfen nicht entfernt werden bis sie von selbst geschmolzen sind.</quest_text>
                 <quest_text>xXx darf dir fünf Eiswürfel an Körperstellen seiner/ihrer Wahl platzieren. Diese dürfen nicht entfernt werden bis sie von selbst geschmolzen sind.</quest_text>
             </language>
+            <category category_name="NAUGHTY" />
             <requirement requires="ICE_CUBE" />
             <conf level="6" player="ONE" partner="FEMALE" friends="GOOD" />
             <conf level="6" partner="OPPOSITE_SEX" />
@@ -5277,12 +5301,6 @@
         </quest>
         <quest>
             <language lang_code="DE">
-            </language>
-            <category category_name="NEVER_HAVE_I" />
-            <conf level="8" friends="BENEFITS" allow_delete="true" />
-        </quest>
-        <quest>
-            <language lang_code="DE">
                 <quest_text>Alle die noch nie Anal-Sex hatten müssen trinken.</quest_text>
                 <quest_text>Alle die bereits Anal-Sex hatten müssen trinken.</quest_text>
             </language>
@@ -5416,7 +5434,7 @@
 				<comment>Nicht übertreiben, zu viel Farbe im Gesicht ist auch nicht toll.</comment>
             </language>
             <category category_name="DARE" />
-            <conf level="4" player="FEMALE" partner="GIRLS" friends="GOOD" />
+            <conf level="4" player="A_FEMALE" partner="GIRLS" friends="GOOD" />
 			<public_conf level="6" />
         </quest>
         <quest>
@@ -5559,7 +5577,7 @@
             <category category_name="DRINKING" />
             <category category_name="NAUGHTY" />
             <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" skip="true" allow_delete="true" />
-			<cong level="6" partner="FEMALE" />
+			<conf level="6" partner="FEMALE" />
             <public_conf level="0" />
         </quest>
         <quest>
