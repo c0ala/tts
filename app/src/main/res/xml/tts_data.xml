@@ -698,6 +698,15 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Jeder der ein Kleid anhat trinkt.</quest_text>
+                <quest_text>Jeder der kein Kleid anhat trinkt.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
+            <conf level="3" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Jeder der mindestens ein Instrument spielen kann muss trinken.</quest_text>
                 <quest_text>Jeder der kein Instrument spielen kann muss trinken.</quest_text>
             </language>
@@ -1509,12 +1518,31 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle Mädls die keinen trägerlosen BH tragen trinken.</quest_text>
+                <quest_text>Alle Mädls die keinen Push-Up-BH tragen trinken.</quest_text>
+                <quest_text>Alle Mädls die einen trägerlosen BH tragen trinken.</quest_text>
+                <quest_text>Alle Mädls die einen Push-Up-BH tragen trinken.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
+            <conf level="5" player="GIRLS" friends="GOOD" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Sprintsaufen: xXx und du trinken gleichzeitig je ein Glas Wasser. Der Verlierer muss anschließend sein alkoholisches Getränk exen.</quest_text>
             </language>
             <category category_name="DRINKING" />
             <category category_name="CONDITION" />
             <conf level="5" player="ONE" partner="YES" friends="GOOD" allow_delete="true" />
 			<source>www.stupidedia.org</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle die einen String oder Tanga tragen müssen trinken.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
+            <conf level="6" friends="GOOD" allow_delete="true" />
         </quest>
         <quest>
             <language lang_code="DE">
@@ -1572,9 +1600,20 @@
             <language lang_code="DE">
                 <quest_text>Die Person, die zuletzt Sex hatte muss trinken.</quest_text>
             </language>
+            <category category_name="CONDITION" />
             <category category_name="DRINKING" />
             <conf level="7" allow_delete="true" />
             <source>(Android-App) Picolo Trinkspiel (von Marmelapp)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die beim Masturbieren die rechte Hand bevorzugen.</quest_text>
+                <quest_text>Alle trinken die beim Masturbieren die linke Hand bevorzugen.</quest_text>
+            </language>
+            <category category_name="CONDITION" />
+            <category category_name="DRINKING" />
+            <conf level="7" friends="GOOD" allow_delete="true" />
+            <source>Idee von Anselm</source>
         </quest>
 
         <!-- everybody drinks -->
@@ -1938,6 +1977,15 @@
 
         <quest>
             <language lang_code="DE">
+                <quest_text>Küsse dein Knie.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <category category_name="DRINKING" />
+            <conf level="2" player="ONE" />
+            <source>Idee von Anselm</source>
+        </quest>
+		<quest>
+            <language lang_code="DE">
                 <quest_text>Tante Berta. Wer möchte darf dir in die Wangen zwicken.</quest_text>
             </language>
             <category category_name="DO_FUNNY_THINGS" />
@@ -2047,6 +2095,24 @@
             <conf level="3" player="ONE" skip="true" allow_delete="true" />
             <public_conf level="0" />
             <source>www.dare-up-your-party.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Bewegung tut gut, neue Leute auch. xXx und du tauschen Platz.</quest_text>
+                <comment>Obstsalat</comment>
+            </language>
+            <category category_name="MOVE_IT" />
+            <conf level="3" player="ONE" partner="YES" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Gymnastikübung: Mache eine Brücke.</quest_text>
+				<comment>Für eine Brücke wird der Körper so weit zurückgebogen, dass die Arme wieder den Boden berühren.</comment>
+            </language>
+            <category category_name="MOVE_IT" />
+            <conf level="3" player="ONE" partner="YES" allow_delete="true" />
+            <public_conf level="0" />
         </quest>
         <quest>
             <language lang_code="DE">
@@ -2327,6 +2393,8 @@
                 <quest_text>Party-Fotobuch. Mache ein Selfie mit der Person die in deinen Augen die beste Partykleidung trägt.</quest_text>
                 <quest_text>Party-Fotobuch. Mache ein Selfie mit der Person die am besoffensten ist.</quest_text>
                 <quest_text>Party-Fotobuch. Mache ein Selfie mit möglichst vielen Personen.</quest_text>
+                <quest_text>Party-Fotobuch. Mache ein Selfie mit der Person rechts von dir.</quest_text>
+                <quest_text>Party-Fotobuch. Mache ein Selfie mit der Person links von dir.</quest_text>
             </language>
             <category category_name="DO_FUNNY_THINGS" />
             <apply_rule rule="what_happens_stays" />
@@ -2341,6 +2409,25 @@
             <category category_name="DO_FUNNY_THINGS" />
             <apply_rule rule="what_happens_stays" />
             <conf level="4" player="ONE" partner="GIRLS" friends="GOOD" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Frost und Schnee haben dir schwer zugesetzt. Eine Person deiner Wahl darf dich auf eine beliebige Weise wärmen.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <conf level="4" player="ONE" friends="GOOD" />
+			<public_conf level="0" />
+			<source>(Brettspiel) Sauf-Otto</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Frost und Schnee haben dir schwer zugesetzt. xXx muss dich auf eine beliebige Weise wärmen.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <conf level="4" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" />
+			<conf level="4" partner="FEMALE" />
+			<public_conf level="0" />
+			<source>(Brettspiel) Sauf-Otto</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -2505,6 +2592,14 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Mannequin Challenge. Jeder verharrt in einer der Party angemessenen Pose während einer mit Kamera filmt und durch die Wohnung geht.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <conf level="6" player="ALL" allow_delete="true" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Lass dir die Augen verbinden. Wähle eine Person die an der Kleidung von xXx fünf Wäscheklammern (oder ähnliches) befestigen soll. Versuche diese durch ertasten zu finden und zu entfernen.</quest_text>
                 <comment>Die Anzahl kann natürlich variieren, es müssen auch nicht unbedingt Wäscheklammern sein. Wichtig ist, dass die Person angefasst wird um die Objekte zu entfernen.</comment>
             </language>
@@ -2553,12 +2648,32 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Lege dich auf deinen Rücken und fülle etwas Alkohol in deinen Bauchnabel. Lasse xXx aus deinem Bauchnabel trinken.</quest_text>
+            </language>
+            <category category_name="NAUGHTY" />
+            <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" />
+			<conf level="6" player="FEMALE" />
+            <public_conf level="0" />
+            <source>(Android-App) Drinking Games - Trinkspiele (von CireraCake)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Lege dich auf deinen Rücken und fülle etwas Alkohol in deinen Bauchnabel. Lasse jeden aus deinem Bauchnabel trinken der durstig ist. Schenke nach wenn der Nabel leer wird.</quest_text>
             </language>
             <category category_name="NAUGHTY" />
             <conf level="6" player="ONE" partner="GIRLS" friends="GOOD" />
             <public_conf level="0" />
             <source>(Android-App) Drinking Games - Trinkspiele (von CireraCake)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Dir werden die Augen verbunden. xXx muss sich auf den Rücken legen und ein Stück Obst oder anderes Essen irgendwo auf dem Körper pltzieren (lassen). Du darfst nun nur deinen Mund benutzen um (blind) den "Schatz" zu finden.</quest_text>
+            </language>
+            <category category_name="NAUGHTY" />
+            <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" />
+			<conf level="6" partner="FEMALE" />
+            <public_conf level="0" />
+            <source>www.tordol.com</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -2586,6 +2701,27 @@
             <conf level="7" player="ONE" friends="GOOD" skip="true" allow_delete="true" />
             <public_conf level="0" />
             <source>www.dare-up-your-party.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Lehne dich zurück und mache deinen Oberkörper komplett frei. Lasse Alkohol über dein Sternum (Brustbein) bis über den Bauchnabel rinnen. xXx darf das Getränk dort abfangen und trinken.</quest_text>
+				<comment>Je tiefer es rinnt, desto besser.</comment>
+            </language>
+            <category category_name="NAUGHTY" />
+			<apply_rule rule="strip_for_massage" />
+            <conf level="8" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" />
+			<conf level="8" partner="FEMALE" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Lehne dich zurück und mache deinen Oberkörper komplett frei. Lasse Alkohol über dein Sternum (Brustbein) bis über den Bauchnabel rinnen. Jeder der durstig ist darf das Getränk dort abfangen und trinken.</quest_text>
+				<comment>Je tiefer es abgefangen wird, desto besser.</comment>
+            </language>
+            <category category_name="NAUGHTY" />
+			<apply_rule rule="strip_for_massage" />
+            <conf level="8" player="ONE" friends="GOOD" />
+            <public_conf level="0" />
         </quest>
 
         <!-- kissing -->
@@ -2637,6 +2773,8 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Trinke und küsse die nächste Person links von dir.</quest_text>
+                <quest_text>Trinke und küsse die nächste Person rechts von dir.</quest_text>
                 <quest_text>Trinke und küsse die nächste männliche Person links von dir.</quest_text>
                 <quest_text>Trinke und küsse die nächste männliche Person rechts von dir.</quest_text>
             </language>
@@ -2664,6 +2802,15 @@
             <apply_rule rule="kiss_def" />
             <conf level="5" player="ONE" partner="GIRLS" />
             <source>aus einem polnischen Trinkspiel.</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Küsse den/die Nüchternste(n) deines Lieblingsgeschlechts.</quest_text>
+            </language>
+            <category category_name="KISSING" />
+            <apply_rule rule="kiss_def" />
+            <conf level="5" player="ONE" partner="GIRLS" />
+            <source>(Brettspiel) Sauf-Otto</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -2743,10 +2890,53 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Finde die jüngste weibliche Person die dieses Spiel spielt und gib ihr einen langen Kuss (~10 Sekunden).</quest_text>
+				<comment>Youngins</comment>
+            </language>
+            <category category_name="KISSING" />
+            <conf level="6" player="ONE" friends="GOOD" />
+			<source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Finde die jüngste männliche Person die dieses Spiel spielt und gib ihr einen langen Kuss (~10 Sekunden).</quest_text>
+				<comment>Youngins</comment>
+            </language>
+            <category category_name="KISSING" />
+            <conf level="6" player="FEMALE" friends="GOOD" />
+			<source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Küsse die erste weibliche Person die du heute auf dieser Party/in dieser Runde gesehen hast.</quest_text>
+            </language>
+            <category category_name="KISSING" />
+            <conf level="6" player="ONE" partner="GIRLS" friends="GOOD" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Küsse die erste Person die du heute auf dieser Party/in dieser Runde gesehen hast.</quest_text>
+                <quest_text>Küsse die erste männliche Person die du heute auf dieser Party/in dieser Runde gesehen hast.</quest_text>
+            </language>
+            <category category_name="KISSING" />
+            <conf level="6" player="A_FEMALE" friends="GOOD" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Küsse xXx am Bauch.</quest_text>
             </language>
             <category category_name="KISSING" />
             <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" />
+			<conf level="6" player="FEMALE" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Küsse xXx und mache dabei ein Selfie.</quest_text>
+            </language>
+            <category category_name="KISSING" />
+            <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" />
+			<conf level="6" player="FEMALE" />
+			<public_conf level="0" />
         </quest>
         <quest>
             <language lang_code="DE">
@@ -2769,6 +2959,15 @@
             <apply_rule rule="silence" />
             <conf level="6" player="A_FEMALE" friends="BENEFITS" />
             <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Küsse xXx wührend du ihr/ihm am Arsch greifst.</quest_text>
+            </language>
+            <category category_name="KISSING" />
+            <category category_name="NAUGHTY" />
+            <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="BENEFITS" />
+            <conf level="6" partner="FEMALE" />
         </quest>
         <quest>
             <language lang_code="DE">
@@ -2828,6 +3027,16 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Lasse dich dabei filmen wie du für über 10 Sekunden mit xXx rummachst.</quest_text>
+                <comment>Gerne auch länger ;-)</comment>
+            </language>
+            <category category_name="KISSING" />
+            <category category_name="NAUGHTY" />
+            <conf level="8" player="ONE" partner="OPPOSITE_SEX" friends="BENEFITS" />
+            <conf level="8" partner="FEMALE" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Küsse xXx mind. 20 Sekunden lang mit Zunge.</quest_text>
                 <comment>Gerne auch länger ;-)</comment>
             </language>
@@ -2868,6 +3077,16 @@
             <conf level="9" partner="FEMALE" />
             <public_conf level="0" />
         </quest>
+		<quest>
+			<language lang_code="DE">
+				<quest_text>French Kiss. Küsse xXx einige Sekunden (~10-15) mit Zunge. Der Kuss soll bereits für alle gut sichtbar mit sich berührenden Zungen beginnen.</quest_text>
+			</language>
+			<category category_name="KISSING" />
+			<category category_name="NAUGHTY" />
+			<conf level="9" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" />
+			<conf level="9" partner="FEMALE" />
+			<source>www.tordol.com</source>
+		</quest>
         <quest>
             <language lang_code="DE">
                 <quest_text>Frage xXx ob ihr rummachen wollt und macht dies auch (mindestens zwanzig Sekunden). xXx oder du können auch ablehnen, müssen dafür aber einmal komplett nackt eine Runde im naheliegenden Park oder einmal um den Häuserblock laufen (Socken und Schuhe sind erlaubt).</quest_text>
@@ -2890,6 +3109,17 @@
             <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" skip="true" />
             <conf level="6" partner="FEMALE" />
             <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Polizeikontrolle. Stelle dich (mit dem Gesicht zur Wand) breitbeinig auf (Arme an die Wand). Dir werden die Augen verbunden, danach dürfen dich die anderen Spieler gründlich abtasten (auch an den eher intimeren Stellen). Du musst nun erraten wer dich wann abgetastet hat. Jede Person die du errätst muss zwei mal trinken, für jede die du nicht errätst trinkst du eins.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <category category_name="DRINKING" />
+            <apply_rule rule="silence" />
+            <conf level="6" player="ONE" allow_delete="true" />
+            <public_conf level="0" />
+			<source>www.tordol.com</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -2997,6 +3227,16 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Du und xXx müsst gemeinsam und nur mit euren Körpern einen Eiswürfel zum schmelzen bringen, allerdings ohne eure Hände zu benützen. Alle anderen Teile des Körpers sind sofern sie nicht mit Kleidung bedeckt sind.</quest_text>
+            </language>
+            <category category_name="NAUGHTY" />
+            <requirement requires="ICE_CUBE" />
+            <conf level="5" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" />
+			<conf level="5" partner="FEMALE" />
+			<source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Nimm einen Eiswürfel in den Mund und gib ihn an eine andere Person deiner Wahl weiter, ohne Hände. Diese Person muss das gleiche tun. Ist der Eiswürfel geschmolzen muss der letzte der ihn hatte drei trinken.</quest_text>
                 <quest_text>Nimm einen Eiswürfel in den Mund. Dieser muss nun reihum weitergegeben werden, ohne Hände. Ist der Eiswürfel geschmolzen muss der letzte der ihn hatte drei trinken.</quest_text>
             </language>
@@ -3013,6 +3253,17 @@
             <category category_name="NAUGHTY" />
             <requirement requires="ICE_CUBE" />
             <conf level="6" player="ONE" partner="FEMALE" friends="BENEFITS" />
+            <conf level="6" partner="OPPOSITE_SEX" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>xXx darf dir zwei Eiswürfel an Körperstellen seiner/ihrer Wahl platzieren. Diese dürfen nicht entfernt werden bis sie von selbst geschmolzen sind.</quest_text>
+                <quest_text>xXx darf dir drei Eiswürfel an Körperstellen seiner/ihrer Wahl platzieren. Diese dürfen nicht entfernt werden bis sie von selbst geschmolzen sind.</quest_text>
+                <quest_text>xXx darf dir vier Eiswürfel an Körperstellen seiner/ihrer Wahl platzieren. Diese dürfen nicht entfernt werden bis sie von selbst geschmolzen sind.</quest_text>
+                <quest_text>xXx darf dir fünf Eiswürfel an Körperstellen seiner/ihrer Wahl platzieren. Diese dürfen nicht entfernt werden bis sie von selbst geschmolzen sind.</quest_text>
+            </language>
+            <requirement requires="ICE_CUBE" />
+            <conf level="6" player="ONE" partner="FEMALE" friends="GOOD" />
             <conf level="6" partner="OPPOSITE_SEX" />
         </quest>
 
@@ -3399,6 +3650,14 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Wer dicke Eier hat trinkt zwei mal.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="2" friends="GOOD" allow_delete="true" />
+            <source>(Brettspiel) Sauf-Otto</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle trinken die an einem Tag noch nie mehr als 500€ ausgegeben haben.</quest_text>
                 <quest_text>Alle trinken die an einem Tag noch nie mehr als 1000€ ausgegeben haben.</quest_text>
                 <quest_text>Alle trinken die an einem Tag noch nie mehr als 2000€ ausgegeben haben.</quest_text>
@@ -3409,6 +3668,19 @@
             <category category_name="NEVER_HAVE_I" />
             <conf level="2" allow_delete="true" />
             <source>(Android-App) Game of Shots (von Wired Koala Studios)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die nicht mehr als 10€ Bargeld dabei haben.</quest_text>
+                <quest_text>Alle trinken die nicht mehr als 25€ Bargeld dabei haben.</quest_text>
+                <quest_text>Alle trinken die nicht mehr als 50€ Bargeld dabei haben.</quest_text>
+                <quest_text>Alle trinken die mehr als 10€ Bargeld dabei haben.</quest_text>
+                <quest_text>Alle trinken die mehr als 25€ Bargeld dabei haben.</quest_text>
+                <quest_text>Alle trinken die mehr als 50€ Bargeld dabei haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="2" allow_delete="true" />
+            <source>(Brettspiel) Sauf-Otto</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -3627,6 +3899,26 @@
             <category category_name="NEVER_HAVE_I" />
             <conf level="2" allow_delete="true" />
             <source>(Android-App) Ich Habe Noch Nie! (von Robot Mafia Studios)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon mal mit einem leichteren Partner zusammen waren.</quest_text>
+                <quest_text>Alle trinken die noch nie mit einem leichteren Partner zusammen waren.</quest_text>
+                <quest_text>Alle trinken die schon mal mit einem deutlich leichteren Partner zusammen waren.</quest_text>
+                <quest_text>Alle trinken die noch nie mit einem deutlich leichteren Partner zusammen waren.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="3" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon mal mit einem schwereren Partner zusammen waren.</quest_text>
+                <quest_text>Alle trinken die noch nie mit einem schwereren Partner zusammen waren.</quest_text>
+                <quest_text>Alle trinken die schon mal mit einem deutlich schwereren Partner zusammen waren.</quest_text>
+                <quest_text>Alle trinken die noch nie mit einem deutlich schwereren Partner zusammen waren.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="3" allow_delete="true" />
         </quest>
         <quest>
             <language lang_code="DE">
@@ -4973,14 +5265,18 @@
             <language lang_code="DE">
                 <quest_text>Alle trinken die noch nie ins Gesicht von jemandem abgespritzt haben oder denen noch niemand ins Gesicht abgespritzt hat.</quest_text>
                 <quest_text>Alle trinken die bereits ins Gesicht von jemandem abgespritzt haben oder denen bereits jemand ins Gesicht abgespritzt hat.</quest_text>
+                <quest_text>Alle trinken die noch auf den Körper von jemandem abgespritzt haben oder denen noch niemand auf den Körper abgespritzt hat.</quest_text>
+                <quest_text>Alle trinken die bereits auf den Körper von jemandem abgespritzt haben oder denen bereits jemand auf den Körper abgespritzt hat.</quest_text>
+                <quest_text>Alle trinken die noch auf die Brüste von jemandem abgespritzt haben oder denen noch niemand auf die Brüste abgespritzt hat.</quest_text>
+                <quest_text>Alle trinken die bereits auf die Brüste von jemandem abgespritzt haben oder denen bereits jemand auf die Brüste abgespritzt hat.</quest_text>
+                <quest_text>Alle trinken die noch auf den Rücken von jemandem abgespritzt haben oder denen noch niemand auf den Rücken abgespritzt hat.</quest_text>
+                <quest_text>Alle trinken die bereits auf den Rücken von jemandem abgespritzt haben oder denen bereits jemand auf den Rücken abgespritzt hat.</quest_text>
             </language>
             <category category_name="NEVER_HAVE_I" />
             <conf level="8" friends="BENEFITS" allow_delete="true" />
         </quest>
         <quest>
             <language lang_code="DE">
-                <quest_text>Alle trinken die noch auf den Körper von jemandem abgespritzt haben oder denen noch niemand auf den Körper abgespritzt hat.</quest_text>
-                <quest_text>Alle trinken die bereits auf den Körper von jemandem abgespritzt haben oder denen bereits jemand auf den Körper abgespritzt hat.</quest_text>
             </language>
             <category category_name="NEVER_HAVE_I" />
             <conf level="8" friends="BENEFITS" allow_delete="true" />
@@ -5098,6 +5394,7 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>xXx arf dir am Arsch greifen. Traust du dich nicht dann trinke vier mal.</quest_text>
                 <quest_text>Du darfst xXx am Arsch greifen. Traust du dich nicht dann trinke vier mal.</quest_text>
             </language>
             <category category_name="DARE" />
@@ -5112,6 +5409,32 @@
             <category category_name="DARE" />
             <conf level="4" player="ONE" />
             <source>(Android-App) Drinking Games - Trinkspiele (von CireraCake)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Lasse dich von Mädchen deiner Wahl (neu) schminken. Ziel ist es  mindestens genauso hübsch, aber anders auszusehen als jetzt.</quest_text>
+				<comment>Nicht übertreiben, zu viel Farbe im Gesicht ist auch nicht toll.</comment>
+            </language>
+            <category category_name="DARE" />
+            <conf level="4" player="FEMALE" partner="GIRLS" friends="GOOD" />
+			<public_conf level="6" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Lasse dir (wenn möglich) von Mitspielern deiner Wahl eine neue Frisur machen. Ziel ist es mindestens genauso gut, aber anders auszusehen als jetzt.</quest_text>
+				<comment>Nicht übertreiben, zu viel Farbe im Gesicht ist auch nicht toll.</comment>
+            </language>
+            <category category_name="DARE" />
+            <conf level="4" player="ONE" friends="GOOD" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Die Gruppe wählt eines deiner Kleidungsstücke welches du ausziehen musst. Einer der Mitspieler platziert das Kleidungsstück etwa zehn Meter vor der Haustür. Du musst nun (unabhängig vom Wetter) hinausgehen, das Kleidungsstück nehmen und anziehen bevor du zurück ins Haus kommst.</quest_text>
+            </language>
+            <category category_name="DARE" />
+            <conf level="5" player="ONE" friends="GOOD" skip="true" />
+            <public_conf level="0" />
+            <source>www.tordol.com</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -5152,6 +5475,36 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>xXx darf dir mit seinen Händen langsam hinunter gleiten und über beide Brüste fahren (unter der Kleidung). Hältst du durch muss xXx fünf trinken, brichst du ab trinke selbst fünf mal.</quest_text>
+            </language>
+            <category category_name="DARE" />
+            <category category_name="DRINKING" />
+            <category category_name="NAUGHTY" />
+            <conf level="5" player="A_FEMALE" partner="YES" friends="GOOD" skip="true" allow_delete="true" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Zieh dir so viele Kleidungsstücke aus wie du möchtest und hüpfe mit der restlichen Kleidung für 5 Sekunden vor allen anderen unter die eiskalte (!) Dusche. Anschließend trockne dich ab und ziehe dir wieder an was du abgelegt hast (eventuell nasse Kleidungsstücke bleiben an). Trinke drei.</quest_text>
+            </language>
+            <category category_name="DARE" />
+            <category category_name="DRINKING" />
+            <conf level="5" player="ONE" />
+			<public_conf level="0" />
+			<source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Zieh dir so viele Kleidungsstücke aus wie du möchtest und hüpfe mit der restlichen Kleidung unter die eiskalte (!) Dusche bis du komplett nass bist. Nach dem Duschvorgang darfst du deine Kleidung nicht mehr tauschen (was nass ist, bleibt nass). Drinke drei damit dir warm wird.</quest_text>
+            </language>
+            <category category_name="DARE" />
+            <category category_name="DRINKING" />
+            <conf level="6" player="ONE" />
+			<public_conf level="0" />
+			<source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Verlasse den Raum. Die Gruppe darf dir eine Aufgabe auswählen, die du erledigen musst, und dich danach hereinholen. Du erfährst die Aufgabe, aber nicht wer die Aufgabe ausgesucht hat. Die Gruppe entscheidet auch wie viel getrunken werden muss wenn die Aufgabe nicht erfüllt wird.</quest_text>
                 <comment>Die Aufgabe und Strafdrinks sollten angemessen sein.</comment>
                 <comment>Tipp: Am besten sind Aufgaben für die man ohne Alkohol zu schüchtern ist.</comment>
@@ -5164,7 +5517,7 @@
             <language lang_code="DE">
                 <quest_text>Trinke zwei und zeige den Mitspielern deinen tollen nackten knackigen Arsch.</quest_text>
             </language>
-            <category category_name="DARE" />
+            <category category_name="DARE" />	
             <category category_name="DRINKING" />
             <conf level="6" player="ONE" friends="GOOD" skip="true" />
             <public_conf level="10" />
@@ -5194,8 +5547,32 @@
             </language>
             <category category_name="DARE" />
             <category category_name="NAUGHTY" />
-            <conf level="6" player="A_FEMALE" friends="BENEFITS" skip="true" />
+            <conf level="6" player="A_FEMALE" friends="BENEFITS" skip="true" allow_delete="true" />
             <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>xXx darf dir mit seinen Händen langsam die Beine an der Innenseite entlang gleiten, bis er/sie über deine Intimzone hinweg ist. Hältst du durch muss xXx fünf trinken, brichst du ab trinke selbst fünf mal.</quest_text>
+				<comment>Über der noch getragenen Kleidung.</comment>
+            </language>
+            <category category_name="DARE" />
+            <category category_name="DRINKING" />
+            <category category_name="NAUGHTY" />
+            <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" skip="true" allow_delete="true" />
+			<cong level="6" partner="FEMALE" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>xXx darf dich vom Hals ausgehend langsam immer tiefer küssen, bis er/sie über beide Brüste (bis tief in den Ausschnitt, dann über der getragenen Kleidung) gekommen ist. Hältst du durch muss xXx fünf trinken, brichst du ab trinke selbst fünf mal.</quest_text>
+            </language>
+            <category category_name="DARE" />
+            <category category_name="DRINKING" />
+            <category category_name="KISSING" />
+            <category category_name="NAUGHTY" />
+            <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" skip="true" allow_delete="true" />
+			<conf level="6" partner="FEMALE" />
+            <public_conf level="8" />
         </quest>
         <quest>
             <language lang_code="DE">
@@ -5265,6 +5642,20 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>xXx darf dich von den Beinen ausgehend an der Innenseite entlang immer höher küssen, bis er/sie über deine Intimzone hinweg ist. Hältst du durch muss xXx fünf trinken, brichst du ab trinke selbst fünf mal.</quest_text>
+                <quest_text>xXx darf dich von den Rippen über den Bauch entlang immer tiefer küssen bis er/sie über deine Intimzone hinweg ist. Hältst du durch muss xXx fünf trinken, brichst du ab trinke selbst fünf mal.</quest_text>
+				<comment>Über der noch getragenen Kleidung.</comment>
+            </language>
+            <category category_name="DARE" />
+            <category category_name="DRINKING" />
+            <category category_name="KISSING" />
+            <category category_name="NAUGHTY" />
+            <conf level="8" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" skip="true" allow_delete="true" />
+			<conf level="8" partner="FEMALE" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Traust du dich? Lasse dir von xXx Nadeln in beide Ohrläppchen stechen. Diese verbleiben bis es für andere Aufgaben unbedingt notwendig wird sie wieder u entfernen.</quest_text>
                 <comment>Stecknadeln, Sicherheitsnadeln oder dünnen Nähnadeln zB.</comment>
             </language>
@@ -5330,6 +5721,19 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>xXx darf dich vom Hals ausgehend auf und über beide Brüste weiter über den Bauch entlang immer tiefer küssen bis er/sie über deine Intimzone hinweg ist. Hältst du durch muss xXx sechs trinken, brichst du ab trinke selbst sechs mal.</quest_text>
+				<comment>Bis tief in den Ausschnitt (wenn vorhanden), dann über der getragenen Kleidung.</comment>
+            </language>
+            <category category_name="DARE" />
+            <category category_name="DRINKING" />
+            <category category_name="KISSING" />
+            <category category_name="NAUGHTY" />
+            <conf level="9" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" skip="true" allow_delete="true" />
+			<conf level="9" partner="FEMALE" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Macht eine Bestellung bei einem Lieferservice. Deine Aufgabe wird es sein die Bestellung an der Tür entgegenzunehmen, komplett nackt. Traust du dich? Wenn nicht, trinke 5.</quest_text>
             </language>
             <category category_name="DARE" />
@@ -5372,8 +5776,29 @@
             <public_conf level="0" />
             <source>(Android-App) Drinking Game Missions (von Appxperimentz)</source>
         </quest>
+		<quest>
+			<language lang_code="DE">
+				<quest_text>Du hast die Möglichkeit deinen BH gegen ein (von dir oder einem anderen Spieler) bereits ausgezogenes T-Shirt einzutauschen. Nutze sie.</quest_text>
+			</language>
+			<category category_name="DO_FUNNY_THINGS" />
+			<apply_rule rule="strip_somewhere_private" />
+			<conf level="5" player="A_FEMALE" />
+			<public_conf level="6" />
+		</quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Trinke zwei und tausche deinen BH mit einem Mädchen deiner Wahl</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <category category_name="DRINKING" />
+            <apply_rule rule="swap_somewhere_private" />
+            <apply_rule rule="clothes_def" />
+            <conf level="5" player="A_FEMALE" partner="GIRLS" friends="GOOD" />
+            <public_conf level="6" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Trinke zwei und tausche deinen BH mit xXx.</quest_text>
                 <quest_text>Trinke zwei und tausche die komplette Unterwäsche mit xXx.</quest_text>
             </language>
             <category category_name="DO_FUNNY_THINGS" />
@@ -5492,6 +5917,17 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Wirf eine Münze. Bei Kopf ziehe ein Kleidungsstück deiner oberen Körperhälfte aus, bei Zahl eines deiner unteren Körperhälfte.</quest_text>
+            </language>
+            <category category_name="STRIP_CLOTHES" />
+            <category category_name="DRINKING" />
+            <apply_rule rule="clothes_def" />
+            <apply_rule rule="stripped_clothes" />
+            <conf level="5" player="ONE" friends="GOOD" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Entscheide, welches Kleidungsstück xXx ausziehen muss. Trinkt beide.</quest_text>
             </language>
             <category category_name="STRIP_CLOTHES" />
@@ -5573,6 +6009,16 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Trinke zwei mal und ziehe deinen BH aus. Darüberliegende Kleidungsstücke darfst du (noch) anbehalten. Trägst du keinen hast du Glück.</quest_text>
+            </language>
+            <category category_name="STRIP_CLOTHES" />
+            <category category_name="DRINKING" />
+            <apply_rule rule="strip_somewhere_private" />
+            <apply_rule rule="stripped_clothes" />
+            <conf level="5" player="A_FEMALE" friends="GOOD" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Ziehe dir ein Kleidungsstück an welches xXx trägt. xXx muss dieses ausziehen und hergeben.</quest_text>
             </language>
             <category category_name="CLOTHES_BACK_ON" />
@@ -5583,7 +6029,6 @@
         </quest>
         <quest>
             <language lang_code="DE">
-                <quest_text>Trinke zwei mal und ziehe deinen BH aus. Darüberliegende Kleidungsstücke darfst du (noch) anbehalten. Trägst du keinen hast du Glück.</quest_text>
                 <quest_text>Trinke und ziehe dein Höschen/deine Unterhose aus wenn du eine anhast. Darüberliegende Kleidungsstücke darfst du (noch) anbehalten.</quest_text>
             </language>
             <category category_name="STRIP_CLOTHES" />
@@ -5672,6 +6117,18 @@
             <apply_rule rule="stripped_clothes" />
             <conf level="9" player="ONE" partner="ALL" friends="GOOD" />
             <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle Mädchen die einen trägerlosen BH tragen müssen diesen ablegen.</quest_text>
+                <quest_text>Alle Mädchen, außer jene die einen trägerlosen BH tragen, müssen diesen ablegen.</quest_text>
+                <quest_text>Alle Mädchen müssen ihren BH ablegen.</quest_text>
+            </language>
+            <category category_name="STRIP_CLOTHES" />
+            <apply_rule rule="clothes_def" />
+            <apply_rule rule="stripped_clothes" />
+			<apply_rule rule="strip_somewhere_private" />
+            <conf level="9" player="ALL" friends="GOOD" allow_delete="true" />
         </quest>
         <quest>
             <language lang_code="DE">
@@ -5900,6 +6357,17 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Trinke zwei. Danach lasse xXx deine Nippel lecken. Traust du dich nicht, trinke nochmal drei.</quest_text>
+            </language>
+            <category category_name="DARE" />
+            <category category_name="DRINKING" />
+            <category category_name="NAUGHTY" />
+            <apply_rule rule="strip_for_massage" />
+            <conf level="9" player="A_FEMALE" partner="YES" friends="GOOD" skip="true" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Lecke xXx leidenschaftlich vom Kopf bis zu den Fußspitzen, wo es dir beliebt.</quest_text>
             </language>
             <category category_name="NAUGHTY" />
@@ -5990,6 +6458,15 @@
             <public_conf level="0" />
             <source>(Android-App) Truth or Dare Party Game (von TeddyDev)</source>
         </quest>
+		<quest>
+            <language lang_code="DE">
+                <quest_text>Trinke zwei, anschließend bewege deinen Oberkörper so, dass deine Brüste wackeln.</quest_text>
+                <quest_text>Trinke zwei, anschließend beuge deine Oberkörper nach vorne und bewege ihn so, dass deine Brüste wackeln.</quest_text>
+				<comment>Läute deine Glocken</comment>
+            </language>
+            <category category_name="NAUGHTY" />
+            <conf level="6" player="A_FEMALE" friends="GOOD" />
+        </quest>
         <quest>
             <language lang_code="DE">
                 <quest_text>Zeige deine Brüste (für mehr als drei Sekunden) oder trinke zwei mal für jeden Mitspieler.</quest_text>
@@ -6012,6 +6489,7 @@
         <quest>
             <language lang_code="DE">
                 <quest_text>Berühre eine weibliche Mitspielerin deiner Wahl unsittlich.</quest_text>
+                <comment>Du alter Lustmolch!</comment>
             </language>
             <category category_name="NAUGHTY" />
             <conf level="7" player="ONE" partner="GIRLS" friends="GOOD" />
@@ -6020,7 +6498,6 @@
         <quest>
             <language lang_code="DE">
                 <quest_text>Berühre einen männlichen Mitspieler deiner Wahl unsittlich.</quest_text>
-                <comment>Du alter Lustmolch!</comment>
             </language>
             <category category_name="NAUGHTY" />
             <conf level="7" player="A_FEMALE" partner="BOYS" friends="GOOD" />
@@ -6079,11 +6556,29 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Träger am BH sind nicht mehr erlaubt. BHs müssen trägerlos getragen werden.</quest_text>
+				<comment>Sowohl einfach aus den Trägern schlüpfen sowie auch komplett entfernen oder ausziehen ist gestattet.</comment>
+            </language>
+            <category category_name="NAUGHTY" />
+            <conf level="8" player="GIRLS" friends="GOOD" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Begrapsche xXx untenrum. Über der Kleidung wenn noch getragen.</quest_text>
             </language>
             <category category_name="NAUGHTY" />
             <conf level="8" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" />
             <conf level="8" partner="FEMALE" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Klemme einen Gegenstand (Bierflaschen etwa bieten sich an) zwischen deine Brüste (ohne BH) und mache damit ein Selfie. Wenn du beide Hände brauchst lasse eine andere Person das Foto machen.</quest_text>
+				<comment>Deine Nippel müssen nicht zu sehen sein, der Gegenstand soll allerdings wirklich mit den Brüsten gehalten werden.</comment>
+            </language>
+            <category category_name="NAUGHTY" />
+            <apply_rule rule="strip_for_massage" />
+			<apply_rule rule="go_somewhere_private_show_result" />
+            <conf level="9" player="A_FEMALE" friends="GOOD" />
         </quest>
         <quest>
             <language lang_code="DE">
@@ -6147,6 +6642,18 @@
                 <quest_text>Gehe gemeinsam mit xXx duschen, nackt, jetzt. Bleibt mindestens drei Minuten unter laufendem Wasser. Kein ungewolltes anfassen!</quest_text>
             </language>
             <category category_name="NAUGHTY" />
+            <conf level="10" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" skip="true" />
+            <conf level="10" partner="FEMALE" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Lege dich auf den Rücken und mache deinen Bauch frei. xXx nimmt nun eine Kerze und darf etwas heißes Wachs auf deinen Bauchbereich tropfen. Die Kerze MUSS dazu zumindest einen halben Meter von deiner Haut entfernt sein um Verbrennungen zu vermeiden.</quest_text>
+				<comment>Burned At Both Ends</comment>
+				<comment>Richtig ausgeführt wird es zwar warm, schmerzt aber so gut wie nicht.</comment>
+            </language>
+            <category category_name="NAUGHTY" />
+			<apply_rule rule="strip_for_massage" />
             <conf level="10" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" skip="true" />
             <conf level="10" partner="FEMALE" />
             <public_conf level="0" />
@@ -6415,6 +6922,17 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Slave. Für zwei Minuten musst du alles machen was xXx von dir verlangt - unahängig davon ie versaut es sein mag.</quest_text>
+                <quest_text>Slave. Für drei Minuten musst du alles machen was xXx von dir verlangt - unahängig davon ie versaut es sein mag.</quest_text>
+            </language>
+            <category category_name="NAUGHTY" />
+            <conf level="10" player="ONE" partner="FEMALE" friends="BENEFITS" />
+            <conf level="10" partner="OPPOSITE_SEX" />
+            <public_conf level="0" />
+			<source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Mache ein heißes Nacktfoto (komplett nackt) von dir und versteigere es unter den Spielern. Das Foto ist vertraulich zu behandeln und darf nicht an nicht anwesende Leute weitergegeben werden. Du musst auf dem Foto nicht erkennbar sein.</quest_text>
             </language>
             <category category_name="DARE" />
@@ -6497,6 +7015,18 @@
             </language>
             <category category_name="NAUGHTY" />
             <conf level="10" player="ONE" partner="OPPOSITE_SEX" friends="BENEFITS" />
+            <conf level="10" partner="FEMALE" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Lege dich auf den Rücken und mache deinen Bauch und Brustbereich frei. xXx nimmt nun eine Kerze und darf etwas heißes Wachs auf deinen Oberkörper tropfen. Die Kerze MUSS dazu zumindest einen halben Meter von deiner Haut entfernt sein um Verbrennungen zu vermeiden.</quest_text>
+				<comment>Burned At Both Ends</comment>
+				<comment>Richtig ausgeführt wird es zwar warm, schmerzt aber so gut wie nicht.</comment>
+            </language>
+            <category category_name="NAUGHTY" />
+			<apply_rule rule="strip_for_massage" />
+            <conf level="10" player="ONE" partner="OPPOSITE_SEX" friends="BENEFITS" skip="true" />
             <conf level="10" partner="FEMALE" />
             <public_conf level="0" />
         </quest>
@@ -6588,7 +7118,30 @@ blowjob mit verbundenen augen, raten wer bläst
 kontinuierliche aufgabe: partycambeauftragter
 benefits: fingern
 
-anselms ideen
-küss dein knie
-masturbiere mit der rechten/linken hand
+todo: aufgaben zu dritt und mehr spieler
+-->
+<!-- neue Ideen Part 1:
+www.tordol.com
+(kontinuierlich) halte die brüste von xXx / die eier von xXx für eine rune/zwei runden, ...
+(kontinuierlich) Slave. Choose one person, s/he may do what ever s/he wants to you, or ask any favor of you for a random time between 1-3 rounds. Rules: If s/he asks you to strip down, or take off any clothes, s/he must also. They cannot ask you to not perform a dare or to not answer a truth. S/he can however, ask you to replace another person (someone randomly selected, for instance) in a dare that directly involves him/herself. 
+(kontinuierlich) Lover Cover. Select any other person in the room. Now completely disrobe letting the other player cover any of your "private parts" with their hands or body. They must cover you for one turn, then they must cover you as you redress.
+House Down. If the location you are at has a garden hose, you must allow one person in the group to completely soak you for 30 seconds. You may remove any clothing you wish prior to the soaking, but you cannot change clothes afterwards.
+-->
+<!-- neue Ideen Part 2:
+fingern mit 1, 2, 3, 4, 5 finger (bis so viele finger reinpassen ev.)
+foto in der dusche / foto nach der dusche
+Schaumbad zwei Mädls
+kontinuierlich: macht das licht aus in der wohnung, beleuchtung nur mit taschenlampen/kerzen/handys
+dare - wenn xxx sich oben ohne traut, musst du unten ohne
+contest: pussy licking, blowjob
+augenbinde für alle & durch den raum gehn und küssen/aufgaben erledigen/leute finden
+blowjob und typ muss raten wer ihm gerade einen bläst
+-->
+<!-- neue Ideen Part 3:
+Webseiten:
+http://www.tordol.com/
+https://www.ich-habe-noch-nie.de/
+http://www.playtod.eu/
+
+so dinge wie one-finger-challenge, heartshapedboobchallenge, bellybuttonchallenge...
 -->

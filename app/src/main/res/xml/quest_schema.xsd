@@ -178,6 +178,7 @@
 			<xsd:enumeration value="NO" />
 			<!-- Flag describing a quest where the second player has to be the opposite sex as the first player. -->
 			<xsd:enumeration value="OPPOSITE_SEX" />
+			<!-- TODO value="SAME_SEX" /-->
 			<!-- Flag describing a quest with a second player. -->
 			<xsd:enumeration value="YES" />
 		</xsd:restriction>
