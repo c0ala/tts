@@ -334,11 +334,22 @@
         </quest>
         <quest>
             <language lang_code="DE">
-                <quest_text>Die Person die du am schönsten/hübschesten findest muss zwei mal trinken.</quest_text>
-                <quest_text>Die Person die du am schönsten/hübschesten findest muss drei mal trinken.</quest_text>
+                <quest_text>Die Person die du am attraktivsten/schönsten/hübschesten findest muss zwei mal trinken.</quest_text>
+                <quest_text>Die Person die du am attraktivsten/schönsten/hübschesten findest muss drei mal trinken.</quest_text>
             </language>
             <category category_name="DRINKING" />
             <conf level="3" player="ONE" partner="ALL" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Wähle die Person von der du glaubst, dass sie dich am attraktivsten findet. Diese Person muss zwei mal trinken.</quest_text>
+                <quest_text>Wähle die Person von der du glaubst, dass sie dich am attraktivsten findet. Diese Person muss drei mal trinken.</quest_text>
+                <quest_text>Wähle die Person von der du glaubst, dass sie dich am attraktivsten findet. Diese Person muss zwei mal trinken. Dein Partner (wenn vorhanden) darf allerdings nicht gewählt werden.</quest_text>
+                <quest_text>Wähle die Person von der du glaubst, dass sie dich am attraktivsten findet. Diese Person muss drei mal trinken. Dein Partner (wenn vorhanden) darf allerdings nicht gewählt werden.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="3" player="ONE" partner="ALL_OPPOSITE" />
+			<source>www.tordol.com</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -400,16 +411,16 @@
         </quest>
         <quest>
             <language lang_code="DE">
-                <quest_text>Angenommen du musst mit einer weiblichen Person aus dieser Runde für einen Tag Körper tauschen? Wen würdest du wählen? Diese Person trinkt zwei.</quest_text>
-                <quest_text>Angenommen du musst mit einer weiblichen Person aus dieser Runde für den Rest deines Lebens Körper tauschen? Wen würdest du wählen? Diese Person trinkt drei.</quest_text>
+                <quest_text>Angenommen du musst mit einer weiblichen Person aus dieser Runde für einen Tag Körper tauschen. Wen würdest du wählen? Diese Person trinkt zwei.</quest_text>
+                <quest_text>Angenommen du musst mit einer weiblichen Person aus dieser Runde für den Rest deines Lebens Körper tauschen. Wen würdest du wählen? Diese Person trinkt drei.</quest_text>
             </language>
             <category category_name="DRINKING" />
             <conf level="5" player="ONE" partner="GIRLS" friends="GOOD" allow_delete="true" />
         </quest>
         <quest>
             <language lang_code="DE">
-                <quest_text>Angenommen du musst mit einer männlichen Person aus dieser Runde für einen Tag Körper tauschen? Wen würdest du wählen? Diese Person trinkt zwei.</quest_text>
-                <quest_text>Angenommen du musst mit einer männlichen Person aus dieser Runde für den Rest deines Lebens Körper tauschen? Wen würdest du wählen? Diese Person trinkt drei.</quest_text>
+                <quest_text>Angenommen du musst mit einer männlichen Person aus dieser Runde für einen Tag Körper tauschen. Wen würdest du wählen? Diese Person trinkt zwei.</quest_text>
+                <quest_text>Angenommen du musst mit einer männlichen Person aus dieser Runde für den Rest deines Lebens Körper tauschen. Wen würdest du wählen? Diese Person trinkt drei.</quest_text>
             </language>
             <category category_name="DRINKING" />
             <conf level="5" player="ONE" partner="BOYS" friends="GOOD" allow_delete="true" />
@@ -698,6 +709,16 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Jeder der etwas aus Leder trägt trinkt.</quest_text>
+				<comment>nicht nur Kleidung, auch Gürtel, Accessoires, ...</comment>
+            </language>
+            <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
+            <conf level="3" allow_delete="true" />
+            <source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Jeder der ein Kleid anhat trinkt.</quest_text>
                 <quest_text>Jeder der kein Kleid anhat trinkt.</quest_text>
             </language>
@@ -816,7 +837,7 @@
             </language>
             <category category_name="DRINKING" />
             <category category_name="CONDITION" />
-            <conf level="3" player="ALL" />
+            <conf level="3" player="ONE" partner="ALL" />
             <source>(Android-App) Ampel Saufen (von MaDeVo)</source>
         </quest>
         <quest>
@@ -2176,6 +2197,15 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Synonym. Sage ein Wort (eines wofür es viele Synonyme/Wörter mit gleicher Bedeutung gibt). Dann wählst du eine Person aus die ein Synonym zu deinem Wort nennen muss. Diese Person muss dann eine weitere Person wählen. Jeder Begriff darf nur einmal genannt weren. Die Person die nichts mehr weiß, muss zwei trinken.</quest_text>
+                <quest_text>Synonym. Sage ein Wort (eines wofür es viele Synonyme/Wörter mit gleicher Bedeutung gibt). Im Kreis herum muss nun jede Person einen Synonym-Begriff dafür nennen. Jeder Begriff darf nur einmal genannt weren. Die Person die nichts mehr weiß, muss zwei trinken.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="3" player="ONE" partner="ALL" />
+            <source>(Android-App) Picolo Trinkspiel (von Marmelapp)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Medusa. Alle Spieler senken ihre Köpfe und schauen zu Boden. Auf drei heben alle zeitgleich ihre Köpfe und starren eine andere Person ihrer Wahl an. Wer nun jemanden ansieht, der nicht direkt zurückschaut ist in Sicherheit. Wer allerdings in Augenkontakt mit einem Mitspieler gerät, ruft "Medusa!" und muss trinken.</quest_text>
             </language>
             <category category_name="DO_FUNNY_THINGS" />
@@ -2377,7 +2407,7 @@
         </quest>
         <quest>
             <language lang_code="DE">
-                <quest_text>Party-Fotobuch. Mache ein Foto auf dem die Person zu sehen ist die du am schönsten/hübschesten findest.</quest_text>
+                <quest_text>Party-Fotobuch. Mache ein Foto auf dem die Person zu sehen ist die du am attraktivsten/schönsten/hübschesten findest.</quest_text>
                 <quest_text>Party-Fotobuch. Mache ein Foto auf dem die Person zu sehen ist die in deinen Augen die beste Partykleidung trägt.</quest_text>
                 <quest_text>Party-Fotobuch. Mache ein Foto auf dem mindestens die kleinste sowie größte anwesende Person zu sehen sind.</quest_text>
                 <quest_text>Party-Fotobuch. Mache ein Foto auf dem die Person zu sehen ist die am besoffensten ist.</quest_text>
@@ -2389,7 +2419,7 @@
         </quest>
         <quest>
             <language lang_code="DE">
-                <quest_text>Party-Fotobuch. Mache ein Selfie mit der Person die du am schönsten/hübschesten findest.</quest_text>
+                <quest_text>Party-Fotobuch. Mache ein Selfie mit der Person die du am attraktivsten/schönsten/hübschesten findest.</quest_text>
                 <quest_text>Party-Fotobuch. Mache ein Selfie mit der Person die in deinen Augen die beste Partykleidung trägt.</quest_text>
                 <quest_text>Party-Fotobuch. Mache ein Selfie mit der Person die am besoffensten ist.</quest_text>
                 <quest_text>Party-Fotobuch. Mache ein Selfie mit möglichst vielen Personen.</quest_text>
@@ -2402,7 +2432,7 @@
         </quest>
         <quest>
             <language lang_code="DE">
-                <quest_text>Party-Fotobuch. Mache ein Foto von/mit dem in deinen Augen schönsten/hübschesten Mädchen.</quest_text>
+                <quest_text>Party-Fotobuch. Mache ein Foto von/mit dem in deinen Augen attraktivsten/schönsten/hübschesten Mädchen.</quest_text>
                 <quest_text>Party-Fotobuch. Mache ein Foto von/mit dem Mädchen das in deinen Augen die beste Partykleidung trägt.</quest_text>
                 <quest_text>Party-Fotobuch. Mache ein Foto von/mit dem Mädchen das am besoffensten ist.</quest_text>
             </language>
@@ -2907,7 +2937,7 @@
         </quest>
         <quest>
             <language lang_code="DE">
-                <quest_text>Finde die jüngste männliche Person die dieses Spiel spielt und gib ihr einen langen Kuss (~10 Sekunden).</quest_text>
+                <quest_text>Finde die jüngste männliche Person die dieses Spiel spielt und gib ihm einen langen Kuss (~10 Sekunden).</quest_text>
 				<comment>Youngins</comment>
             </language>
             <category category_name="KISSING" />
@@ -3647,12 +3677,66 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle trinken die noch nie an ihren Fingernägeln gebissen haben.</quest_text>
+                <quest_text>Alle trinken die schon mal an ihren Fingernägeln gebissen haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="1" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die noch nie an ihren Zehennägeln gebissen haben.</quest_text>
+                <quest_text>Alle trinken die schon mal an ihren Zehennägeln gebissen haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="1" allow_delete="true" />
+            <source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle trinken die noch nie vergessen haben wo sie ihr Auto/Fahrrad abgestellt haben.</quest_text>
                 <quest_text>Alle trinken die schon einmal vergessen haben wo sie ihr Auto/Fahrrad abgestellt haben.</quest_text>
             </language>
             <category category_name="NEVER_HAVE_I" />
             <conf level="1" allow_delete="true" />
             <source>aus Privacy Quickie FAN-Edition</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die noch nie in den Öffis eingeschlafen sind und ihren Ausstieg verpasst haben.</quest_text>
+                <quest_text>Alle trinken die schon mal in den Öffis eingeschlafen sind und ihren Ausstieg verpasst haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="1" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die noch nie mit jemandem Händchen gehalten haben.</quest_text>
+                <quest_text>Alle trinken die schon mal mit jemandem Händchen gehalten haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="1" allow_delete="true" />
+            <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die noch nie eng mit jemandem getanzt haben.</quest_text>
+                <quest_text>Alle trinken die schon mal eng mit jemandem getanzt haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="1" allow_delete="true" />
+            <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die noch nie jemanden massiert haben.</quest_text>
+                <quest_text>Alle trinken die schon mal jemanden massiert haben.</quest_text>
+                <quest_text>Alle trinken die noch nie von jemanden massiert wurden.</quest_text>
+                <quest_text>Alle trinken die schon mal von jemanden massiert wurden.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="1" allow_delete="true" />
+            <source>aus einer pr0p0ll-Umfrage</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -3926,6 +4010,60 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle trinken die betrunken noch nie etwas getan haben das sie am nächsten Tag bereut haben.</quest_text>
+                <quest_text>Alle trinken die betrunken bereits einmal etwas getan haben das sie am nächsten Tag bereut haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="2" allow_delete="true" />
+            <source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die eine Person unter 16 Jahren daten würden.</quest_text>
+                <quest_text>Alle trinken die eine Person unter 18 Jahren daten würden.</quest_text>
+                <quest_text>Alle trinken die eine Person unter 21 Jahren daten würden.</quest_text>
+                <quest_text>Alle trinken die eine Person unter 25 Jahren daten würden.</quest_text>
+                <quest_text>Alle trinken die eine Person unter 30 Jahren daten würden.</quest_text>
+                <quest_text>Alle trinken die eine Person unter 40 Jahren daten würden.</quest_text>
+                <quest_text>Alle trinken die eine Person unter 50 Jahren daten würden.</quest_text>
+                <quest_text>Alle trinken die eine Person über 16 Jahren daten würden.</quest_text>
+                <quest_text>Alle trinken die eine Person über 18 Jahren daten würden.</quest_text>
+                <quest_text>Alle trinken die eine Person über 21 Jahren daten würden.</quest_text>
+                <quest_text>Alle trinken die eine Person über 25 Jahren daten würden.</quest_text>
+                <quest_text>Alle trinken die eine Person über 30 Jahren daten würden.</quest_text>
+                <quest_text>Alle trinken die eine Person über 40 Jahren daten würden.</quest_text>
+                <quest_text>Alle trinken die eine Person über 50 Jahren daten würden.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="2" allow_delete="true" />
+            <source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon mal Kondome gekauft haben.</quest_text>
+                <quest_text>Alle trinken die noch nie Kondome gekauft haben.</quest_text>
+                <quest_text>Alle trinken die schon mal online Kondome gekauft haben.</quest_text>
+                <quest_text>Alle trinken die noch nie online Kondome gekauft haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="2" allow_delete="true" />
+            <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon mal verschiedene Kondomgrößen getestet haben.</quest_text>
+                <quest_text>Alle trinken die noch nie verschiedene Kondomgrößen getestet haben.</quest_text>
+                <quest_text>Alle trinken die ihre optimale Kondomgröße wissen und verwenden.</quest_text>
+                <quest_text>Alle trinken die sich noch keine Gedanken über ihre optimale Kondomgröße gemacht haben.</quest_text>
+                <comment>Kondome sollen für maximalen Komfort und maximale Sicherheit passend zur Penisgröße (Umfang) gewählt werden. Das Kondom sollte eine geringfügig kleinere nominelle Breite haben als der halbe Penisumfang im vollständig erigierten Zustand an der breitesten Stelle. So ist sichergestellt, dass das Kondom nicht stark gedehnt wird, aber trotzdem durch ausreichend Spannkraft gehalten wird.</comment>
+                <comment>Die Standardbreite von 52 mm entspricht demnach einem Penisumfang von etwas mehr als 10,5 cm, eine Kondomgröße von 60 mm einem Penisumfang von etwas mehr als 12,0 cm und Kondomgröße 69 mm einem Penisumfang von etwas mehr als 14,0 cm.</comment>
+                <comment>Quelle: Wikipedia</comment>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="3" player="BOYS" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle trinken die schon mal mit einem leichteren Partner zusammen waren.</quest_text>
                 <quest_text>Alle trinken die noch nie mit einem leichteren Partner zusammen waren.</quest_text>
                 <quest_text>Alle trinken die schon mal mit einem deutlich leichteren Partner zusammen waren.</quest_text>
@@ -4001,6 +4139,15 @@
             <category category_name="NEVER_HAVE_I" />
             <conf level="3" allow_delete="true" />
             <source>(Android-App) Ich Habe Noch Nie! (von Robot Mafia Studios)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die noch nie in der Badewanne eingeschlafen sind.</quest_text>
+                <quest_text>Alle trinken die schon mal in der Badewanne eingeschlafen sind.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="3" allow_delete="true" />
+            <source>www.tordol.com</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -4147,6 +4294,45 @@
             <category category_name="NEVER_HAVE_I" />
             <conf level="3" allow_delete="true" />
             <source>aus Privacy Quickie FAN-Edition</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die sich schon mal wegen zu viel Alkohol übergeben mussten.</quest_text>
+                <quest_text>Alle trinken die noch nie wegen zu viel Alkohol übergeben mussten.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="4" friends="GOOD" allow_delete="true" />
+            <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die noch keine Person entjungfert haben.</quest_text>
+                <quest_text>Alle trinken die schon mal eine Person entjungfert haben.</quest_text>
+                <quest_text>Alle trinken die noch nie Sex mit einer Jungfrau hatten.</quest_text>
+                <quest_text>Alle trinken die schon mal Sex mit einer Jungfrau hatten.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="4" friends="GOOD" allow_delete="true" />
+			<source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die durch Absicht schon einmal von anderen Personen nackt oder teilweise nackt gesehen wurden, aber so getan haben als würden sie es nicht bemerken.</quest_text>
+                <quest_text>Alle trinken die noch nie von anderen Personen nackt oder teilweise nackt gesehen wurden, aber so getan haben als würden sie es nicht bemerken.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="4" friends="GOOD" allow_delete="true" />
+			<source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die als Kinder Doktorspiele gespielt haben.</quest_text>
+                <quest_text>Alle trinken die als Kinder nie Doktorspiele gespielt haben.</quest_text>
+				<comment>Definition: Kinderspiel, in dem (oft aus sexueller Neugier) eine ärztliche Untersuchung nachgeahmt wird.</comment>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="4" friends="GOOD" allow_delete="true" />
+			<source>www.tordol.com</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -4543,6 +4729,15 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle trinken die schon mal einen Schwangerschaftstest gekauft haben.</quest_text>
+                <quest_text>Alle trinken die noch nie  einen Schwangerschaftstest gekauft haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="4" player="GIRLS" friends="GOOD" allow_delete="true" />
+            <source>aus einer pr0p0ll-Umfragen</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle trinken die schon mal Gleitgel verwendet haben.</quest_text>
                 <quest_text>Alle trinken die noch nie Gleitgel verwendet haben.</quest_text>
             </language>
@@ -4786,7 +4981,7 @@
             <language lang_code="DE">
                 <quest_text>Alle die ein Sexspielzeug besitzen müssen trinken.</quest_text>
                 <quest_text>Alle die kein Sexspielzeug besitzen müssen trinken.</quest_text>
-                <comment>Nein mit Sexspielzeug ist nicht deine Freundin/dein Freund gemeint.</comment>
+                <comment>Nein mit Sexspielzeug ist nicht der Partner gemeint.</comment>
             </language>
             <category category_name="NEVER_HAVE_I" />
             <conf level="5" friends="GOOD" allow_delete="true" />
@@ -4845,6 +5040,33 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle trinken die schon mal direkt beim ersten Date mit dem Partner im Bett gelandet sind.</quest_text>
+                <quest_text>Alle trinken die noch nie direkt beim ersten Date mit dem Partner im Bett gelandet sind.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="5" allow_delete="true" />
+            <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon mal Sex mit einer Person hatten deren Namen sie nicht kannten.</quest_text>
+                <quest_text>Alle trinken die noch nie Sex mit einer Person hatten deren Namen sie nicht kannten.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="5" allow_delete="true" />
+            <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon einmal einen Filmriss durch zu viel Alkohol hatten.</quest_text>
+                <quest_text>Alle trinken die noch nie einen Filmriss durch zu viel Alkohol hatten.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="6" friends="GOOD" allow_delete="true" />
+            <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle trinken die ihrem Partner bereits einmal den Intimbereich rasiert haben.</quest_text>
                 <quest_text>Alle trinken die ihrem Partner noch nie den Intimbereich rasiert haben.</quest_text>
             </language>
@@ -4868,6 +5090,39 @@
             <category category_name="NEVER_HAVE_I" />
             <conf level="6" friends="GOOD" allow_delete="true" />
             <source>4Chan Drinking Game</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle die bei der Selbstbefriedigung noch nie Lebensmittel zur Hilfe genommen haben müssen trinken.</quest_text>
+                <quest_text>Alle die bei der Selbstbefriedigung schon einmal Lebensmittel zur Hilfe genommen haben müssen trinken.</quest_text>
+                <quest_text>Alle die bei der Selbstbefriedigung noch nie diverses Obst (Gurke, Banane, ...) zur Hilfe genommen haben müssen trinken.</quest_text>
+                <quest_text>Alle die bei der Selbstbefriedigung schon einmal diverses Obst (Gurke, Banane, ...) zur Hilfe genommen haben müssen trinken.</quest_text>
+                <quest_text>Alle die bei der Selbstbefriedigung schon einmal Lebensmittel zur Hilfe genommen haben und diese danach eggemüssen trinken.</quest_text>
+                <quest_text>Alle die bei der Selbstbefriedigung schon einmal diverses Obst (Gurke, Banane, ...) zur Hilfe genommen haben müssen trinken.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="6" friends="GOOD" allow_delete="true" />
+            <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle die beim Sex noch nie Lebensmittel zur Hilfe genommen haben müssen trinken.</quest_text>
+                <quest_text>Alle die beim Sex schon einmal Lebensmittel zur Hilfe genommen haben müssen trinken.</quest_text>
+                <quest_text>Alle die beim Sex noch nie diverses Obst (Gurke, Banane, ...) zur Hilfe genommen haben müssen trinken.</quest_text>
+                <quest_text>Alle die beim Sex schon einmal diverses Obst (Gurke, Banane, ...) zur Hilfe genommen haben müssen trinken.</quest_text>
+                <quest_text>Alle die beim Sex schon einmal Lebensmittel zur Hilfe genommen haben und diese danach eggemüssen trinken.</quest_text>
+                <quest_text>Alle die beim Sex schon einmal diverses Obst (Gurke, Banane, ...) zur Hilfe genommen haben müssen trinken.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="6" friends="GOOD" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle die beim Sex noch nie Lebensmittel zur Hilfe genommen haben müssen trinken.</quest_text>
+                <quest_text>Alle die beim Sex schon einmal Lebensmittel zur Hilfe genommen haben müssen trinken.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="6" friends="GOOD" allow_delete="true" />
         </quest>
         <quest>
             <language lang_code="DE">
@@ -5091,6 +5346,69 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle trinken die schon einmal bis zur Bewusstlosigkeit getrunken haben.</quest_text>
+                <quest_text>Alle trinken die noch nie bis zur Bewusstlosigkeit getrunken haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="6" friends="GOOD" allow_delete="true" />
+            <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon einmal Sex ohne Verhütung gehabt haben.</quest_text>
+                <quest_text>Alle trinken die noch nie Sex ohne Verhütung gehabt haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="6" friends="GOOD" allow_delete="true" />
+            <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon einmal Ben-Wa Balls (auch Chinese Balls) oder Analperlen verwendet haben.</quest_text>
+                <quest_text>Alle trinken die noch nie Ben-Wa Balls (auch Chinese Balls) oder Analperlen verwendet haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="6" friends="GOOD" allow_delete="true" />
+            <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon einmal ihre Notdruft woanders verrichtet haben als im Badezimmer, Plumsklo oder irgendeinem anderen gemeinhin dafür akzeptierten Ort.</quest_text>
+                <quest_text>Alle trinken die noch nie ihre Notdruft woanders verrichtet haben als im Badezimmer, Plumsklo oder irgendeinem anderen gemeinhin dafür akzeptierten Ort.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="7" friends="GOOD" allow_delete="true" />
+            <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken deren Finger schon einmal den Weg in das eigene Rektum gefunden hat.</quest_text>
+                <quest_text>Alle trinken deren Finger noch nie den Weg in das eigene Rektum gefunden hat.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="7" friends="GOOD" allow_delete="true" />
+            <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken deren Finger schon einmal den Weg in ein anderes Rektum gefunden hat.</quest_text>
+                <quest_text>Alle trinken deren Finger noch nie den Weg in ein anderes Rektum gefunden hat.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="7" friends="GOOD" allow_delete="true" />
+            <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon einmal irgendwelche Exkremente im Kühlschrank, Backofen oder einer Vorrichtung zur Lagerung/Zubereitung von Lebensmitteln aufbewahrt haben.</quest_text>
+                <quest_text>Alle trinken die noch nie  irgendwelche Exkremente im Kühlschrank, Backofen oder einer Vorrichtung zur Lagerung/Zubereitung von Lebensmitteln aufbewahrt haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="7" friends="BENEFITS" allow_delete="true" />
+            <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Jeder der noch nie seine Geschlechtsmerkmale mit denen eines Freundes/einer Freundin verglichen hat muss trinken.</quest_text>
                 <quest_text>Jeder der schon mal seine Geschlechtsmerkmale mit denen eines Freundes/einer Freundin verglichen hat muss trinken.</quest_text>
             </language>
@@ -5289,11 +5607,11 @@
             <language lang_code="DE">
                 <quest_text>Alle trinken die noch nie ins Gesicht von jemandem abgespritzt haben oder denen noch niemand ins Gesicht abgespritzt hat.</quest_text>
                 <quest_text>Alle trinken die bereits ins Gesicht von jemandem abgespritzt haben oder denen bereits jemand ins Gesicht abgespritzt hat.</quest_text>
-                <quest_text>Alle trinken die noch auf den Körper von jemandem abgespritzt haben oder denen noch niemand auf den Körper abgespritzt hat.</quest_text>
+                <quest_text>Alle trinken die noch nie auf den Körper von jemandem abgespritzt haben oder denen noch niemand auf den Körper abgespritzt hat.</quest_text>
                 <quest_text>Alle trinken die bereits auf den Körper von jemandem abgespritzt haben oder denen bereits jemand auf den Körper abgespritzt hat.</quest_text>
-                <quest_text>Alle trinken die noch auf die Brüste von jemandem abgespritzt haben oder denen noch niemand auf die Brüste abgespritzt hat.</quest_text>
+                <quest_text>Alle trinken die noch nie auf die Brüste von jemandem abgespritzt haben oder denen noch niemand auf die Brüste abgespritzt hat.</quest_text>
                 <quest_text>Alle trinken die bereits auf die Brüste von jemandem abgespritzt haben oder denen bereits jemand auf die Brüste abgespritzt hat.</quest_text>
-                <quest_text>Alle trinken die noch auf den Rücken von jemandem abgespritzt haben oder denen noch niemand auf den Rücken abgespritzt hat.</quest_text>
+                <quest_text>Alle trinken die noch nie auf den Rücken von jemandem abgespritzt haben oder denen noch niemand auf den Rücken abgespritzt hat.</quest_text>
                 <quest_text>Alle trinken die bereits auf den Rücken von jemandem abgespritzt haben oder denen bereits jemand auf den Rücken abgespritzt hat.</quest_text>
             </language>
             <category category_name="NEVER_HAVE_I" />
@@ -5674,7 +5992,7 @@
         </quest>
         <quest>
             <language lang_code="DE">
-                <quest_text>Traust du dich? Lasse dir von xXx Nadeln in beide Ohrläppchen stechen. Diese verbleiben bis es für andere Aufgaben unbedingt notwendig wird sie wieder u entfernen.</quest_text>
+                <quest_text>Traust du dich? Lasse dir von xXx Nadeln in beide Ohrläppchen stechen. Diese verbleiben bis es für andere Aufgaben unbedingt notwendig wird sie wieder zu entfernen.</quest_text>
                 <comment>Stecknadeln, Sicherheitsnadeln oder dünnen Nähnadeln zB.</comment>
             </language>
             <category category_name="DARE" />
@@ -6280,6 +6598,19 @@
 
         <quest>
             <language lang_code="DE">
+                <quest_text>Stecke deinen Finger in Nutella (oder ähnliches wie Honig, ...) bzw. bedecke den Finger mit Essbarem. xXx darf anschließend deinen Finger in den Mund nehmen und leidenschaftlich abschlecken, langsam und verführerisch.</quest_text>
+                <quest_text>xXx steckt seinen Finger in Nutella (oder ähnliches wie Honig, ...) bzw. bedeckt seinen Finger mit Essbarem. Du darfst anschließend seinen Finger in den Mund nehmen und leidenschaftlich abschlecken, langsam und verführerisch.</quest_text>
+            </language>
+            <category category_name="NAUGHTY" />
+            <requirement requires="CREAM" />
+            <apply_rule rule="lickable_def" />
+            <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" />
+            <conf level="6" partner="FEMALE" />
+            <public_conf level="0" />
+			<source>www.tordol.com</source>
+        </quest>
+		<quest>
+            <language lang_code="DE">
                 <quest_text>Verteile großzügig etwas Essbares (z.B. Sahne oder flüssige Schokolade) auf deinem freigemachten Bauch. xXx darf diese anschließend leidenschaftlich und langsam auflecken.</quest_text>
                 <quest_text>Eine Person deiner Wahl verteilt großzügig etwas Essbares (z.B. Sahne oder flüssige Schokolade) auf dem freigemachten Bauch von xXx. Du darfst diese anschließend restlos und leidenschaftlich von xXx auflecken. Mache es so langsam und verführerisch wie möglich.</quest_text>
             </language>
@@ -6289,6 +6620,20 @@
             <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" />
             <conf level="6" partner="FEMALE" />
             <public_conf level="0" />
+        </quest>
+		<quest>
+            <language lang_code="DE">
+                <quest_text>Verteile großzügig etwas Essbares (z.B. Sahne oder flüssige Schokolade) auf und um deinen Lippen. xXx darf diese anschließend leidenschaftlich und langsam auflecken.</quest_text>
+                <quest_text>Eine Person deiner Wahl verteilt großzügig etwas Essbares (z.B. Sahne oder flüssige Schokolade) auf und um die Lippen von xXx. Du darfst diese anschließend restlos und leidenschaftlich auflecken. Mache es so langsam und verführerisch wie möglich.</quest_text>
+				<comment>Lippen --> im Gesicht</comment>
+            </language>
+            <category category_name="NAUGHTY" />
+            <requirement requires="CREAM" />
+            <apply_rule rule="lickable_def" />
+            <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" />
+            <conf level="6" partner="FEMALE" />
+            <public_conf level="0" />
+			<source>www.tordol.com</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -7127,6 +7472,8 @@ ideen für ab friends-version:
 nacktfoto/nactvideo
 mehr fotoaction
 
+more swapping clothes
+
 ideen für nur benefits-version:
 facesitting
 1-10 punkte vergeben für eregiertes glied, brüste, ... harmlose sachen
@@ -7156,10 +7503,16 @@ augenbinde für alle & durch den raum gehn und küssen/aufgaben erledigen/leute 
 blowjob und typ muss raten wer ihm gerade einen bläst
 -->
 <!-- neue Ideen Part 3:
-Webseiten:
-http://www.tordol.com/
-https://www.ich-habe-noch-nie.de/
-http://www.playtod.eu/
-
 so dinge wie one-finger-challenge, heartshapedboobchallenge, bellybuttonchallenge...
+-->
+<!--www.tordol.com
+If any other player is willing to play in their underwear for two rounds, you must also do so.
+If any member of the opposite sex is willing to strip for one round, you must do a shot of their choice. You must do this for as many players as are willing, up to 4.
+Name one intimate act that you would be willing to do, yet your partner has never (or will never) ask you to do so?
+It is said that every person is a certain type of drunk: aggressive, sad, funny, etc. Give you best guess as to what type of drunk each of the other players are / would be.
+What is the most alcohol you have ever drank at a single party, bar, or time? What were you drinking?
+Name one sex toy that you would like your partner to buy for you. Now name one that you would like them to buy for themself.
+What turns you on? You must state 3 things that really get you hot.
+Do you enjoy watching your partner, or other people, masturbate? Why or why not?
+What, in your opinion, is your partner's ultimate sexual / romantic fantasy? Why do you think this appeals to them?
 -->
