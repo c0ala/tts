@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!-- @author Klaus -->
-<!-- @version 2 -->
-<!-- @since 12.07.2015. -->
 
 <tts_data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="quest_schema.xsd">
@@ -274,6 +272,14 @@
             <category category_name="DRINKING" />
             <conf level="1" player="ONE" partner="ALL" />
             <source>(Android-App) Drinking Game Missions (von Appxperimentz)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Wähle eine Person der du vertraust. Diese Person entscheidet ob sie selbst trinkt oder du trinkst.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="3" player="ONE" partner="ALL" />
+            <source>aus "These Cards Will Get You Drunk Too"</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -600,6 +606,47 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Die Person die am besten gedehnt ist muss trinken.</quest_text>
+                <quest_text>Die Person die am wenigsten gedehnt ist muss trinken.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="2" player="ONE" partner="ALL" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Wählt die Person die am wenigsten entscheidungsfreudig ist. Diese Person entscheidet wer zwei trinkt.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="2" allow_delete="true" />
+            <source>aus "These Cards Will Get You Drunk"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Wählt die Person die in einem Horrorfilm als Erstes sterben würde. Diese Person trinkt zwei.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="2" allow_delete="true" />
+            <source>aus "These Cards Will Get You Drunk Too"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Wenn du in einer Beziehung bist trinkt dein Partner zwei. Ist er nicht hier oder bist du Single trinke selbst zwei.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="2" player="ONE" allow_delete="true" />
+            <source>aus "These Cards Will Get You Drunk Too"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die nicht, ohne die Knie zu beugen, ihre Zehen berühren können.</quest_text>
+                <quest_text>Alle trinken die ihre Zehen berühren können ohne die Knie zu beugen.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="2" player="ONE" allow_delete="true" />
+            <source>aus "These Cards Will Get You Drunk Too"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle trinken die seit mehr als 6 Monaten vergeben sind.</quest_text>
                 <quest_text>Alle trinken zwei die seit mehr als einem Jahr vergeben sind.</quest_text>
                 <quest_text>Alle trinken vier die seit mehr als zwei Jahren vergeben sind.</quest_text>
@@ -642,6 +689,71 @@
             <category category_name="CONDITION" />
             <conf level="2" allow_delete="true" />
             <source>aus Privacy Quickie FAN-Edition</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle die gerade nur Bier trinken trinken fünf.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
+            <conf level="2" allow_delete="true" />
+            <source>aus "Buzzed"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Der Spieler dem dieses Handy gehört trinkt zwei.</quest_text>
+                <quest_text>Der Spieler dem dieses Handy gehört darf 6x trinken verteilen.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="3" />
+            <source>(Android-App) Dare&amp;Drink Trinkspiel (von Julien Kessels)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken für jedes Jahr das sie eine Zahnspange gehabt haben (aufgerundet).</quest_text>
+            </language>
+            <category category_name="CONDITION" />
+            <category category_name="DRINKING" />
+            <conf level="2" allow_delete="true" />
+            <source>aus "Buzzed"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>xXx und du trinken jeweils abwechselnd einmal bis einer von euch stoppt. Der Verlierer trink nochmal drei.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="3" player="ONE" partner="YES" />
+            <source>(Android-App) Dare&amp;Drink Trinkspiel (von Julien Kessels)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle die morgen nicht arbeiten müssen trinken drei.</quest_text>
+                <quest_text>Alle die morgen arbeiten müssen trinken drei.</quest_text>
+                <comment>Denkt nichtmal daran die Party vor dem Ende zu verlassen.</comment>
+            </language>
+            <category category_name="CONDITION" />
+            <category category_name="DRINKING" />
+            <conf level="3" player="ONE" partner="YES" />
+            <source>(Android-App) Dare&amp;Drink Trinkspiel (von Julien Kessels)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle die vor morgen früh nicht mehr dieses Haus verlassen trinken drei.</quest_text>
+            </language>
+            <category category_name="CONDITION" />
+            <category category_name="DRINKING" />
+            <conf level="3" />
+            <public_conf level="3" />
+            <source>(Android-App) Dare&amp;Drink Trinkspiel (von Julien Kessels)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle die morgen aufstehen müssen trinken zwei.</quest_text>
+                <quest_text>Alle die morgen ausschlafen können trinken zwei.</quest_text>
+            </language>
+            <category category_name="CONDITION" />
+            <category category_name="DRINKING" />
+            <conf level="3" player="ONE" partner="YES" />
         </quest>
         <quest>
             <language lang_code="DE">
@@ -780,6 +892,15 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Jeder der im selben Monat wie du Geburtstag hat muss trinken.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
+            <conf level="3" />
+            <source>aus "These Cards Will Get You Drunk"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle mit gefärbten Haaren trinken.</quest_text>
                 <quest_text>Alle mit natürlicher Haarfarbe trinken.</quest_text>
             </language>
@@ -915,6 +1036,15 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle mit Löchern in den Socken trinken.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
+            <conf level="3" allow_delete="true" />
+            <source>aus "These Cards Will Get You Drunk Too"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle die ein 'a' im Namen haben trinken.</quest_text>
                 <quest_text>Alle die ein 'e' im Namen haben trinken.</quest_text>
                 <quest_text>Alle die ein 'i' im Namen haben trinken.</quest_text>
@@ -980,6 +1110,7 @@
                 <quest_text>Derjenige, der als letztes beim Feiern gekotzt hat, trinkt fünf.</quest_text>
             </language>
             <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
             <conf level="3" allow_delete="true" />
             <source>(Android-App) Picolo Trinkspiel (von Marmelapp)</source>
         </quest>
@@ -989,6 +1120,7 @@
                 <quest_text>Alle die weiter als 50km von hier geboren sind trinken vier mal.</quest_text>
             </language>
             <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
             <conf level="3" allow_delete="true" />
             <source>(Android-App) Picolo Trinkspiel (von Marmelapp)</source>
         </quest>
@@ -1044,6 +1176,7 @@
                 <quest_text>Die Person mit den kürzesten Beinen muss zwei trinken.</quest_text>
             </language>
             <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
             <conf level="3" allow_delete="true" />
         </quest>
         <quest>
@@ -1052,6 +1185,7 @@
                 <quest_text>Die Person mit der kleinsten Schuhgröße trinkt drei.</quest_text>
             </language>
             <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
             <conf level="3" allow_delete="true" />
         </quest>
         <quest>
@@ -1125,7 +1259,22 @@
         </quest>
         <quest>
             <language lang_code="DE">
-                <quest_text>Alle trinken die sich andere Personen manchmal nackt vorstellen.</quest_text>
+                <quest_text>Der Spieler der sich zuletzt ein Tattoo hat stechen lassen trinkt.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="3" allow_delete="true" />
+            <source>aus "Buzzed"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Der Spieler der sich zuletzt ein Piercing hat stechen lassen trinkt (Ohrläppchen zählen nicht). Zeige dein Tattoo.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="3" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die sich andere Personen manchmal nackt vorstellen. Zeige dein Piercing.</quest_text>
             </language>
             <category category_name="CONDITION" />
             <category category_name="DRINKING" />
@@ -1207,12 +1356,88 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Wählt den größten Alkoholiker unter euch. Dieser trinkt und darf entscheiden wer noch trinkt.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="4" allow_delete="true" />
+            <source>aus "These Cards Will Get You Drunk"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Wählt den Spieler der versucht möglichst wenig zu trinken. Dieser trinkt drei.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="4" allow_delete="true" />
+            <source>aus "These Cards Will Get You Drunk"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Wählt den Spieler der am ehesten mit zehn Katzen enden wird. Alle anderen trinken für diese Person.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="4" allow_delete="true" />
+            <source>aus "These Cards Will Get You Drunk"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Wählt den Spieler der am ehesten aus einer Bar/dem Club geworfen wird. Diese Person trinkt.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="4" allow_delete="true" />
+            <source>aus "These Cards Will Get You Drunk"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Imitiere einen anderen Spieler. Der Spieler der korrekt rät darf entscheiden wer drei trinken muss.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="4" player="ONE" allow_delete="true" />
+            <source>aus "These Cards Will Get You Drunk"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Der Spieler der dem Ausgang am nächsten ist trinkt zwei.</quest_text>
+                <comment>Got somewhere else to be, bitch?</comment>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="4" allow_delete="true" />
+            <source>aus "Buzzed - First Expansion Pack"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Jeder mit einen Reddit Account muss trinken.</quest_text>
             </language>
             <category category_name="DRINKING" />
             <category category_name="CONDITION" />
             <conf level="4" allow_delete="true" />
             <source>(Android-App) Game of Shots (von Wired Koala Studios)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Jeder mit einen Netflix Account muss trinken.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
+            <conf level="4" allow_delete="true" />
+            <source>aus "Buzzed"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die den Netflix Account eines anderen verwenden.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
+            <conf level="4" allow_delete="true" />
+            <source>aus "Buzzed"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Jeder mit einen Spotify Account muss trinken.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
+            <conf level="4" allow_delete="true" />
+            <source>aus "Buzzed"</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -1521,6 +1746,42 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Jeder der etwas mit Spitze trägt trinkt.</quest_text>
+                <quest_text>Jeder der nichts mit Spitze trägt trinkt.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
+            <conf level="5" player="GIRLS" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Jeder der etwas mit Transparentem Stoff trägt trinkt.</quest_text>
+                <quest_text>Jeder der nichts mit Transparentem Stoff trägt trinkt.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
+            <conf level="5" player="GIRLS" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Jeder der etwas mit Netzstoff trägt trinkt.</quest_text>
+                <quest_text>Jeder der nichts mit Netzstoff trägt trinkt.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
+            <conf level="5" player="GIRLS" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Jeder der etwas aus Leder trägt trinkt.</quest_text>
+                <quest_text>Jeder der nichts aus Leder trägt trinkt.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <category category_name="CONDITION" />
+            <conf level="5" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Jeder der Unterwäsche trägt trinkt.</quest_text>
                 <quest_text>Jeder der keine Unterwäsche trägt trinkt.</quest_text>
             </language>
@@ -1635,6 +1896,15 @@
             <category category_name="DRINKING" />
             <conf level="7" friends="GOOD" allow_delete="true" />
             <source>Idee von Anselm</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die jetzt gerne Sex hätten.</quest_text>
+            </language>
+            <category category_name="CONDITION" />
+            <category category_name="DRINKING" />
+            <conf level="8" friends="GOOD" allow_delete="true" />
+            <source>(Android-App) Torben Trinkt - Trinkspiel (von Nicolas Neudeck)</source>
         </quest>
 
         <!-- everybody drinks -->
@@ -1778,6 +2048,24 @@
             <category category_name="DRINKING" />
             <conf level="3" allow_delete="true" />
             <source>4Chan Drinking Game</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Die Person mit dem kürzesten Vornamen trinkt.</quest_text>
+                <quest_text>Die Person mit dem längsten Vornamen trinkt.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="3" allow_delete="true" />
+            <source>aus "These Cards Will Get You Drunk"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Die Person mit dem kürzesten Nachnamen trinkt.</quest_text>
+                <quest_text>Die Person mit dem längsten Nachnamen trinkt.</quest_text>
+            </language>
+            <category category_name="DRINKING" />
+            <conf level="3" allow_delete="true" />
+            <source>aus "These Cards Will Get You Drunk"</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -2053,6 +2341,16 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Sage drei mal schnell "Die Katze tritt die Treppe krumm". Trinke bei jedem Fehler.</quest_text>
+                <quest_text>Sage drei mal schnell "Manche Mönche sind in München". Trinke bei jedem Fehler.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <category category_name="DRINKING" />
+            <conf level="2" player="ONE" />
+            <source>(Android-App) Wahrheit oder Pflicht (von Apprize)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle die es nicht schaffen, dass sich ihre Finger hinterm Rücken berühren, müssen drei trinken (Ein Arm von üben über die Schulter, der andere von unten).</quest_text>
             </language>
             <category category_name="DO_FUNNY_THINGS" />
@@ -2068,6 +2366,14 @@
             <category category_name="DRINKING" />
             <conf level="2" allow_delete="true" />
             <source>(Android-App) Picolo Trinkspiel (von Marmelapp)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle dürfen dir einen Schluck ihres Getränks in dein Glas schütten.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <conf level="3" player="ONE" allow_delete="true" />
+            <source>(Android-App) Dare&amp;Drink Trinkspiel (von Julien Kessels)</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -2407,6 +2713,24 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Mache und verschicke ein Snapchat-Selfie auf dem du trinkst. Hast du kein Snapchat? --> trinke drei.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <category category_name="DRINKING" />
+            <conf level="4" player="ONE" />
+            <source>(Android-App) Dare&amp;Drink Trinkspiel (von Julien Kessels)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Mache und verschicke gemeinsam mit xXx ein Snapchat-Selfie auf dem ihr trinkt. Habt ihr beide kein Snapchat? --> trinkt drei.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <category category_name="DRINKING" />
+            <conf level="4" player="ONE" partner="YES" />
+            <source>(Android-App) Dare&amp;Drink Trinkspiel (von Julien Kessels)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Party-Fotobuch. Mache ein Foto auf dem die Person zu sehen ist die du am attraktivsten/schönsten/hübschesten findest.</quest_text>
                 <quest_text>Party-Fotobuch. Mache ein Foto auf dem die Person zu sehen ist die in deinen Augen die beste Partykleidung trägt.</quest_text>
                 <quest_text>Party-Fotobuch. Mache ein Foto auf dem mindestens die kleinste sowie größte anwesende Person zu sehen sind.</quest_text>
@@ -2425,6 +2749,19 @@
                 <quest_text>Party-Fotobuch. Mache ein Selfie mit möglichst vielen Personen.</quest_text>
                 <quest_text>Party-Fotobuch. Mache ein Selfie mit der Person rechts von dir.</quest_text>
                 <quest_text>Party-Fotobuch. Mache ein Selfie mit der Person links von dir.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <apply_rule rule="what_happens_stays" />
+            <conf level="4" player="ONE" friends="GOOD" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Mache und verschicke ein Snapchat-Selfie mit der Person die du am attraktivsten/schönsten/hübschesten findest.</quest_text>
+                <quest_text>Mache und verschicke ein Snapchat-Selfie mit der Person die in deinen Augen die beste Partykleidung trägt.</quest_text>
+                <quest_text>Mache und verschicke ein Snapchat-Selfie mit der Person die am besoffensten ist.</quest_text>
+                <quest_text>Mache und verschicke ein Snapchat-Selfie mit möglichst vielen Personen.</quest_text>
+                <quest_text>Mache und verschicke ein Snapchat-Selfie mit der Person rechts von dir.</quest_text>
+                <quest_text>Mache und verschicke ein Snapchat-Selfie mit der Person links von dir.</quest_text>
             </language>
             <category category_name="DO_FUNNY_THINGS" />
             <apply_rule rule="what_happens_stays" />
@@ -2458,6 +2795,134 @@
 			<conf level="4" partner="FEMALE" />
 			<public_conf level="0" />
 			<source>(Brettspiel) Sauf-Otto</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx Arm.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx Unterarm.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx Handrücken.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx Handfläche.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx Fußgelenk.</quest_text>
+                <comment>Wasserlöslich ist gut.</comment>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <requirement requires="PENCIL" />
+            <apply_rule rule="strip_for_massage" />
+            <conf level="4" player="ONE" partner="YES" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deinem Arm unterschreiben.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deinem Unterarm unterschreiben.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deinem Handrücken unterschreiben.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deinem Handfläche unterschreiben.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deinem Fußgelenk unterschreiben.</quest_text>
+                <comment>Wasserlöslich ist gut.</comment>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <requirement requires="PENCIL" />
+            <apply_rule rule="strip_for_massage" />
+            <conf level="4" player="ONE" partner="YES" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx Arm.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx Unterarm.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx Handrücken.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx Handfläche.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx Fußgelenk.</quest_text>
+                <comment>Wasserlöslich ist gut.</comment>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <requirement requires="PENCIL" />
+            <apply_rule rule="strip_for_massage" />
+            <conf level="4" player="ONE" partner="YES" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf den Arm zeichnen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf den Unterarm zeichnen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf den Handrücken zeichnen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf den Handfläche zeichnen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf den Fußgelenk zeichnen.</quest_text>
+                <comment>Wasserlöslich ist gut.</comment>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <requirement requires="PENCIL" />
+            <apply_rule rule="strip_for_massage" />
+            <conf level="4" player="ONE" partner="YES" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Menschen reagieren verschieden auf Alkohol. Einige werden laut, andere ruhig, einige hyperaktiv, andere zutraulich, ... Gib zu jedem Mitspieler eine Einschätzung zu welchem Typ er gehört.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <conf level="4" player="ONE" friends="GOOD" allow_delete="true" />
+            <source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Wähle zwei Spieler die gemeinsam ein Lied deiner Wahl singen müssen. Du schlechtere Sänger muss trinken.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <conf level="4" player="ONE" friends="GOOD" allow_delete="true" />
+            <source>aus "These Cards Will Get You Drunk"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx Bauch.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx Nacken.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx Stirn.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx Rücken.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx Wange.</quest_text>
+                <comment>Wasserlöslich ist gut.</comment>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <requirement requires="PENCIL" />
+            <apply_rule rule="strip_for_massage" />
+            <conf level="5" player="ONE" partner="YES" friends="GOOD" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deinem Bauch unterschreiben.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deinem Nacken unterschreiben.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deiner Stirn unterschreiben.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deiner Rücken unterschreiben.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deiner Wange unterschreiben.</quest_text>
+                <comment>Wasserlöslich ist gut.</comment>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <requirement requires="PENCIL" />
+            <apply_rule rule="strip_for_massage" />
+            <conf level="5" player="ONE" partner="YES" friends="GOOD" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx Bauch.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx Nacken.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx Stirn.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx Rücken.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx Wange.</quest_text>
+                <comment>Wasserlöslich ist gut.</comment>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <requirement requires="PENCIL" />
+            <apply_rule rule="strip_for_massage" />
+            <conf level="5" player="ONE" partner="YES" friends="GOOD" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf den Bauch zeichnen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf den Nacken zeichnen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf die Stirn zeichnen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf die Rücken zeichnen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf die Wange zeichnen.</quest_text>
+                <comment>Wasserlöslich ist gut.</comment>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <requirement requires="PENCIL" />
+            <apply_rule rule="strip_for_massage" />
+            <conf level="5" player="ONE" partner="YES" friends="GOOD" allow_delete="true" />
         </quest>
         <quest>
             <language lang_code="DE">
@@ -2530,6 +2995,14 @@
             </language>
             <category category_name="DO_FUNNY_THINGS" />
             <conf level="5" player="ONE" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Nenne etwas intimes das du gerne machen würdest, aber noch niemand mit dir gemacht hat.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <conf level="5" player="ONE" friends="GOOD" allow_delete="true" />
+            <source>www.tordol.com</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -2724,6 +3197,130 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx Arsch.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx linke Arschbacke.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx rechte Arschbacke.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx seitliche Rippen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx Brustbein.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx Brust.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <requirement requires="PENCIL" />
+            <apply_rule rule="strip_for_massage" />
+            <apply_rule rule="both_private_show_result" />
+            <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" allow_delete="true" />
+            <conf level="6" partner="FEMALE" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deinem Arsch unterschreiben.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deiner linken Arschbacke unterschreiben.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deiner rechten Arschbacke unterschreiben.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deinen seitlichen Rippen unterschreiben.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deinem Brustbein unterschreiben.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deiner Brust unterschreiben.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <requirement requires="PENCIL" />
+            <apply_rule rule="strip_for_massage" />
+            <apply_rule rule="both_private_show_result" />
+            <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" allow_delete="true" />
+            <conf level="6" partner="FEMALE" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx Arsch.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx linke Arschbacke.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx rechte Arschbacke.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx seitliche Rippen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx Brustbein.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx Brust.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <requirement requires="PENCIL" />
+            <apply_rule rule="strip_for_massage" />
+            <apply_rule rule="both_private_show_result" />
+            <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" allow_delete="true" />
+            <conf level="6" partner="FEMALE" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf deinen Arsch zeichnen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf deine linke Arschbacke zeichnen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf deine rechte Arschbacke zeichnen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf deine seitlichen Rippen zeichnen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf dein Brustbein zeichnen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf deine Brust zeichnen.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <requirement requires="PENCIL" />
+            <apply_rule rule="strip_for_massage" />
+            <apply_rule rule="both_private_show_result" />
+            <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" allow_delete="true" />
+            <conf level="6" partner="FEMALE" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx Brüste.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx linke Brust.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen auf xXx rechte Brust.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und schreibe deinen Namen über beide Brüste von xXx.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <requirement requires="PENCIL" />
+            <apply_rule rule="strip_for_massage" />
+            <apply_rule rule="both_private_show_result" />
+            <conf level="7" player="ONE" partner="FEMALE" friends="GOOD" allow_delete="true" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deinen Brüsten unterschreiben.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deine linke Brust unterschreiben.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx auf deine rechte Brust unterschreiben.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass xXx über deine beiden Brüste unterschreiben.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <requirement requires="PENCIL" />
+            <apply_rule rule="strip_for_massage" />
+            <apply_rule rule="both_private_show_result" />
+            <conf level="7" player="A_FEMALE" partner="YES" friends="GOOD" allow_delete="true" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx Brüste.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx linke Brust.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas auf xXx rechte Brust.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und zeichne etwas über beide Brüste von xXx.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <requirement requires="PENCIL" />
+            <apply_rule rule="strip_for_massage" />
+            <apply_rule rule="both_private_show_result" />
+            <conf level="7" player="ONE" partner="FEMALE" friends="GOOD" allow_delete="true" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf deine Brüste zeichnen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf deine linke Brust zeichnen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas auf deine rechte Brust zeichnen.</quest_text>
+                <quest_text>Nimm einen Kugelschreiber/Filzsstift und lass dir von xXx etwas über deine beiden Brüste zeichnen.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <requirement requires="PENCIL" />
+            <apply_rule rule="strip_for_massage" />
+            <apply_rule rule="both_private_show_result" />
+            <conf level="7" player="A_FEMALE" partner="YES" friends="GOOD" allow_delete="true" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Lasse dir den Mund mit Klebeband zukleben. Das Klebeband soll so lange wie möglich oben bleiben. Musst du trinken so kann ein Schlitz für einen Strohhalm ins Klebeband gemacht werden. Alternativ muss das Klebeband wieder abgemacht werden.</quest_text>
             </language>
             <category category_name="DO_FUNNY_THINGS" />
@@ -2756,6 +3353,28 @@
 
         <!-- kissing -->
 
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Wenn du dich traust xXx zu küssen müssen alle anderen drei trinken.</quest_text>
+            </language>
+            <category category_name="KISSING" />
+            <category category_name="DARE" />
+            <category category_name="DRINKING" />
+            <conf level="3" player="ONE" partner="OPPOSITE_SEX" />
+            <conf level="3" partner="FEMALE" />
+            <source>(Android-App) Dare&amp;Drink Trinkspiel (von Julien Kessels)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Wenn xXx sich traut dich zu küssen müssen alle anderen drei trinken.</quest_text>
+            </language>
+            <category category_name="KISSING" />
+            <category category_name="DARE" />
+            <category category_name="DRINKING" />
+            <conf level="3" player="ONE" partner="OPPOSITE_SEX" />
+            <conf level="3" partner="FEMALE" />
+            <source>(Android-App) Dare&amp;Drink Trinkspiel (von Julien Kessels)</source>
+        </quest>
         <quest>
             <language lang_code="DE">
                 <quest_text>Küsse xXx auf die Stirn.</quest_text>
@@ -2820,6 +3439,15 @@
             <category category_name="DRINKING" />
             <apply_rule rule="kiss_def" />
             <conf level="4" player="A_FEMALE" friends="GOOD" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Küsse xXx Arsch, danke dem Spiel und trinke drei.</quest_text>
+            </language>
+            <category category_name="KISSING" />
+            <category category_name="DRINKING" />
+            <conf level="5" player="ONE" partner="FEMALE" friends="GOOD" />
+            <source>(Android-App) Dare&amp;Drink Trinkspiel (von Julien Kessels)</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -3015,11 +3643,20 @@
         </quest>
         <quest>
             <language lang_code="DE">
-                <quest_text>Küsse xXx wührend du ihr/ihm am Arsch greifst.</quest_text>
+                <quest_text>Küsse xXx während du ihr/ihm am Arsch greifst.</quest_text>
             </language>
             <category category_name="KISSING" />
             <category category_name="NAUGHTY" />
             <conf level="6" player="ONE" partner="OPPOSITE_SEX" friends="BENEFITS" />
+            <conf level="6" partner="FEMALE" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Küsse xXx während du ihr an die Brüste greifst.</quest_text>
+            </language>
+            <category category_name="KISSING" />
+            <category category_name="NAUGHTY" />
+            <conf level="6" player="ONE" partner="FEMALE" friends="BENEFITS" />
             <conf level="6" partner="FEMALE" />
         </quest>
         <quest>
@@ -3403,6 +4040,15 @@
 
         <quest>
             <language lang_code="DE">
+                <quest_text>Sage etwas das du noch nie gemacht hast. Jeder der dies schon gemacht hat muss trinken.</quest_text>
+                <quest_text>Sage etwas das du schon gemacht hast. Jeder der dies noch nicht gemacht hat muss trinken.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="1" allow_delete="true" />
+            <source>aus "These Cards Will Get You Drunk Too"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle die noch nie eine Lederhose oder Dirndl anhatten müssen trinken.</quest_text>
                 <quest_text>Alle die mindestens einmal eine Lederhose oder Dirndl anhatten müssen trinken.</quest_text>
             </language>
@@ -3740,6 +4386,60 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle die schon aus einer Bibliothek hinausgeworfen wurden trinken zwei.</quest_text>
+                <quest_text>Alle die noch nie aus einer Bibliothek hinausgeworfen wurden trinken zwei</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="1" allow_delete="true" />
+            <source>(Android App) Never have I ever (von Salah Nerje)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle die schon mal ohne Zähne putzen ins Bett gegangen sind trinken zwei.</quest_text>
+                <quest_text>Alle die noch nie ohne Zähne putzen ins Bett gegangen sind trinken zwei</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="1" allow_delete="true" />
+            <source>(Android App) Never have I ever (von Salah Nerje)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle die schon mal auf einer Bananenschale ausgerutscht sind trinken zwei.</quest_text>
+                <quest_text>Alle die noch nie auf einer Bananenschale ausgerutscht sind trinken zwei</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="1" allow_delete="true" />
+            <source>(Android App) Never have I ever (von Salah Nerje)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die sich noch nie selbst die Haare geschnitten haben.</quest_text>
+                <quest_text>Alle trinken die sich schon selbst die Haare geschnitten haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="1" allow_delete="true" />
+            <source>(Android App) Never have I ever (von Salah Nerje)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle die schon aus einem Club/einer Bar hinausgeworfen wurden trinken zwei.</quest_text>
+                <quest_text>Alle die noch nie aus einem Club/einer Bar hinausgeworfen wurden trinken zwei</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="2" allow_delete="true" />
+            <source>aus "Buzzed - First Expansion Pack"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon einmal Windeln wechseln mussten.</quest_text>
+                <quest_text>Alle trinken die noch nie einmal Windeln wechseln mussten..</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="2" allow_delete="true" />
+            <source>aus "Buzzed - First Expansion Pack"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle trinken die schon aus Wut jemanden ein Getränk ins Gesicht geschüttet haben.</quest_text>
                 <quest_text>Alle trinken die noch nie aus Wut jemanden ein Getränk ins Gesicht geschüttet haben.</quest_text>
             </language>
@@ -4019,13 +4719,29 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle trinken die schon mal vor Mittag schon betrunken waren.</quest_text>
+                <quest_text>Alle trinken die noch nie vor Mittag schon betrunken waren.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="2" allow_delete="true" />
+            <source>(Android App) Ich hab noch nie - Trinkspiel (von SKIEL Ltd.)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon etwas von Victoria Secret gekauft haben.</quest_text>
+                <quest_text>Alle trinken die noch nie etwas von Victoria Secret gekauft haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="2" player="GIRLS" allow_delete="true" />
+            <source>(Android App) Ich hab noch nie - Trinkspiel (von SKIEL Ltd.)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle trinken die eine Person unter 16 Jahren daten würden.</quest_text>
                 <quest_text>Alle trinken die eine Person unter 18 Jahren daten würden.</quest_text>
                 <quest_text>Alle trinken die eine Person unter 21 Jahren daten würden.</quest_text>
                 <quest_text>Alle trinken die eine Person unter 25 Jahren daten würden.</quest_text>
                 <quest_text>Alle trinken die eine Person unter 30 Jahren daten würden.</quest_text>
-                <quest_text>Alle trinken die eine Person unter 40 Jahren daten würden.</quest_text>
-                <quest_text>Alle trinken die eine Person unter 50 Jahren daten würden.</quest_text>
                 <quest_text>Alle trinken die eine Person über 16 Jahren daten würden.</quest_text>
                 <quest_text>Alle trinken die eine Person über 18 Jahren daten würden.</quest_text>
                 <quest_text>Alle trinken die eine Person über 21 Jahren daten würden.</quest_text>
@@ -4048,6 +4764,74 @@
             <category category_name="NEVER_HAVE_I" />
             <conf level="2" allow_delete="true" />
             <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die eine Zahnspange haben.</quest_text>
+                <quest_text>Alle trinken die keine Zahnspange haben.</quest_text>
+                <quest_text>Alle trinken die eine Zahnspange hatten (oder noch haben).</quest_text>
+                <quest_text>Alle trinken die noch nie eine Zahnspange hatten.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="2" allow_delete="true" />
+            <source>aus "Buzzed"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die noch nie Karaoke singen waren.</quest_text>
+                <quest_text>Alle trinken die schon mal Karaoke singen waren.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="2" allow_delete="true" />
+            <source>(Android App) Never have I ever (von Salah Nerje)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die noch nie auf einer Kuh geritten sind.</quest_text>
+                <quest_text>Alle trinken die schon mal auf einer Kuh geritten sind.</quest_text>
+                <quest_text>Alle trinken die noch nie auf einem Elefanten geritten sind.</quest_text>
+                <quest_text>Alle trinken die schon mal auf einem Elefanten geritten sind.</quest_text>
+                <quest_text>Alle trinken die noch nie auf einem Kamel geritten sind.</quest_text>
+                <quest_text>Alle trinken die schon mal auf einem Kamel geritten sind.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="2" allow_delete="true" />
+            <source>(Android App) Never have I ever (von Salah Nerje)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon eine Kuh gemolken haben.</quest_text>
+                <quest_text>Alle trinken die noch nie eine Kuh gemolken haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="2" allow_delete="true" />
+            <source>(Android App) Never have I ever (von Salah Nerje)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon einen Sextraum mit einem Lehrer, Trainer oder Professor hatten.</quest_text>
+                <quest_text>Alle trinken die noch nie einen Sextraum mit einem Lehrer, Trainer oder Professor hatten.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="3" friends="GOOD" allow_delete="true" />
+            <source>(Android App) Never have I ever (von Salah Nerje)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon darüber nachgedacht haben mit der besten Freundin rumzumachen.</quest_text>
+                <quest_text>Alle trinken die noch nie darüber nachgedacht haben mit der besten Freundin rumzumachen.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="7" friends="GOOD" allow_delete="true" />
+            <source>(Android App) Never have I ever (von Salah Nerje)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon versucht haben eine bereits vergebene Person ins Bett zu bekommen.</quest_text>
+                <quest_text>Alle trinken die noch nie versucht haben eine bereits vergebene Person ins Bett zu bekommen.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="3" allow_delete="true" />
         </quest>
         <quest>
             <language lang_code="DE">
@@ -4178,6 +4962,33 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle trinken die noch nie etwas mit einem Geschwister eines Freundes/einer Freundin hatten.</quest_text>
+                <quest_text>Alle trinken die schon mal etwas mit einem Geschwister eines Freundes/einer Freundin hatten.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="3" allow_delete="true" />
+            <source>(Android App) Ich hab noch nie - Trinkspiel (von SKIEL Ltd.)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die noch nie unerlaubt etwas aus einem Restaurant mitgenommen haben.</quest_text>
+                <quest_text>Alle trinken die schon mal unerlaubt etwas aus einem Restaurant mitgenommen haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="3" allow_delete="true" />
+            <source>(Android App) Ich hab noch nie - Trinkspiel (von SKIEL Ltd.)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die noch nie auf einer Bar getanzt haben.</quest_text>
+                <quest_text>Alle trinken die schon mal auf einer Bar getanzt haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="3" allow_delete="true" />
+            <source>(Android App) Never have I ever (von Salah Nerje)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle die noch nie jemanden mit Zungenpiercing geküsst haben müssen trinken.</quest_text>
                 <quest_text>Alle die schon einmal jemanden mit Zungenpiercing geküsst haben müssen trinken.</quest_text>
             </language>
@@ -4232,6 +5043,16 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle die schon mit zwei (oder mehr) Personen am gleichen Tag etwas hatten, trinken zwei.</quest_text>
+                <quest_text>Alle die noch nie mit zwei (oder mehr) Personen am gleichen Tag etwas hatten, trinken zwei.</quest_text>
+                <comment>YOU'RE A FUCKING LEGEND!</comment>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="3" allow_delete="true" />
+            <source>aus "Buzzed - First Expansion Pack"</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle trinken die einem Freund oder einer Freundin schon mal den Partner ausgespannt haben.</quest_text>
                 <quest_text>Alle trinken die noch nie einem Freund oder einer Freundin den Partner ausgespannt haben.</quest_text>
             </language>
@@ -4257,6 +5078,24 @@
             <category category_name="NEVER_HAVE_I" />
             <conf level="3" friends="GOOD" allow_delete="true" />
             <source>aus Privacy Quickie FAN-Edition</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon mal besoffen jemanden mit einem Stift angemalt haben.</quest_text>
+                <quest_text>Alle trinken die noch nie besoffen jemanden mit einem Stift angemalt haben.</quest_text>
+                <comment>Penis?</comment>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="3" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon mal besoffen von jemandem angemalt wurden.</quest_text>
+                <quest_text>Alle trinken die noch nie besoffen von jemandem angemalt wurden.</quest_text>
+                <comment>Penis?</comment>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="3" allow_delete="true" />
         </quest>
         <quest>
             <language lang_code="DE">
@@ -4294,6 +5133,32 @@
             <category category_name="NEVER_HAVE_I" />
             <conf level="3" allow_delete="true" />
             <source>aus Privacy Quickie FAN-Edition</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon mal mit jemanden geschlafen haben der/die 5 Jahre (oder mehr) jünger war.</quest_text>
+                <quest_text>Alle trinken die noch nie mit jemanden geschlafen haben der/die 5 Jahre (oder mehr) jünger war.</quest_text>
+                <quest_text>Alle trinken die schon mal mit jemanden geschlafen haben der/die 8 Jahre (oder mehr) jünger war.</quest_text>
+                <quest_text>Alle trinken die noch nie mit jemanden geschlafen haben der/die 8 Jahre (oder mehr) jünger war.</quest_text>
+                <quest_text>Alle trinken die schon mal mit jemanden geschlafen haben der/die 10 Jahre (oder mehr) jünger war.</quest_text>
+                <quest_text>Alle trinken die noch nie mit jemanden geschlafen haben der/die 10 Jahre (oder mehr) jünger war.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="4" allow_delete="true" />
+            <source>(Android App) Ich hab noch nie - Trinkspiel (von SKIEL Ltd.)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon mal mit jemanden geschlafen haben der/die 5 Jahre (oder mehr) älter war.</quest_text>
+                <quest_text>Alle trinken die noch nie mit jemanden geschlafen haben der/die 5 Jahre (oder mehr) älter war.</quest_text>
+                <quest_text>Alle trinken die schon mal mit jemanden geschlafen haben der/die 8 Jahre (oder mehr) älter war.</quest_text>
+                <quest_text>Alle trinken die noch nie mit jemanden geschlafen haben der/die 8 Jahre (oder mehr) älter war.</quest_text>
+                <quest_text>Alle trinken die schon mal mit jemanden geschlafen haben der/die 10 Jahre (oder mehr) älter war.</quest_text>
+                <quest_text>Alle trinken die noch nie mit jemanden geschlafen haben der/die 10 Jahre (oder mehr) älter war.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="4" allow_delete="true" />
+            <source>(Android App) Ich hab noch nie - Trinkspiel (von SKIEL Ltd.)</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -4641,6 +5506,22 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle trinken die noch nie Unterwäschefotos von sich auf Snapchat verschickt haben.</quest_text>
+                <quest_text>Alle trinken die bereits einmal Unterwäsche von sich auf Snapchat verschickt haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="4" friends="GOOD" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die noch nie Nacktfotos von sich auf Snapchat verschickt haben.</quest_text>
+                <quest_text>Alle trinken die bereits einmal Nacktfotos von sich auf Snapchat verschickt haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="4" friends="GOOD" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle trinken die noch nie einer wildfremden Person ihren blanken Hintern entgegengestreckt haben.</quest_text>
                 <quest_text>Alle trinken die bereits einer wildfremden Person ihren blanken Hintern entgegengestreckt haben.</quest_text>
             </language>
@@ -4962,6 +5843,15 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle Mädls trinken die schon mal ihre Brüste gezeigt haben um ein gratis Getränk zu bekommen.</quest_text>
+                <quest_text>Alle Mädls trinken die noch nie ihre Brüste gezeigt haben um ein gratis Getränk zu bekommen.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="5" player="GIRLS" friends="GOOD" allow_delete="true" />
+            <source>(Android App) Never have I ever (von Salah Nerje)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Jeder der noch nie sexuelle Fantasien mit jemandem aus dieser Gruppe hatte muss trinken.</quest_text>
                 <quest_text>Jeder der schon sexuelle Fantasien mit jemandem aus dieser Gruppe hatte muss trinken.</quest_text>
             </language>
@@ -5031,6 +5921,24 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle trinken die sich schon mal die Nippel gepierced haben.</quest_text>
+                <quest_text>Alle trinken die sich noch nie die Nippel gepierced haben.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="5" player="GIRLS" friends="GOOD" allow_delete="true" />
+            <source>(Android App) Never have I ever (von Salah Nerje)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die ein Buch für Sex (Tipps oder Positionen) haben oder oder hatten.</quest_text>
+                <quest_text>Alle trinken die nie ein Buch für Sex (Tipps oder Positionen) haben oder hatten.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="5" player="GIRLS" friends="GOOD" allow_delete="true" />
+            <source>(Android App) Never have I ever (von Salah Nerje)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle trinken die schon mal mit einem Blowjob aufgeweckt wurden.</quest_text>
                 <quest_text>Alle trinken die noch nie mit einem Blowjob aufgeweckt wurden.</quest_text>
             </language>
@@ -5058,12 +5966,48 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle trinken die schon einmal Sex mit einer Person hatten die bereits vergeben war.</quest_text>
+                <quest_text>Alle trinken die noch nie Sex mit einer Person hatten die bereits vergeben war.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="5" friends="GOOD" allow_delete="true" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon einmal Sex mit beiden Geschlechtern hatten.</quest_text>
+                <quest_text>Alle trinken die noch nicht Sex mit beiden Geschlechtern hatten.</quest_text>
+                <comment>Ihr Luder!</comment>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="5" friends="GOOD" allow_delete="true" />
+            <source>(Android-App) Torben Trinkt - Trinkspiel (von Nicolas Neudeck)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle trinken die schon einmal einen Filmriss durch zu viel Alkohol hatten.</quest_text>
                 <quest_text>Alle trinken die noch nie einen Filmriss durch zu viel Alkohol hatten.</quest_text>
             </language>
             <category category_name="NEVER_HAVE_I" />
-            <conf level="6" friends="GOOD" allow_delete="true" />
+            <conf level="5" friends="GOOD" allow_delete="true" />
             <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die noch nie einen Penis im Mund hatten.</quest_text>
+                <quest_text>Alle trinken die schon einen Penis im Mund hatten.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="6" player="GIRLS" friends="GOOD" allow_delete="true" />
+            <source>(Android App) Never have I ever (von Salah Nerje)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die noch nie ungeschützten Geschlechtsverkehr hatten.</quest_text>
+                <quest_text>Alle trinken die schon ungeschützten Geschlechtsverkehr hatten.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="6" friends="GOOD" allow_delete="true" />
+            <source>(Android App) Never have I ever (von Salah Nerje)</source>
         </quest>
         <quest>
             <language lang_code="DE">
@@ -5173,6 +6117,10 @@
                 <quest_text>Alle die bereits in einer Universität masturbiert haben müssen trinken.</quest_text>
                 <quest_text>Alle die noch nie am Arbeitsplatz masturbiert haben müssen trinken.</quest_text>
                 <quest_text>Alle die bereits am Arbeitsplatz masturbiert haben müssen trinken.</quest_text>
+                <quest_text>Alle die noch nie auf einem Dach masturbiert haben müssen trinken.</quest_text>
+                <quest_text>Alle die bereits auf einem Dach masturbiert haben müssen trinken.</quest_text>
+                <quest_text>Alle die noch nie auf einem Trampolin masturbiert haben müssen trinken.</quest_text>
+                <quest_text>Alle die bereits auf einem Trampolin masturbiert haben müssen trinken.</quest_text>
             </language>
             <category category_name="NEVER_HAVE_I" />
             <conf level="6" friends="GOOD" allow_delete="true" />
@@ -5290,6 +6238,10 @@
                 <quest_text>Alle trinken die schon mal Sex auf einer Treppe hatten.</quest_text>
                 <quest_text>Alle trinken die noch nie Sex im Krankenhaus hatten.</quest_text>
                 <quest_text>Alle trinken die schon mal Sex im Krankenhaus hatten.</quest_text>
+                <quest_text>Alle trinken die noch nie Sex auf einem Dach hatten.</quest_text>
+                <quest_text>Alle trinken die schon mal Sex auf einem Dach hatten.</quest_text>
+                <quest_text>Alle trinken die noch nie Sex auf einem Trampolin hatten.</quest_text>
+                <quest_text>Alle trinken die schon mal Sex auf einem Trampolin hatten.</quest_text>
             </language>
             <category category_name="NEVER_HAVE_I" />
             <conf level="6" friends="GOOD" allow_delete="true" />
@@ -5340,6 +6292,10 @@
                 <quest_text>Alle trinken die schon mal in einer Universität eine Frau gefingert haben.</quest_text>
                 <quest_text>Alle trinken die noch nie eine Frau am Arbeitsplatz gefingert haben.</quest_text>
                 <quest_text>Alle trinken die schon mal eine Frau am Arbeitsplatz gefingert haben.</quest_text>
+                <quest_text>Alle trinken die noch nie eine Frau auf einem Dach gefingert haben.</quest_text>
+                <quest_text>Alle trinken die schon mal eine Frau auf einem Dach gefingert haben.</quest_text>
+                <quest_text>Alle trinken die noch nie eine Frau auf einem Trampolin gefingert haben.</quest_text>
+                <quest_text>Alle trinken die schon mal eine Frau auf einem Trampolin gefingert haben.</quest_text>
             </language>
             <category category_name="NEVER_HAVE_I" />
             <conf level="6" friends="GOOD" allow_delete="true" />
@@ -5361,6 +6317,23 @@
             <category category_name="NEVER_HAVE_I" />
             <conf level="6" friends="GOOD" allow_delete="true" />
             <source>aus einer pr0p0ll-Umfrage</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon einmal "Sex on the Beach" hatten - nicht den Cocktail!</quest_text>
+                <quest_text>Alle trinken die noch nie "Sex on the Beach" hatten - nicht den Cocktail!</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="6" friends="GOOD" allow_delete="true" />
+            <source>(Android App) Ich hab noch nie - Trinkspiel (von SKIEL Ltd.)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle trinken die schon einmal Sex hatten obwohl sie mit einer anderen Person in einer Beziehung waren.</quest_text>
+                <quest_text>Alle trinken die noch nie Sex hatten obwohl sie mit einer anderen Person in einer Beziehung waren.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="6" friends="GOOD" allow_delete="true" />
         </quest>
         <quest>
             <language lang_code="DE">
@@ -5426,6 +6399,15 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Alle die noch nie Fesseln oder ähnliches für das Liebesspiel verwendet haben müssen trinken.</quest_text>
+                <quest_text>Alle die bereits Fesseln oder ähnliches für das Liebesspiel verwendet haben müssen trinken.</quest_text>
+            </language>
+            <category category_name="NEVER_HAVE_I" />
+            <conf level="7" friends="GOOD" allow_delete="true" />
+            <source>(Android App) Never have I ever (von Salah Nerje)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Alle Mädchen trinken die schon mal während des Orgasmus ausgespritzt haben (squirting).</quest_text>
                 <quest_text>Alle Mädchen trinken die noch nie während des Orgasmus ausgespritzt haben (squirting).</quest_text>
             </language>
@@ -5476,6 +6458,10 @@
                 <quest_text>Alle Mädchen trinken die schon mal in einer Universität einem Typen einen runtergeholt haben.</quest_text>
                 <quest_text>Alle Mädchen trinken die noch nie einem Typen am Arbeitsplatz einen runtergeholt haben.</quest_text>
                 <quest_text>Alle Mädchen trinken die schon mal einem Typen am Arbeitsplatz einen runtergeholt haben.</quest_text>
+                <quest_text>Alle Mädchen trinken die noch nie einem Typen auf einem Dach einen runtergeholt haben.</quest_text>
+                <quest_text>Alle Mädchen trinken die schon mal einem Typen auf einem Dach einen runtergeholt haben.</quest_text>
+                <quest_text>Alle Mädchen trinken die noch nie einem Typen auf einem Trampolin einen runtergeholt haben.</quest_text>
+                <quest_text>Alle Mädchen trinken die schon mal einem Typen auf einem Trampolin einen runtergeholt haben.</quest_text>
             </language>
             <category category_name="NEVER_HAVE_I" />
             <conf level="8" player="GIRLS" friends="GOOD" allow_delete="true" />
@@ -5526,6 +6512,10 @@
                 <quest_text>Alle Mädchen trinken die schon mal in einer Universität einen Typen oral befriedigt haben.</quest_text>
                 <quest_text>Alle Mädchen trinken die noch nie einen Typen am Arbeitsplatz oral befriedigt haben.</quest_text>
                 <quest_text>Alle Mädchen trinken die schon mal einen Typen am Arbeitsplatz oral befriedigt haben.</quest_text>
+                <quest_text>Alle Mädchen trinken die noch nie einen Typen auf einem Dach oral befriedigt haben.</quest_text>
+                <quest_text>Alle Mädchen trinken die schon mal einen Typen auf einem Dach oral befriedigt haben.</quest_text>
+                <quest_text>Alle Mädchen trinken die noch nie einen Typen auf einem Trampolin oral befriedigt haben.</quest_text>
+                <quest_text>Alle Mädchen trinken die schon mal einen Typen auf einem Trampolin oral befriedigt haben.</quest_text>
             </language>
             <category category_name="NEVER_HAVE_I" />
             <conf level="8" player="GIRLS" friends="GOOD" allow_delete="true" />
@@ -5574,6 +6564,10 @@
                 <quest_text>Alle trinken die schon mal in einer Universität eine Frau oral befriedigt haben.</quest_text>
                 <quest_text>Alle trinken die noch nie eine Frau am Arbeitsplatz oral befriedigt haben.</quest_text>
                 <quest_text>Alle trinken die schon mal eine Frau am Arbeitsplatz oral befriedigt haben.</quest_text>
+                <quest_text>Alle trinken die noch nie eine Frau auf einem Dach oral befriedigt haben.</quest_text>
+                <quest_text>Alle trinken die schon mal eine Frau auf einem Dach oral befriedigt haben.</quest_text>
+                <quest_text>Alle trinken die noch nie eine Frau auf einem Trampolin oral befriedigt haben.</quest_text>
+                <quest_text>Alle trinken die schon mal eine Frau auf einem Trampolin oral befriedigt haben.</quest_text>
             </language>
             <category category_name="NEVER_HAVE_I" />
             <conf level="8" player="GIRLS" friends="GOOD" allow_delete="true" />
@@ -5655,6 +6649,23 @@
 
         <!-- flash -->
 
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Hebe dein T-Shirt über deinen Kopf. Zeige deinen nackten Oberkörper.</quest_text>
+            </language>
+            <category category_name="DARE" />
+            <conf level="5" player="ONE" friends="GOOD" allow_delete="true" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Hebe dein T-Shirt über deinen Kopf (incl. BH). Zeige deinen nackten (!) Oberkörper.</quest_text>
+            </language>
+            <category category_name="DARE" />
+            <category category_name="NAUGHTY" />
+            <conf level="6" player="A_FEMALE" friends="GOOD" skip="true" allow_delete="true" />
+            <public_conf level="0" />
+        </quest>
         <quest>
             <language lang_code="DE">
                 <quest_text>Es wird Zeit für etwas Sport. Laufe eine Runde im naheliegenden Park oder einmal um den Häuserblock, nur in Unterhose (nein auch kein BH). Socken und Schuhe sind erlaubt.</quest_text>
@@ -5831,6 +6842,14 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>Trinke zwei und zeige den Mitspielern deinen tollen nackten Oberkörper (Front).</quest_text>
+            </language>
+            <category category_name="DARE" />
+            <conf level="5" player="ONE" friends="GOOD" allow_delete="true" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Zieh dir so viele Kleidungsstücke aus wie du möchtest und hüpfe mit der restlichen Kleidung unter die eiskalte (!) Dusche bis du komplett nass bist. Nach dem Duschvorgang darfst du deine Kleidung nicht mehr tauschen (was nass ist, bleibt nass). Drinke drei damit dir warm wird.</quest_text>
             </language>
             <category category_name="DARE" />
@@ -5974,6 +6993,15 @@
             </language>
             <category category_name="DARE" />
             <conf level="7" player="ONE" friends="GOOD" skip="true" allow_delete="true" />
+            <public_conf level="0" />
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Trinke zwei und zeige den Mitspielern deinen tollen nackten und deine Brüste.</quest_text>
+            </language>
+            <category category_name="DARE" />
+            <category category_name="NAUGHTY" />
+            <conf level="7" player="A_FEMALE" friends="GOOD" skip="true" allow_delete="true" />
             <public_conf level="0" />
         </quest>
         <quest>
@@ -6355,6 +7383,50 @@
         </quest>
         <quest>
             <language lang_code="DE">
+                <quest_text>xXx muss trinken. Und zwar 5x pro Kleidungsstück das du gewillt bist für diesen wohltätigen Zweck abzulegen.</quest_text>
+            </language>
+            <category category_name="STRIP_CLOTHES" />
+            <category category_name="DRINKING" />
+            <apply_rule rule="clothes_def" />
+            <apply_rule rule="stripped_clothes" />
+            <conf level="5" player="ONE" partner="YES" friends="GOOD" allow_delete="true" />
+            <source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Du trinkst. Und zwar 5x pro Kleidungsstück das xXx gewillt ist für diesen wohltätigen Zweck abzulegen.</quest_text>
+            </language>
+            <category category_name="STRIP_CLOTHES" />
+            <category category_name="DRINKING" />
+            <apply_rule rule="clothes_def" />
+            <apply_rule rule="stripped_clothes" />
+            <conf level="5" player="ONE" partner="YES" friends="GOOD" allow_delete="true" />
+            <source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Alle außer dir trinken. Und zwar 5x pro Kleidungsstück das du gewillt bist für diesen wohltätigen Zweck abzulegen.</quest_text>
+            </language>
+            <category category_name="STRIP_CLOTHES" />
+            <category category_name="DRINKING" />
+            <apply_rule rule="clothes_def" />
+            <apply_rule rule="stripped_clothes" />
+            <conf level="5" player="ONE" partner="ALL" friends="GOOD" allow_delete="true" />
+            <source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Trinke. Und zwar 5x pro Kleidungsstück das jemand anders gewillt ist für diesen wohltätigen Zweck abzulegen.</quest_text>
+            </language>
+            <category category_name="STRIP_CLOTHES" />
+            <category category_name="DRINKING" />
+            <apply_rule rule="clothes_def" />
+            <apply_rule rule="stripped_clothes" />
+            <conf level="5" player="ONE" partner="ALL" friends="GOOD" allow_delete="true" />
+            <source>www.tordol.com</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Ziehe dir ein Kleidungsstück an welches xXx trägt. xXx muss dieses ausziehen und hergeben.</quest_text>
             </language>
             <category category_name="CLOTHES_BACK_ON" />
@@ -6598,8 +7670,28 @@
 
         <quest>
             <language lang_code="DE">
+                <quest_text>Lecke über die Wange von xXx.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <category category_name="NAUGHTY" />
+            <conf level="3" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" />
+            <conf level="3" partner="FEMALE" />
+            <source>(Android-App) Dare&amp;Drink Trinkspiel (von Julien Kessels)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
+                <quest_text>Lecke die Lippen von xXx.</quest_text>
+            </language>
+            <category category_name="DO_FUNNY_THINGS" />
+            <category category_name="NAUGHTY" />
+            <conf level="5" player="ONE" partner="OPPOSITE_SEX" friends="GOOD" />
+            <conf level="5" partner="FEMALE" />
+            <source>(Android-App) Torben Trinkt - Trinkspiel (von Nicolas Neudeck)</source>
+        </quest>
+        <quest>
+            <language lang_code="DE">
                 <quest_text>Stecke deinen Finger in Nutella (oder ähnliches wie Honig, ...) bzw. bedecke den Finger mit Essbarem. xXx darf anschließend deinen Finger in den Mund nehmen und leidenschaftlich abschlecken, langsam und verführerisch.</quest_text>
-                <quest_text>xXx steckt seinen Finger in Nutella (oder ähnliches wie Honig, ...) bzw. bedeckt seinen Finger mit Essbarem. Du darfst anschließend seinen Finger in den Mund nehmen und leidenschaftlich abschlecken, langsam und verführerisch.</quest_text>
+                <quest_text>xXx steckt seinen/ihren Finger in Nutella (oder ähnliches wie Honig, ...) bzw. bedeckt seinen Finger mit Essbarem. Du darfst anschließend seinen Finger in den Mund nehmen und leidenschaftlich abschlecken, langsam und verführerisch.</quest_text>
             </language>
             <category category_name="NAUGHTY" />
             <requirement requires="CREAM" />
@@ -7468,11 +8560,8 @@ Velli, wähle deinen Sklaven. Dieser muss über zwei Runden deine Schlucke trink
 Buffallo-Regel! NIEMAND darf sein Glas mit seiner/ihrer stärkeren Hand halten.
 
 ideen für ab friends-version:
-öfter flashen
 nacktfoto/nactvideo
 mehr fotoaction
-
-more swapping clothes
 
 ideen für nur benefits-version:
 facesitting
@@ -7507,12 +8596,26 @@ so dinge wie one-finger-challenge, heartshapedboobchallenge, bellybuttonchalleng
 -->
 <!--www.tordol.com
 If any other player is willing to play in their underwear for two rounds, you must also do so.
-If any member of the opposite sex is willing to strip for one round, you must do a shot of their choice. You must do this for as many players as are willing, up to 4.
-Name one intimate act that you would be willing to do, yet your partner has never (or will never) ask you to do so?
-It is said that every person is a certain type of drunk: aggressive, sad, funny, etc. Give you best guess as to what type of drunk each of the other players are / would be.
 What is the most alcohol you have ever drank at a single party, bar, or time? What were you drinking?
 Name one sex toy that you would like your partner to buy for you. Now name one that you would like them to buy for themself.
 What turns you on? You must state 3 things that really get you hot.
 Do you enjoy watching your partner, or other people, masturbate? Why or why not?
 What, in your opinion, is your partner's ultimate sexual / romantic fantasy? Why do you think this appeals to them?
+-->
+<!--
+instead of skip change to another quest
+-->
+<!--aus "These Cards Will Get You Drunk"
+Misery loves company. Keep this card. You can use this card once to force someone to drink with you.
+Double Attack. Keep this card. You can use it once to force a drinker to drink double.
+Swap Attack. Keep this card. You can use it once to force someone else to drink instead of you.
+-->
+<!--aus "Buzzed"
+Which player has had sex in the most exotic location. The person with the most votes drinks.
+-->
+<!--
+Torben Trinkt - benefitsaufgaben
+
+Wahrheit oder Pflicht:
+Halte Händchen mit deinem linken Nachbarn (wie lange???)
 -->
