@@ -51,9 +51,7 @@ public abstract class ElementXMLHelper {
      *              qualified names are not available.
      * @return the ElementXMLHelper best suitable for the next action.
      */
-    public ElementXMLHelper endElement(String uri, String localName, String qName) {
-        return this;
-    }
+    public ElementXMLHelper endElement(String uri, String localName, String qName) { return this; }
 
     /**
      * Read the XML file with a xmlPullParser.

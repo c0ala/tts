@@ -97,6 +97,12 @@
 				android:background="?android:attr/listDivider" />
 
 			<CheckBox
+				android:id="@+id/requirement_pencil"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/requirement_pencil" />
+
+			<CheckBox
 				android:id="@+id/requirement_ice_cube"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"

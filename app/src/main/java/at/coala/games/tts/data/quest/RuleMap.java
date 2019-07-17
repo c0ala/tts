@@ -15,7 +15,7 @@ public class RuleMap {
      *
      * @see Map
      */
-    private Map<String, String> map = new HashMap<String, String>();
+    private Map<String, String> map = new HashMap<>();
 
     /**
      * Adds a rule to the map.

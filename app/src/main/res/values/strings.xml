@@ -22,10 +22,11 @@
     <string name="friends_benefits">Freundschaft+, Erotik</string>
     <!-- insert the number of quests available with String.format() -->
     <string name="space_questcount">%1$d Aufgaben vorhanden.</string>
-    <string name="requirement_ice_cube">Eiswürfel vorhanden</string>
     <string name="requirement_cream">cremige oder füssige Substanzen wie Sahne, Honig, flüssige Schokolade, Marmelade, ...</string>
-    <string name="requirement_pool">Swimming Pool / See vorhanden</string>
     <string name="requirement_dance">Tanzfläche / Tanzmöglichkeit vorhanden</string>
+    <string name="requirement_ice_cube">Eiswürfel vorhanden</string>
+    <string name="requirement_pencil">Stift (Filzstift, Kulli, ...)</string>
+    <string name="requirement_pool">Swimming Pool / See vorhanden</string>
 
     <!-- activity_play.xml -->
     <string name="abort_button">Lieber nicht</string>

@@ -6,7 +6,6 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 
-import at.coala.games.tts.data.quest.Quest;
 import at.coala.games.tts.data.quest.QuestCollection;
 import at.coala.games.tts.data.quest.RuleMap;
 import at.coala.games.tts.dba.xml.QuestDataXMLAccess;
@@ -15,8 +14,6 @@ import at.coala.games.tts.dba.xml.QuestDataXMLAccess;
  * A Helper to extract data out of XML quest elements.
  *
  * @author Klaus
- * @version 1.1
- * @since 15.07.2015.
  */
 public class QuestElementXMLHelper extends ElementXMLHelper {
 
@@ -98,7 +95,8 @@ public class QuestElementXMLHelper extends ElementXMLHelper {
      * @see ElementXMLHelper
      */
     @Override
-    public ElementXMLHelper startElement(String uri, String localName, String qName, Attributes attributes) {
+    public ElementXMLHelper startElement(
+            String uri, String localName, String qName, Attributes attributes) {
         if (QuestDataXMLAccess.ELEMENT_QUEST.equals(localName)) {
             return firstChild;
         } else if (QuestDataXMLAccess.ELEMENT_RULES.equals(localName)) return ruleHelper;

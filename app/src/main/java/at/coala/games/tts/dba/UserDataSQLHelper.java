@@ -63,35 +63,15 @@ class UserDataSQLHelper extends SQLiteOpenHelper {
 	 * Get all users in the database.
 	 *
 	 * @param db the database.
-	 * @return a list with all users.
-	 * @see List
-	 * @see SQLiteDatabase
-	 * @see User
-	 */
-	@Deprecated
-	List<User> getUsers(SQLiteDatabase db) {
-		Cursor cursor = db.rawQuery("SELECT name, sex FROM user", null);
-		List<User> userList = new ArrayList<>();
-		if (cursor.moveToFirst()) {
-			do {
-				userList.add(new User(cursor.getString(0), cursor.getInt(1)));
-			} while(cursor.moveToNext());
-		}
-		cursor.close();
-		return userList;
-	}
-
-	/**
-	 * Get all users in the database.
-	 *
-	 * @param db the database.
 	 * TODO
 	 * @see List
 	 * @see SQLiteDatabase
 	 * @see User
 	 */
 	void getUsers(SQLiteDatabase db, List<User> userListActive, List<User> userListInactive) {
-		Cursor cursor = db.rawQuery("SELECT name, sex, active, level, clothes, points FROM user", null);
+		Cursor cursor =db.rawQuery(
+				"SELECT name, sex, active, level, clothes, points FROM user",
+				null);
 		if (cursor.moveToFirst()) {
 			do {
 				switch (cursor.getInt(2)) {

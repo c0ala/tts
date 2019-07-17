@@ -7,34 +7,60 @@ import at.coala.games.tts.data.quest.Quest;
 import at.coala.games.tts.game.GameDataManager;
 
 /**
- * // TODO documentation of fields and methods
+ * This class contains all the settings and parameters that can be set for this
+ * game. Most of them have default values set as final fields in this class.
  *
  * @author Klaus
  */
 public class Settings {
 
-    //TODO
+    /**
+     * Flag describing the maximum time where the user is asked if he wants to
+     * resume the game instead of restarting it. This value is currently set to
+     * 12 hours.
+     */
     public static final long MAX_MILLIS_TO_RESUME_GAME = 12 * 60 * 60 * 1000;
 
     /**
      * A constant holding the default allow_delete flag.
+     *
+     * @see Quest
      */
     public static final int DEFAULT_DELETE = Quest.DELETE_FALSE;
 
+    /**
+     * A constant holding the default friendship_level flag.
+     *
+     * @see Game
+     */
     public static final int DEFAULT_FRIENDS = Game.FRIENDS_LOOSE;
 
+    /**
+     * A constant holding the default game location flag.
+     *
+     * @see Game
+     */
     public static final int DEFAULT_LOCATION = Game.LOCATION_PRIVATE;
 
     /**
      * A constant holding the default partner.
+     *
+     * @see Quest
      */
     public static final int DEFAULT_PARTNER = Quest.PARTNER_NO;
 
     /**
      * A constant holding the default player, a final Quest.PLAYER_ flag.
+     *
+     * @see Quest
      */
     public static final int DEFAULT_PLAYER = Quest.PLAYER_ALL;
 
+    /**
+     * A constant holding the default skip-able flag.
+     *
+     * @see Quest
+     */
     public static final int DEFAULT_SKIP = Quest.SKIP_FALSE;
 
     /**
@@ -57,9 +83,9 @@ public class Settings {
     private static final int DEFAULT_PROBABILITY_NON_ALK_DRINKING = 1;
     private static final int DEFAULT_PROBABILITY_STRIP = 5;
 
-    private List<Integer> custom_requirements = new ArrayList<Integer>();
+    private List<Integer> custom_requirements = new ArrayList<>();
 
-    private static List<Integer> default_requirements = new ArrayList<Integer>();
+    private static List<Integer> default_requirements = new ArrayList<>();
 
     private int friendship_level = Game.FRIENDS_LOOSE;
 
@@ -74,6 +100,7 @@ public class Settings {
     public static final int ATTRIBUTE_REQUIREMENT_DANCE = ATTRIBUTE_REQUIREMENT_CREAM + 1;
     public static final int ATTRIBUTE_REQUIREMENT_ICE_CUBE = ATTRIBUTE_REQUIREMENT_DANCE + 1;
     public static final int ATTRIBUTE_REQUIREMENT_POOL = ATTRIBUTE_REQUIREMENT_ICE_CUBE + 1;
+    public static final int ATTRIBUTE_REQUIREMENT_PENCIL = ATTRIBUTE_REQUIREMENT_POOL + 1;
 
     // TODO documentation
     private static final String ATTRIBUTE_STRING_ALREADY_DRUNK = "already_drunk";
@@ -84,6 +111,7 @@ public class Settings {
     private static final String ATTRIBUTE_STRING_REQUIREMENT_DANCE = "requirement_dance";
     private static final String ATTRIBUTE_STRING_REQUIREMENT_ICE_CUBE = "requirement_ice_cube";
     private static final String ATTRIBUTE_STRING_REQUIREMENT_POOL = "requirement_pool";
+    private static final String ATTRIBUTE_STRING_REQUIREMENT_PENCIL = "requirement_pencil";
 
     /**
      * TODO
@@ -130,46 +158,51 @@ public class Settings {
         if (default_probability == null) default_probability = new int[Quest.CATEGORY_SUM];
         default_probability[Quest.CATEGORY_CLOTHES_BACK_ON] = DEFAULT_PROBABILITY_CLOTHES_BACK_ON
                 + (friendship_level == Game.FRIENDS_BENEFITS
-                ? 1 : 0);
+                    ? 1 : 0);
 
         default_probability[Quest.CATEGORY_CONDITION] = DEFAULT_PROBABILITY_CONDITION
                 + (friendship_level == Game.FRIENDS_BENEFITS
-                ? -5 : 0);
+                    ? -5 : 0);
 
         default_probability[Quest.CATEGORY_DARE] = DEFAULT_PROBABILITY_DARE
                 + (friendship_level == Game.FRIENDS_BENEFITS
-                ? (pc > 9 ? 0 : pc > 7 ? 1 : pc > 5 ? 2 : pc > 3 ? 3 : 4) : 0);
+                    ? (pc > 9 ? 0 : pc > 7 ? 1 : pc > 5 ? 2 : pc > 3 ? 3 : 4) : 0);
 
         default_probability[Quest.CATEGORY_DO_FUNNY_THINGS] = DEFAULT_PROBABILITY_DO_FUNNY_THINGS
                 + (friendship_level == Game.FRIENDS_LOOSE
-                ? 5 : friendship_level == Game.FRIENDS_BENEFITS
-                ? -5 : 0);
+                    ? 5 : friendship_level == Game.FRIENDS_BENEFITS
+                        ? -5 : 0);
 
         default_probability[Quest.CATEGORY_DRINKING] = DEFAULT_PROBABILITY_DRINKING;
 
         default_probability[Quest.CATEGORY_KISSING] = DEFAULT_PROBABILITY_KISSING
                 + (friendship_level == Game.FRIENDS_GOOD
-                ? (pc > 9 ? 4 : pc > 7 ? 3 : pc > 5 ? 2 : pc > 3 ? 1 : 0) : friendship_level == Game.FRIENDS_BENEFITS
-                ? (pc > 9 ? 5 : pc > 7 ? 4 : pc > 5 ? 3 : pc > 3 ? 2 : 1) : 0);
+                    ? (pc > 9 ? 4 : pc > 7 ? 3 : pc > 5 ? 2 : pc > 3 ? 1 : 0)
+                    : friendship_level == Game.FRIENDS_BENEFITS
+                        ? (pc > 9 ? 5 : pc > 7 ? 4 : pc > 5 ? 3 : pc > 3 ? 2 : 1) : 0);
 
         default_probability[Quest.CATEGORY_MOVE_IT] = DEFAULT_PROBABILITY_MOVE_IT;
 
         default_probability[Quest.CATEGORY_NAUGHTY] = DEFAULT_PROBABILITY_NAUGHTY
                 + (friendship_level == Game.FRIENDS_LOOSE
-                ? (pc > 9 ? -9 : pc > 7 ? -8 : pc > 5 ? -7 : pc > 3 ? -6 : -5) : friendship_level == Game.FRIENDS_GOOD
-                ? (pc > 9 ? -8 : pc > 7 ? -6 : pc > 5 ? -4 : pc > 3 ? -2 : 0) : (pc > 9 ? 6 : pc > 7 ? 7 : pc > 5 ? 8 : pc > 3 ? 9 : 10));
+                    ? (pc > 9 ? -9 : pc > 7 ? -8 : pc > 5 ? -7 : pc > 3 ? -6 : -5)
+                    : friendship_level == Game.FRIENDS_GOOD
+                        ? (pc > 9 ? -8 : pc > 7 ? -6 : pc > 5 ? -4 : pc > 3 ? -2 : 0)
+                        : (pc > 9 ? 6 : pc > 7 ? 7 : pc > 5 ? 8 : pc > 3 ? 9 : 10));
 
         default_probability[Quest.CATEGORY_NEVER_HAVE_I] = DEFAULT_PROBABILITY_NEVER_HAVE_I
                 + (friendship_level == Game.FRIENDS_LOOSE
-                ? (pc > 9 ? 4 : pc > 7 ? 3 : pc > 5 ? 2 : pc > 3 ? 1 : 0) : friendship_level == Game.FRIENDS_BENEFITS
-                ? -5 : 0);
+                    ? (pc > 9 ? 4 : pc > 7 ? 3 : pc > 5 ? 2 : pc > 3 ? 1 : 0)
+                    : friendship_level == Game.FRIENDS_BENEFITS
+                        ? -5 : 0);
 
         default_probability[Quest.CATEGORY_NON_ALK_DRINKING] = DEFAULT_PROBABILITY_NON_ALK_DRINKING;
 
         default_probability[Quest.CATEGORY_STRIP_CLOTHES] = DEFAULT_PROBABILITY_STRIP
                 + (friendship_level == Game.FRIENDS_GOOD
-                ? (pc > 9 ? 4 : pc > 7 ? 3 : pc > 5 ? 2 : pc > 3 ? 1 : 0) : friendship_level == Game.FRIENDS_BENEFITS
-                ? (pc > 9 ? 5 : pc > 7 ? 4 : pc > 5 ? 3 : pc > 3 ? 2 : 1) : 0);
+                    ? (pc > 9 ? 4 : pc > 7 ? 3 : pc > 5 ? 2 : pc > 3 ? 1 : 0)
+                    : friendship_level == Game.FRIENDS_BENEFITS
+                        ? (pc > 9 ? 5 : pc > 7 ? 4 : pc > 5 ? 3 : pc > 3 ? 2 : 1) : 0);
     }
 
     /**
@@ -235,6 +268,8 @@ public class Settings {
      */
     public static String getSettingsAttributeString(int setting_attribute_field) {
         switch (setting_attribute_field) {
+            case ATTRIBUTE_ALREADY_DRUNK:
+                return ATTRIBUTE_STRING_ALREADY_DRUNK;
             case ATTRIBUTE_CUSTOM_SETTINGS:
                 return ATTRIBUTE_STRING_CUSTOM_SETTINGS;
             case ATTRIBUTE_FRIENDSHIP_LEVEL:
@@ -249,6 +284,8 @@ public class Settings {
                 return ATTRIBUTE_STRING_REQUIREMENT_POOL;
             case ATTRIBUTE_REQUIREMENT_DANCE:
                 return ATTRIBUTE_STRING_REQUIREMENT_DANCE;
+            case ATTRIBUTE_REQUIREMENT_PENCIL:
+                return ATTRIBUTE_STRING_REQUIREMENT_PENCIL;
             default:
                 return null;
         }
@@ -268,6 +305,8 @@ public class Settings {
                 return ATTRIBUTE_REQUIREMENT_DANCE;
             case Quest.REQUIREMENT_ICE_CUBE:
                 return ATTRIBUTE_REQUIREMENT_ICE_CUBE;
+            case Quest.REQUIREMENT_PENCIL:
+                return ATTRIBUTE_REQUIREMENT_PENCIL;
             case Quest.REQUIREMENT_POOL:
                 return ATTRIBUTE_REQUIREMENT_POOL;
             default:

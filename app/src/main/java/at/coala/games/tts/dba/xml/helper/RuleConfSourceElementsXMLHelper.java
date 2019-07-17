@@ -20,8 +20,6 @@ import at.coala.games.tts.dba.xml.QuestDataXMLAccess;
  * Quest element.
  *
  * @author Klaus
- * @version 2
- * @since 15.07.2015.
  */
 class RuleConfSourceElementsXMLHelper extends ElementXMLHelper {
 
@@ -93,10 +91,14 @@ class RuleConfSourceElementsXMLHelper extends ElementXMLHelper {
      * @see Quest
      * @see QuestCollection
      */
-    RuleConfSourceElementsXMLHelper(ElementXMLHelper parent, QuestCollection quests, List<String> comments, List<String> text) {
-        categories = new ArrayList<Integer>(2);
-        requirements = new ArrayList<Integer>(1);
-        rule_ids = new ArrayList<String>(3);
+    RuleConfSourceElementsXMLHelper(
+            ElementXMLHelper parent,
+            QuestCollection quests,
+            List<String> comments,
+            List<String> text) {
+        categories = new ArrayList<>(2);
+        requirements = new ArrayList<>(1);
+        rule_ids = new ArrayList<>(3);
         this.parent = parent;
         this.quests = quests;
         this.comments = comments;
@@ -164,10 +166,8 @@ class RuleConfSourceElementsXMLHelper extends ElementXMLHelper {
                     try {
                         readCategory(parser);
                     } catch (IllegalArgumentException e) {
-                        /**
-                         * It is ok to ignore this exception. This app will not collapse
-                         * without this quest.
-                         */
+                        // It is ok to ignore this exception. This app will not
+                        // collapse without this quest.
                     }
                     clearData();
                 }
@@ -190,7 +190,8 @@ class RuleConfSourceElementsXMLHelper extends ElementXMLHelper {
      * @see ElementXMLHelper
      * @see XmlPullParser - thrown to signal XML Pull Parser related faults.
      */
-    private void readApplyRule(XmlPullParser parser) throws IOException, XmlPullParserException, IllegalArgumentException {
+    private void readApplyRule(XmlPullParser parser)
+            throws IOException, XmlPullParserException, IllegalArgumentException {
         rule_ids.add(parser.getAttributeValue(null, QuestDataXMLAccess.ATTRIBUTE_APPLY_RULE_ID));
         while (parser.next() != XmlPullParser.END_DOCUMENT) {
             if (parser.getEventType() == XmlPullParser.START_TAG) {
@@ -211,8 +212,10 @@ class RuleConfSourceElementsXMLHelper extends ElementXMLHelper {
      * @throws XmlPullParserException
      * @throws IllegalArgumentException
      */
-    private void readCategory(XmlPullParser parser) throws IOException, XmlPullParserException, IllegalArgumentException {
-        categories.add(Quest.getCategoryField(parser.getAttributeValue(null, QuestDataXMLAccess.ATTRIBUTE_CATEGORY_NAME)));
+    private void readCategory(XmlPullParser parser)
+            throws IOException, XmlPullParserException, IllegalArgumentException {
+        categories.add(Quest.getCategoryField(
+                parser.getAttributeValue(null, QuestDataXMLAccess.ATTRIBUTE_CATEGORY_NAME)));
         while (parser.next() != XmlPullParser.END_DOCUMENT) {
             if (parser.getEventType() == XmlPullParser.START_TAG) {
                 if (QuestDataXMLAccess.ELEMENT_CATEGORY.equals(parser.getName())) {
@@ -243,7 +246,8 @@ class RuleConfSourceElementsXMLHelper extends ElementXMLHelper {
      * @see ElementXMLHelper
      * @see XmlPullParser - thrown to signal XML Pull Parser related faults.
      */
-    private void readConf(XmlPullParser parser) throws IOException, XmlPullParserException, IllegalArgumentException {
+    private void readConf(XmlPullParser parser)
+            throws IOException, XmlPullParserException, IllegalArgumentException {
         setConf(Game.LOCATION_PRIVATE, parser);
         while (parser.next() != XmlPullParser.END_DOCUMENT) {
             if (parser.getEventType() == XmlPullParser.END_TAG) {
@@ -256,7 +260,8 @@ class RuleConfSourceElementsXMLHelper extends ElementXMLHelper {
                     readConf(parser);
                 } else if (QuestDataXMLAccess.ELEMENT_SOURCE.equals(parser.getName())) {
                     readSource(parser);
-                } else if (QuestDataXMLAccess.ELEMENT_PUBLIC_CONFIGURATION.equals(parser.getName())){
+                } else if (QuestDataXMLAccess.ELEMENT_PUBLIC_CONFIGURATION.equals(
+                        parser.getName())){
                     readPublicConf(parser);
                 }
                 return;
@@ -278,7 +283,8 @@ class RuleConfSourceElementsXMLHelper extends ElementXMLHelper {
      * @see ElementXMLHelper
      * @see XmlPullParser - thrown to signal XML Pull Parser related faults.
      */
-    private void readPublicConf(XmlPullParser parser) throws IOException, XmlPullParserException, IllegalArgumentException {
+    private void readPublicConf(XmlPullParser parser)
+            throws IOException, XmlPullParserException, IllegalArgumentException {
         setConf(Game.LOCATION_PUBLIC, parser);
         while (parser.next() != XmlPullParser.END_DOCUMENT) {
             if (parser.getEventType() == XmlPullParser.END_TAG) {
@@ -289,7 +295,8 @@ class RuleConfSourceElementsXMLHelper extends ElementXMLHelper {
             } else if (parser.getEventType() == XmlPullParser.START_TAG) {
                 if (QuestDataXMLAccess.ELEMENT_SOURCE.equals(parser.getName())) {
                     readSource(parser);
-                } else if (QuestDataXMLAccess.ELEMENT_PUBLIC_CONFIGURATION.equals(parser.getName())){
+                } else if (QuestDataXMLAccess.ELEMENT_PUBLIC_CONFIGURATION.equals(
+                        parser.getName())){
                     readPublicConf(parser);
                 }
                 return;
@@ -298,14 +305,17 @@ class RuleConfSourceElementsXMLHelper extends ElementXMLHelper {
     }
 
     /**
+     * TODO
      *
      * @param parser
      * @throws IOException
      * @throws XmlPullParserException
      * @throws IllegalArgumentException
      */
-    private void readRequirement(XmlPullParser parser) throws IOException, XmlPullParserException, IllegalArgumentException {
-        requirements.add(Quest.getRequirementField(parser.getAttributeValue(null, QuestDataXMLAccess.ATTRIBUTE_REQUIRES)));
+    private void readRequirement(XmlPullParser parser)
+            throws IOException, XmlPullParserException, IllegalArgumentException {
+        requirements.add(Quest.getRequirementField(
+                parser.getAttributeValue(null, QuestDataXMLAccess.ATTRIBUTE_REQUIRES)));
         while (parser.next() != XmlPullParser.END_DOCUMENT) {
             if (parser.getEventType() == XmlPullParser.START_TAG) {
                 if (QuestDataXMLAccess.ELEMENT_CONFIGURATION.equals(parser.getName())) {
@@ -466,7 +476,8 @@ class RuleConfSourceElementsXMLHelper extends ElementXMLHelper {
      * @see ElementXMLHelper
      */
     @Override
-    public ElementXMLHelper startElement(String uri, String localName, String qName, Attributes attributes) {
+    public ElementXMLHelper startElement(
+            String uri, String localName, String qName, Attributes attributes) {
         /**
          * TODO
          * change to switch_statement ((is a little bit faster, but needs JAVA 7)
@@ -475,7 +486,8 @@ class RuleConfSourceElementsXMLHelper extends ElementXMLHelper {
          */
         try {
             if (QuestDataXMLAccess.ELEMENT_CATEGORY.equals(localName)) {
-                categories.add(Quest.getCategoryField(attributes.getValue(QuestDataXMLAccess.ATTRIBUTE_CATEGORY_NAME)));
+                categories.add(Quest.getCategoryField(
+                        attributes.getValue(QuestDataXMLAccess.ATTRIBUTE_CATEGORY_NAME)));
             } else if (QuestDataXMLAccess.ELEMENT_CONFIGURATION.equals(localName)) {
                 setConf(Game.LOCATION_PRIVATE, attributes);
             } else if (QuestDataXMLAccess.ELEMENT_PUBLIC_CONFIGURATION.equals(localName)) {
@@ -483,7 +495,8 @@ class RuleConfSourceElementsXMLHelper extends ElementXMLHelper {
             } else if (QuestDataXMLAccess.ELEMENT_APPLY_RULE.equals(localName)) {
                 rule_ids.add(attributes.getValue(QuestDataXMLAccess.ATTRIBUTE_APPLY_RULE_ID));
             } else if (QuestDataXMLAccess.ELEMENT_REQUIREMENT.equals(localName)) {
-                requirements.add(Quest.getRequirementField(attributes.getValue(QuestDataXMLAccess.ATTRIBUTE_REQUIRES)));
+                requirements.add(Quest.getRequirementField(
+                        attributes.getValue(QuestDataXMLAccess.ATTRIBUTE_REQUIRES)));
             }
         } catch (IllegalArgumentException e) {
             clearData();

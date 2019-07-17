@@ -12,8 +12,6 @@ import at.coala.games.tts.game.GameDataManager;
  * This class stores and provides a quest and all data that comes with it.
  *
  * @author Klaus
- * @version 4
- * @since 01.01.1970
  */
 public class Quest {
 
@@ -431,18 +429,28 @@ public class Quest {
 	private static final String REQUIREMENT_ICE_CUBE_STRING = "ICE_CUBE";
 
 	/**
-	 * Flag to use something you can swim in.
+	 * Flag to use a pencil.
 	 */
-	public static final int REQUIREMENT_POOL = REQUIREMENT_ICE_CUBE + 1;
+	public static final int REQUIREMENT_PENCIL = REQUIREMENT_ICE_CUBE + 1;
 
 	/**
-	 * String representation of final flag REQUIREMENT_POLL.
+	 * String representation of final flag REQUIREMENT_PENCIL.
+	 */
+	private static final String REQUIREMENT_PENCIL_STRING = "PENCIL";
+
+	/**
+	 * Flag to use something you can swim in.
+	 */
+	public static final int REQUIREMENT_POOL = REQUIREMENT_PENCIL + 1;
+
+	/**
+	 * String representation of final flag REQUIREMENT_POOL.
 	 */
 	private static final String REQUIREMENT_POOL_STRING = "POOL";
 
 	/**
 	 * A publicly accessible unmodifiable (as converted due to the constructor)
-	 * list of comments, or null of none exist.
+	 * list of rules, or null of none exist.
 	 *
 	 * @see List
 	 * @see RuleMap
@@ -504,7 +512,8 @@ public class Quest {
 		  List<QuestConfiguration> conf,
 		  List<QuestConfiguration> public_conf) {
 		this.categories = Collections.unmodifiableList(categories);
-		this.requirements = (requirements == null) ? null : Collections.unmodifiableList(requirements);
+		this.requirements = (requirements == null) ? null
+				: Collections.unmodifiableList(requirements);
 		this.source = source;
 		this.quest_texts = Collections.unmodifiableList(quest_texts);
 		this.comments = (comments == null) ? null : Collections.unmodifiableList(comments);
@@ -528,7 +537,7 @@ public class Quest {
 		double random = GameDataManager.getRandom();
 		if (location == Game.LOCATION_PRIVATE || public_conf == null) {
 			if (conf.size() == 1) return conf.get(0);
-			List<QuestConfiguration> valid_conf = new ArrayList<QuestConfiguration>();
+			List<QuestConfiguration> valid_conf = new ArrayList<>();
 			//noinspection Convert2streamapi
 			for (QuestConfiguration c : conf) {
 				if (c.level <= level) valid_conf.add(c);
@@ -536,7 +545,7 @@ public class Quest {
 			return valid_conf.get((int)Math.round(random*(double)(valid_conf.size() -1)));
 		} else {
 			if (conf.size() == 1) return public_conf.get(0);
-			List<QuestConfiguration> valid_conf = new ArrayList<QuestConfiguration>();
+			List<QuestConfiguration> valid_conf = new ArrayList<>();
 			//noinspection Convert2streamapi
 			for (QuestConfiguration c : public_conf) {
 				if (c.level <= level) valid_conf.add(c);
@@ -565,7 +574,7 @@ public class Quest {
 	 */
 	public List<String> getRules(RuleMap rule_map) {
 		if (rule_ids == null) return null;
-		List<String> rules = new ArrayList<String>();
+		List<String> rules = new ArrayList<>();
 		//noinspection Convert2streamapi
 		for (String id : rule_ids) rules.add(rule_map.getRule(id));
 		return Collections.unmodifiableList(rules);
@@ -581,10 +590,16 @@ public class Quest {
 	 * @param friendship_level takes a final Game.FRIENDS_ flag.
 	 * @param all_players_are null, or a restriction to valid against only one
 	 *                           sex set with a final User.SEX_ flag.
+	 * @param requirements takes a List of Quest.REQUIREMET_ flags.
 	 * @return true if it is a valid Quest; false if not.
 	 * @see	Game
+	 * @see Quest
 	 */
-	boolean isValid(int location, int friendship_level, Integer all_players_are, List<Integer> requirements) {
+	boolean isValid(
+			int location,
+			int friendship_level,
+			Integer all_players_are,
+			List<Integer> requirements) {
 		minLevel = Integer.MAX_VALUE;
 		if (this.requirements != null && requirements != null) {
 			for (int r : this.requirements) {
@@ -623,7 +638,8 @@ public class Quest {
 							|| c.friendship_level == Game.FRIENDS_LOOSE
 							|| friendship_level == Game.FRIENDS_BENEFITS)
 					&& (all_players_are == null
-					|| (validPlayer(c.player, all_players_are)) && validPartner(c.partner, all_players_are))) {
+					|| (validPlayer(c.player, all_players_are))
+					&& validPartner(c.partner, all_players_are))) {
 				if (c.level < minLevel) minLevel = c.level;
 				valid = true;
 			}
@@ -672,10 +688,10 @@ public class Quest {
 	}
 
 	/**
-	 * TODO
+	 * Maps and returns the Integer representation to the correlating CATEGORY_-String.
 	 *
-	 * @param category_string
-	 * @return
+	 * @param category_string one of CATEGORY_ flags as String.
+	 * @return one of CATEGORY_ flags as Integer.
      */
 	public static Integer getCategoryField(String category_string) {
 		if (category_string == null) return null;
@@ -708,10 +724,10 @@ public class Quest {
 	}
 
 	/**
-	 * TODO
+	 * Maps and returns the Integer representation to the correlating DELETE_-String.
 	 *
-	 * @param delete_string
-	 * @return
+	 * @param delete_string one of DELETE_ flags as String.
+	 * @return one of DELETE_ flags as Integer.
      */
 	public static Integer getDeleteField(String delete_string) {
 		if (delete_string == null) return null;
@@ -726,10 +742,10 @@ public class Quest {
 	}
 
 	/**
-	 * TODO
+	 * Maps and returns the Integer representation to the correlating PARTNER_-String.
 	 *
-	 * @param partner_string
-	 * @return
+	 * @param partner_string one of PARTNER_ flags as String.
+	 * @return one of PARTNER_ flags as Integer.
      */
 	public static Integer getPartnerField(String partner_string) {
 		if (partner_string == null) return null;
@@ -758,10 +774,10 @@ public class Quest {
 	}
 
 	/**
-	 * TODO
+	 * Maps and returns the Integer representation to the correlating PLAYER_-String.
 	 *
-	 * @param player_string
-	 * @return
+	 * @param player_string one of PLAYER_ flags as String.
+	 * @return one of PLAYER_ flags as Integer.
      */
 	public static Integer getPlayerField(String player_string) {
 		if (player_string == null) return null;
@@ -784,10 +800,10 @@ public class Quest {
 	}
 
 	/**
-	 * TODO
+	 * Maps and returns the Integer representation to the correlating REQUIREMENT_-String.
 	 *
-	 * @param requirement_string
-	 * @return
+	 * @param requirement_string one of REQUIREMENT_ flags as String.
+	 * @return one of REQUIREMENT_ flags as Integer.
      */
 	public static Integer getRequirementField(String requirement_string) {
 		if (requirement_string == null) return null;
@@ -798,6 +814,8 @@ public class Quest {
 				return REQUIREMENT_DANCE;
 			case REQUIREMENT_ICE_CUBE_STRING:
 				return REQUIREMENT_ICE_CUBE;
+			case REQUIREMENT_PENCIL_STRING:
+				return REQUIREMENT_PENCIL;
 			case REQUIREMENT_POOL_STRING:
 				return REQUIREMENT_POOL;
 			default:
@@ -806,10 +824,10 @@ public class Quest {
 	}
 
 	/**
-	 * TODO
+	 * Maps and returns the Integer representation to the correlating SKIP_-String.
 	 *
-	 * @param skip_string
-	 * @return
+	 * @param skip_string one of SKIP_ flags as String.
+	 * @return one of SKIP_ flags as Integer.
      */
 	public static Integer getSkipField(String skip_string) {
 		if (skip_string == null) return null;

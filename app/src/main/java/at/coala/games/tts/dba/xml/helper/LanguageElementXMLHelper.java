@@ -13,8 +13,6 @@ import at.coala.games.tts.dba.xml.QuestDataXMLAccess;
  * A Helper to extract data out of XML language elements.
  *
  * @author Klaus
- * @version 1.1
- * @since 15.07.2015.
  */
 class LanguageElementXMLHelper extends ElementXMLHelper {
 
@@ -44,7 +42,7 @@ class LanguageElementXMLHelper extends ElementXMLHelper {
      * @param quests collection needed to store quests.
      * @param lang_code a xsd:language code.
      * @see ElementXMLHelper
-     * @see at.coala.games.tts.data.quest.Quest
+     * @see Quest
      * @see QuestCollection
      */
     LanguageElementXMLHelper(ElementXMLHelper parent, QuestCollection quests, String lang_code) {
@@ -93,7 +91,8 @@ class LanguageElementXMLHelper extends ElementXMLHelper {
         while(parser.next() != XmlPullParser.END_DOCUMENT) {
             if (parser.getEventType() == XmlPullParser.START_TAG
                     && QuestDataXMLAccess.ELEMENT_LANGUAGE.equals(parser.getName())
-                    && lang_code.equals(parser.getAttributeValue(null, QuestDataXMLAccess.ATTRIBUTE_QUEST_LANGUAGE))) {
+                    && lang_code.equals(parser.getAttributeValue(
+                            null, QuestDataXMLAccess.ATTRIBUTE_QUEST_LANGUAGE))) {
                     child.read(parser);
                     return;
             } else if(parser.getEventType() == XmlPullParser.END_TAG
@@ -126,13 +125,16 @@ class LanguageElementXMLHelper extends ElementXMLHelper {
      * @see ElementXMLHelper
      */
     @Override
-    public ElementXMLHelper startElement(String uri, String localName, String qName, Attributes attributes) {
+    public ElementXMLHelper startElement(
+            String uri, String localName, String qName, Attributes attributes) {
         if (QuestDataXMLAccess.ELEMENT_LANGUAGE.equals(localName)) {
             /**
              * TODO
-             * system for better language recognition (craft to upper case, object instead of string, ...)
+             * system for better language recognition (craft to upper case,
+             * object instead of string, ...)
              */
-            if (lang_code.equals(attributes.getValue(QuestDataXMLAccess.ATTRIBUTE_QUEST_LANGUAGE))) {
+            if (lang_code.equals(
+                    attributes.getValue(QuestDataXMLAccess.ATTRIBUTE_QUEST_LANGUAGE))) {
                 return child;
             }
         }

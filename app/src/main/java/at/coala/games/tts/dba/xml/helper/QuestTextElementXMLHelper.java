@@ -16,8 +16,6 @@ import at.coala.games.tts.dba.xml.QuestDataXMLAccess;
  * A Helper to extract data out of XML quest_text and comment elements.
  *
  * @author Klaus
- * @version 1.1
- * @since 15.07.2015.
  */
 class QuestTextElementXMLHelper extends ElementXMLHelper {
 
@@ -105,7 +103,8 @@ class QuestTextElementXMLHelper extends ElementXMLHelper {
                     if (parser.next() == XmlPullParser.TEXT) comments.add(parser.getText());
                 }
             }
-            else if (parser.getEventType() == XmlPullParser.END_TAG && QuestDataXMLAccess.ELEMENT_LANGUAGE.equals(parser.getName())) {
+            else if (parser.getEventType() == XmlPullParser.END_TAG
+                    && QuestDataXMLAccess.ELEMENT_LANGUAGE.equals(parser.getName())) {
                 uncle.read(parser);
                 return;
             }

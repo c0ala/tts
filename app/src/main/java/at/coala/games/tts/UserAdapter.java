@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -66,10 +65,12 @@ public class UserAdapter extends ArrayAdapter<User> {
 	public View getView(final int position, View convertView, ViewGroup parent) {
 		User user = getItem(position);
 		if (convertView == null) {
-			convertView = LayoutInflater.from(getContext()).inflate(R.layout.user_item, parent, false);
+			convertView = LayoutInflater.from(
+					getContext()).inflate(R.layout.user_item, parent, false);
 		}
 		((TextView)convertView.findViewById(R.id.text_view)).setText(user.name);
-		((ImageView)convertView.findViewById(R.id.user_sex_image)).setImageResource(user.sex == User.SEX_FEMALE ? R.drawable.f : R.drawable.m);
+		((ImageView)convertView.findViewById(R.id.user_sex_image)).setImageResource(
+				user.sex == User.SEX_FEMALE ? R.drawable.f : R.drawable.m);
 		
 		CheckBox play_checkBox = (CheckBox)convertView.findViewById(R.id.play_checkBox);
 		play_checkBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {

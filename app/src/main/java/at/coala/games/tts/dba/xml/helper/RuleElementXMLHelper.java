@@ -14,8 +14,6 @@ import at.coala.games.tts.dba.xml.QuestDataXMLAccess;
  * A Helper to extract data out of XML rule elements.
  *
  * @author Klaus
- * @version 1.0
- * @since 16.07.2015.
  */
 class RuleElementXMLHelper extends ElementXMLHelper {
 
@@ -59,8 +57,10 @@ class RuleElementXMLHelper extends ElementXMLHelper {
     @Override
     public void read(XmlPullParser parser) throws IOException, XmlPullParserException {
         while (parser.next() != XmlPullParser.END_DOCUMENT) {
-            if (parser.getEventType() == XmlPullParser.START_TAG && QuestDataXMLAccess.ELEMENT_RULE.equals(parser.getName())) {
-                rule_id[0] = parser.getAttributeValue(null, QuestDataXMLAccess.ATTRIBUTE_RULE_ID);
+            if (parser.getEventType() == XmlPullParser.START_TAG
+                    && QuestDataXMLAccess.ELEMENT_RULE.equals(parser.getName())) {
+                rule_id[0] = parser.getAttributeValue(
+                        null, QuestDataXMLAccess.ATTRIBUTE_RULE_ID);
                 child.read(parser);
             }
         }
@@ -88,7 +88,8 @@ class RuleElementXMLHelper extends ElementXMLHelper {
      * @see ElementXMLHelper
      */
     @Override
-    public ElementXMLHelper startElement(String uri, String localName, String qName, Attributes attributes) {
+    public ElementXMLHelper startElement(
+            String uri, String localName, String qName, Attributes attributes) {
         if (QuestDataXMLAccess.ELEMENT_RULE.equals(localName)) {
             rule_id[0] = attributes.getType(QuestDataXMLAccess.ATTRIBUTE_RULE_ID);
             return child;

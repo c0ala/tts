@@ -11,7 +11,5 @@ public class GameStateError extends GameState {
      */
 
     @Override
-    GameState clickedButtonGoOrNo(boolean button_is_go) {
-        return null;
-    }
+    GameState clickedButtonGoOrNo(boolean button_is_go) { return null; }
 }

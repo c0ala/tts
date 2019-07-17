@@ -39,9 +39,7 @@ class GameStateResume extends GameState {
      * @see Context
      */
     @Override
-    String getGoButtonText(Context context) {
-        return context.getString(R.string.resume_button);
-    }
+    String getGoButtonText(Context context) { return context.getString(R.string.resume_button); }
 
     /**
      * Returns the text that should be shown in the main text field.
@@ -51,9 +49,7 @@ class GameStateResume extends GameState {
      * @see Context
      */
     @Override
-    String getMainText(Context context) {
-        return context.getString(R.string.on_resume);
-    }
+    String getMainText(Context context) { return context.getString(R.string.on_resume); }
 
     /**
      * Returns the text that should be shown on the go_button.
@@ -63,7 +59,5 @@ class GameStateResume extends GameState {
      * @see Context
      */
     @Override
-    String getNoButtonText(Context context) {
-        return context.getString(R.string.new_game);
-    }
+    String getNoButtonText(Context context) { return context.getString(R.string.new_game); }
 }

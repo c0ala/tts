@@ -15,8 +15,6 @@ import at.coala.games.tts.dba.xml.QuestDataXMLAccess;
  * rule to the RuleMap.
  *
  * @author Klaus
- * @version 1.0
- * @since 16.07.2015.
  * @see RuleMap
  */
 class RuleTextElementXMLHelper extends ElementXMLHelper {
@@ -59,7 +57,8 @@ class RuleTextElementXMLHelper extends ElementXMLHelper {
      * @see ElementXMLHelper
      * @see RuleMap
      */
-    RuleTextElementXMLHelper(ElementXMLHelper parent, RuleMap rules, String lang_code, String[] rule_id) {
+    RuleTextElementXMLHelper(
+            ElementXMLHelper parent, RuleMap rules, String lang_code, String[] rule_id) {
         this.parent = parent;
         this.rules = rules;
         this.lang_code = lang_code;
@@ -111,7 +110,8 @@ class RuleTextElementXMLHelper extends ElementXMLHelper {
         while (parser.next() != XmlPullParser.END_DOCUMENT) {
             if (parser.getEventType() == XmlPullParser.START_TAG
                     && QuestDataXMLAccess.ELEMENT_RULE_TEXT.equals(parser.getName())
-                    && lang_code.equals(parser.getAttributeValue(null, QuestDataXMLAccess.ATTRIBUTE_RULE_LANGUAGE))
+                    && lang_code.equals(parser.getAttributeValue(
+                            null, QuestDataXMLAccess.ATTRIBUTE_RULE_LANGUAGE))
                     && parser.next() == XmlPullParser.TEXT) {
                 rules.addRule(rule_id[0], parser.getText());
                 return;
@@ -145,13 +145,15 @@ class RuleTextElementXMLHelper extends ElementXMLHelper {
      * @see ElementXMLHelper
      */
     @Override
-    public ElementXMLHelper startElement(String uri, String localName, String qName, Attributes attributes) {
+    public ElementXMLHelper startElement(
+            String uri, String localName, String qName, Attributes attributes) {
         if (QuestDataXMLAccess.ELEMENT_RULE_TEXT.equals(localName)) {
             /**
              * TODO
              * system for better language recognition (craft to upper case, object instead of string, ...)
              */
-            match = lang_code.equals(attributes.getValue(QuestDataXMLAccess.ATTRIBUTE_RULE_LANGUAGE));
+            match = lang_code.equals(
+                    attributes.getValue(QuestDataXMLAccess.ATTRIBUTE_RULE_LANGUAGE));
         }
         return super.startElement(uri, localName, qName, attributes);
     }

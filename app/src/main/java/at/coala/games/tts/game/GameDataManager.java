@@ -29,14 +29,15 @@ public class GameDataManager {
 	/**
 	 * TODO
 	 */
-	private static final String ATTRIBUTE_GAME_DATA_LAST_GAME_ACTION_TIMESTAMP_STRING = "last_game_action_timestamp";
+	private static final String ATTRIBUTE_GAME_DATA_LAST_GAME_ACTION_TIMESTAMP_STRING =
+			"last_game_action_timestamp";
 
 	/**
 	 * A field storing the current game state.
 	 *
 	 * @see GameState
 	 */
-	static GameState currentState = new GameStateStart();
+	private static GameState currentState = new GameStateStart();
 
 	/**
 	 * A field storing all game data.
@@ -119,7 +120,9 @@ public class GameDataManager {
 	 *                     no_button.
 	 * @see GameState
 	 */
-	public static void clickedButtonIsGo(boolean button_is_go) { currentState = currentState.clickedButtonGoOrNo(button_is_go); }
+	public static void clickedButtonIsGo(boolean button_is_go) {
+		currentState = currentState.clickedButtonGoOrNo(button_is_go);
+	}
 
 	/**
 	 * Returns true if this game contains the specified user.
@@ -155,7 +158,9 @@ public class GameDataManager {
 	 * @return text for button.
 	 * @see Context
 	 */
-	public static String getGoButtonText(Context context) { return currentState.getGoButtonText(context); }
+	public static String getGoButtonText(Context context) {
+		return currentState.getGoButtonText(context);
+	}
 
 	/**
 	 * Get the count of all linked quest texts.
@@ -181,7 +186,9 @@ public class GameDataManager {
 	 * @return text for button, or null if button should not be shown.
 	 * @see Context
 	 */
-	public static String getNoButtonText(Context context) { return currentState.getNoButtonText(context); }
+	public static String getNoButtonText(Context context) {
+		return currentState.getNoButtonText(context);
+	}
 
 	/**
 	 * Returns the number of players selected for this game.
@@ -260,8 +267,12 @@ public class GameDataManager {
 		game = new Game(settings.getCategoryProbability());
 	}
 
-	static void validateQuestCollection() {
-		quests.validateCollection(settings.getLocation(), settings.getFriendshipLevel(), game.allPlayersAre(), settings.getRequirements());
+	private static void validateQuestCollection() {
+		quests.validateCollection(
+				settings.getLocation(),
+				settings.getFriendshipLevel(),
+				game.allPlayersAre(),
+				settings.getRequirements());
 	}
 
 	/**
@@ -269,9 +280,11 @@ public class GameDataManager {
 	 */
 	static void prepareNextQuest() {
 		do {
-			quest = quests.getRandomQuest(game.getAvgLevel(), game.returnCategory(settings.getCategoryProbability()));
+			quest = quests.getRandomQuest(
+					game.getAvgLevel(), game.returnCategory(settings.getCategoryProbability()));
 		} while (quest == null);
-		boolean success = game.findPlayer(quest.categories, quest.getConfiguration(settings.getLocation(), game.getAvgLevel()));
+		boolean success = game.findPlayer(quest.categories, quest.getConfiguration(
+				settings.getLocation(), game.getAvgLevel()));
 		if (!success) prepareNextQuest();
 	}
 
@@ -310,7 +323,7 @@ public class GameDataManager {
 	/**
 	 * Sets the delete flag to not asked the current question again.
 	 */
-	public static void setDeleteFlag() { quests.setDeleteFlag(); }
+	static void setDeleteFlag() { quests.setDeleteFlag(); }
 
 	/**
 	 * Set a new friendship level and marks the settings as changed.

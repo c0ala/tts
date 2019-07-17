@@ -72,7 +72,8 @@ public class DataAccess {
 	 * @see RuleMap
 	 */
 	@SuppressWarnings("unused")
-	public static void getQuests(QuestCollection quests, RuleMap rules, String lang_code, InputStream dataStream) {
+	public static void getQuests(
+			QuestCollection quests, RuleMap rules, String lang_code, InputStream dataStream) {
 		QuestDataXMLAccess xmlAccess = new QuestDataXMLAccess();
 		try {
 			xmlAccess.getQuests(quests, rules, lang_code, dataStream);
@@ -95,7 +96,8 @@ public class DataAccess {
 	 * @see RuleMap
 	 * @see XmlPullParser
 	 */
-	public static void getQuests(QuestCollection quests, RuleMap rules, String lang_code, XmlPullParser parser) {
+	public static void getQuests(
+			QuestCollection quests, RuleMap rules, String lang_code, XmlPullParser parser) {
 		QuestDataXMLAccess xmlAccess = new QuestDataXMLAccess();
 		try {
 			xmlAccess.getQuests(quests, rules, lang_code, parser);
@@ -118,7 +120,8 @@ public class DataAccess {
 	 * @see Context
 	 */
 	public static boolean getSetting(Context context, int setting, boolean defValue) {
-		SharedPreferences sp = context.getSharedPreferences(PREFERENCES_SETTING, Context.MODE_PRIVATE);
+		SharedPreferences sp =
+				context.getSharedPreferences(PREFERENCES_SETTING, Context.MODE_PRIVATE);
 		return sp.getBoolean(Settings.getSettingsAttributeString(setting), defValue);
 	}
 
@@ -133,7 +136,8 @@ public class DataAccess {
 	 * @see Context
 	 */
 	public static int getSetting(Context context, int setting, int defValue) {
-		SharedPreferences sp = context.getSharedPreferences(PREFERENCES_SETTING, Context.MODE_PRIVATE);
+		SharedPreferences sp =
+				context.getSharedPreferences(PREFERENCES_SETTING, Context.MODE_PRIVATE);
 		return sp.getInt(Settings.getSettingsAttributeString(setting), defValue);
 	}
 
@@ -151,7 +155,8 @@ public class DataAccess {
 	 * @see List
 	 * @see User
 	 */
-	public static void getUsers(Context context, List<User> userListActive, List<User> userListInactive) {
+	public static void getUsers(
+			Context context, List<User> userListActive, List<User> userListInactive) {
 		UserDataSQLHelper dbHelper = new UserDataSQLHelper(context);
 		dbHelper.getUsers(dbHelper.getReadableDatabase(), userListActive, userListInactive);
 		dbHelper.close();
@@ -167,7 +172,8 @@ public class DataAccess {
 	 * @see Context
 	 */
 	public static void updateSetting(Context context, int setting, boolean value) {
-		SharedPreferences.Editor editor = context.getSharedPreferences(PREFERENCES_SETTING, Context.MODE_PRIVATE).edit();
+		SharedPreferences.Editor editor =
+				context.getSharedPreferences(PREFERENCES_SETTING, Context.MODE_PRIVATE).edit();
 		editor.putBoolean(Settings.getSettingsAttributeString(setting), value);
 		editor.apply();
 	}
@@ -182,7 +188,8 @@ public class DataAccess {
 	 * @see Context
 	 */
 	public static void updateSetting(Context context, int setting, int value) {
-		SharedPreferences.Editor editor = context.getSharedPreferences(PREFERENCES_SETTING, Context.MODE_PRIVATE).edit();
+		SharedPreferences.Editor editor =
+				context.getSharedPreferences(PREFERENCES_SETTING, Context.MODE_PRIVATE).edit();
 		editor.putInt(Settings.getSettingsAttributeString(setting), value);
 		editor.apply();
 	}
@@ -270,14 +277,16 @@ public class DataAccess {
 
 	//TODO
 	public static void updateGameData(Context context, int gameData, long value) {
-		SharedPreferences.Editor editor = context.getSharedPreferences(PREFERENCES_GAME_DATA, Context.MODE_PRIVATE).edit();
+		SharedPreferences.Editor editor =
+				context.getSharedPreferences(PREFERENCES_GAME_DATA, Context.MODE_PRIVATE).edit();
 		editor.putLong(GameDataManager.getGameDataAttributeString(gameData), value);
 		editor.apply();
 	}
 
 	//TODO
 	public static long getGameData(Context context, int gameData, long defValue) {
-		SharedPreferences sp = context.getSharedPreferences(PREFERENCES_GAME_DATA, Context.MODE_PRIVATE);
+		SharedPreferences sp =
+				context.getSharedPreferences(PREFERENCES_GAME_DATA, Context.MODE_PRIVATE);
 		return sp.getLong(GameDataManager.getGameDataAttributeString(gameData), defValue);
 	}
 }

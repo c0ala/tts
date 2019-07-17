@@ -7,7 +7,6 @@ import java.util.List;
 
 import at.coala.games.tts.R;
 import at.coala.games.tts.data.quest.Quest;
-import at.coala.games.tts.dba.DataAccess;
 
 /**
  * Provides functionality for showing and evaluating quests.
@@ -50,7 +49,10 @@ class GameStateQuest extends GameState {
      */
     @Override
     GameState clickedButtonGoOrNo(boolean button_is_go) {
-        GameDataManager.game.setPoints(GameDataManager.quest.categories, button_is_go, GameDataManager.settings.getCategoryProbability());
+        GameDataManager.game.setPoints(
+                GameDataManager.quest.categories,
+                button_is_go,
+                GameDataManager.settings.getCategoryProbability());
         return GameDataManager.readyState.onState();
     }
 
@@ -62,9 +64,7 @@ class GameStateQuest extends GameState {
      * @see Context
      */
     @Override
-    String getGoButtonText(Context context) {
-        return context.getString(R.string.done_button);
-    }
+    String getGoButtonText(Context context) { return context.getString(R.string.done_button); }
 
     /**
      * Returns the quest quest_text.
@@ -77,12 +77,17 @@ class GameStateQuest extends GameState {
     String getMainText(Context context) {
         if (quest_text == null) {
             try {
-                quest_text = GameDataManager.quest.quest_texts.get((int)(GameDataManager.getRandom() * GameDataManager.quest.quest_texts.size()));
+                quest_text = GameDataManager.quest.quest_texts.get(
+                        (int)(GameDataManager.getRandom()
+                                * GameDataManager.quest.quest_texts.size()));
             } catch (IndexOutOfBoundsException e) {
-                quest_text = GameDataManager.quest.quest_texts.get(GameDataManager.quest.quest_texts.size()- 1);
+                quest_text = GameDataManager.quest.quest_texts.get(
+                        GameDataManager.quest.quest_texts.size()- 1);
             }
             if (GameDataManager.game.getPartner() != null) {
-                quest_text = quest_text.replace(context.getString(R.string.name_placeholder), GameDataManager.game.getPartner());
+                quest_text = quest_text.replace(
+                        context.getString(R.string.name_placeholder),
+                        GameDataManager.game.getPartner());
             }
         }
         return quest_text;
@@ -116,10 +121,13 @@ class GameStateQuest extends GameState {
     @Override
     String getSubText(Context context) {
         String sub_text = null;
-        if (GameDataManager.quest.comments != null) sub_text = addTextLn(null, GameDataManager.quest.comments, context);
+        if (GameDataManager.quest.comments != null)
+            sub_text = addTextLn(null, GameDataManager.quest.comments, context);
         List<String> rules = GameDataManager.quest.getRules(GameDataManager.rules);
         if (rules != null) sub_text = addTextLn(sub_text, rules, context);
-        if (GameDataManager.quest.source != null) sub_text = addTextLn(sub_text, Collections.singletonList(GameDataManager.quest.source), context);
+        if (GameDataManager.quest.source != null)
+            sub_text = addTextLn(
+                    sub_text, Collections.singletonList(GameDataManager.quest.source), context);
         if (sub_text != null) return sub_text;
         return super.getSubText(context);
     }

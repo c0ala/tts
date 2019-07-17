@@ -6,7 +6,9 @@ import android.content.res.Configuration;
 import at.coala.games.tts.R;
 
 /**
- * TODO
+ * This class contains a pool of background images for landscape and portrait
+ * mode and sets one of them randomly. The pool variates depending on game
+ * settings.
  *
  * @author Klaus
  */

@@ -33,9 +33,7 @@ class GameStateStart extends GameState {
      * @see Context
      */
     @Override
-    String getGoButtonText(Context context) {
-        return context.getString(R.string.go);
-    }
+    String getGoButtonText(Context context) { return context.getString(R.string.go); }
 
     /**
      * Returns the text that should be shown in the main text field.
@@ -45,9 +43,7 @@ class GameStateStart extends GameState {
      * @see Context
      */
     @Override
-    String getMainText(Context context) {
-        return context.getString(R.string.rules_text);
-    }
+    String getMainText(Context context) { return context.getString(R.string.rules_text); }
 
     /**
      * Returns the text that should be shown in the sub text field.
@@ -57,9 +53,7 @@ class GameStateStart extends GameState {
      * @see Context
      */
     @Override
-    String getSubText(Context context) {
-        return context.getString(R.string.rules_comments);
-    }
+    String getSubText(Context context) { return context.getString(R.string.rules_comments); }
 
     /**
      * Returns the text that should be shown as title.
@@ -69,8 +63,6 @@ class GameStateStart extends GameState {
      * @see Context
      */
     @Override
-    String getTitle(Context context) {
-        return context.getString(R.string.rules);
-    }
+    String getTitle(Context context) { return context.getString(R.string.rules); }
 
 }

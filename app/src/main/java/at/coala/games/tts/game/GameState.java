@@ -33,9 +33,7 @@ abstract class GameState {
      * @return text for button.
      * @see Context
      */
-    String getGoButtonText(Context context) {
-        return context.getString(R.string.empty);
-    }
+    String getGoButtonText(Context context) { return context.getString(R.string.empty); }
 
     /**
      * Returns the text that should be shown in the main text field. If not
@@ -45,9 +43,7 @@ abstract class GameState {
      * @return text to show in main text field.
      * @see Context
      */
-    String getMainText(Context context) {
-        return context.getString(R.string.empty);
-    }
+    String getMainText(Context context) { return context.getString(R.string.empty); }
 
     /**
      * Returns the text that should be shown on the no_button. If not
@@ -57,14 +53,10 @@ abstract class GameState {
      * @return text for button, or null if button should not be shown.
      * @see Context
      */
-    String getNoButtonText(Context context) {
-        return null;
-    }
+    String getNoButtonText(Context context) { return null; }
 
     //TODO
-    String getPreTitle(Context context) {
-        return "";
-    }
+    String getPreTitle(Context context) { return ""; }
 
     /**
      * Returns the text that should be shown in the comment field beyond the
@@ -75,9 +67,7 @@ abstract class GameState {
      * @return text to show in comment section.
      * @see Context
      */
-    String getSubText(Context context) {
-        return context.getString(R.string.empty);
-    }
+    String getSubText(Context context) { return context.getString(R.string.empty); }
 
     /**
      * Returns the text that should be shown in the above the text field or as
@@ -88,9 +78,7 @@ abstract class GameState {
      * @return text to show in the title field.
      * @see Context
      */
-    String getTitle(Context context) {
-        return context.getString(R.string.empty);
-    }
+    String getTitle(Context context) { return context.getString(R.string.empty); }
 
     /**
      * Should be called if this is the new GameState to initialise and set new
@@ -98,9 +86,7 @@ abstract class GameState {
      *
      * @return itself.
      */
-    GameState onState() {
-        return this;
-    }
+    GameState onState() { return this; }
 
     //TODO
     void saveGameData(Context context) {

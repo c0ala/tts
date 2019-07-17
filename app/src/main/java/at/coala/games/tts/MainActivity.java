@@ -9,7 +9,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.view.KeyEvent;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.AnimationUtils;
@@ -125,7 +124,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 
 		//noinspection ConstantConditions
-		((InputMethodManager)this.getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), 0);
+		((InputMethodManager)this.getSystemService(Context.INPUT_METHOD_SERVICE))
+				.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), 0);
 		this.new_user_name.clearFocus();
 	}
 
@@ -174,7 +174,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		
 		this.play_button = (Button)findViewById(R.id.main_play_button);
 		this.play_button.setOnClickListener(this);
-		this.play_button.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_blink));
+		this.play_button.startAnimation(
+				AnimationUtils.loadAnimation(this, R.anim.fade_blink));
 
 		this.button_m = (RadioButton)findViewById(R.id.radio_m);
 		this.button_w = (RadioButton)findViewById(R.id.radio_w);
@@ -280,7 +281,8 @@ public class MainActivity extends Activity implements OnClickListener {
 			//v.setOnTouchListener(onTouchListener);
 		}**/
 
-		findViewById(R.id.head_layout).setBackgroundResource(Background.getBackground(getResources().getConfiguration().orientation));
+		findViewById(R.id.head_layout).setBackgroundResource(
+				Background.getBackground(getResources().getConfiguration().orientation));
 	}
 
 	/**
@@ -305,7 +307,9 @@ public class MainActivity extends Activity implements OnClickListener {
 			super.onBackPressed();
 		} else {
 			this.doubleBackToExitPressedOnce = true;
-			Toast.makeText(this, String.format(getString(R.string.press_double_to_exit), getString(R.string.app_name)), Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, String.format(
+					getString(R.string.press_double_to_exit),
+					getString(R.string.app_name)), Toast.LENGTH_SHORT).show();
 			handler.postDelayed(resetDoubleBack, 2000);
 		}
 	}

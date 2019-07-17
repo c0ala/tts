@@ -71,10 +71,6 @@ public class QuestCreator {
     private String source;
 
     /**
-     * A local variable containing the quest text for the prepared quest.
-     */
-
-    /**
      * A local list of quest texts.
      *
      * @see List
@@ -92,13 +88,12 @@ public class QuestCreator {
     public void abort() { quest_in_preparation = false; }
 
     /**
-     * TODO
+     * Adds a category to the quest prepared currently.
      *
-     * @param category
+     * @param category takes a Quest.CATEGORY_ flag.
+     * @see Quest
      */
-    public void addCategory(int category) {
-        categories.add(category);
-    }
+    public void addCategory(int category) { categories.add(category); }
 
     /**
      * Adds a comment to the quest prepared currently.
@@ -106,7 +101,7 @@ public class QuestCreator {
      * @param comment a comment.
      */
     public void addComment(String comment) {
-        if (comments == null) comments = new ArrayList<String>(1);
+        if (comments == null) comments = new ArrayList<>(1);
         comments.add(comment);
     }
 
@@ -133,16 +128,47 @@ public class QuestCreator {
      * @see Game
      * @see Quest
      */
-    public void addConfiguration(int location, int level, Integer player, Integer partner, Integer friendship_level, Integer skip, Integer allow_delete) {
+    public void addConfiguration(
+            int location,
+            int level,
+            Integer player,
+            Integer partner,
+            Integer friendship_level,
+            Integer skip,
+            Integer allow_delete) {
         if (location == Game.LOCATION_PUBLIC) {
             if (public_conf == null) {
-                public_conf = new ArrayList<QuestConfiguration>();
-                addConfiguration(public_conf, level, player, partner, friendship_level, skip, allow_delete, conf.get(conf.size() - 1));
+                public_conf = new ArrayList<>();
+                addConfiguration(
+                        public_conf,
+                        level,
+                        player,
+                        partner,
+                        friendship_level,
+                        skip,
+                        allow_delete,
+                        conf.get(conf.size() - 1));
             } else {
-                addConfiguration(public_conf, level, player, partner, friendship_level, skip, allow_delete, public_conf.get(public_conf.size() - 1));
+                addConfiguration(
+                        public_conf,
+                        level,
+                        player,
+                        partner,
+                        friendship_level,
+                        skip,
+                        allow_delete,
+                        public_conf.get(public_conf.size() - 1));
             }
         } else {
-            addConfiguration(conf, level, player, partner, friendship_level, skip, allow_delete, conf.get(conf.size() - 1));
+            addConfiguration(
+                    conf,
+                    level,
+                    player,
+                    partner,
+                    friendship_level,
+                    skip,
+                    allow_delete,
+                    conf.get(conf.size() - 1));
         }
     }
 
@@ -189,12 +215,13 @@ public class QuestCreator {
     }
 
     /**
-     * TODO
+     * Adds a requirement for the quest prepared currently.
      *
-     * @param requirement
+     * @param requirement takes a Quest.REQUIREMENT_ flag.
+     * @see Quest
      */
     public void addRequirement(int requirement) {
-        if (requirements == null) requirements = new ArrayList<Integer>(1);
+        if (requirements == null) requirements = new ArrayList<>(1);
         requirements.add(requirement);
     }
 
@@ -205,7 +232,7 @@ public class QuestCreator {
      * @see RuleMap
      */
     public void addRuleId(String rule_id) {
-        if (rule_ids == null) rule_ids = new ArrayList<String>(1);
+        if (rule_ids == null) rule_ids = new ArrayList<>(1);
         rule_ids.add(rule_id);
     }
 
@@ -221,9 +248,7 @@ public class QuestCreator {
      *
      * @param text an alternative quest text.
      */
-    public void addText(String text) {
-        this.text.add(text);
-    }
+    public void addText(String text) { this.text.add(text); }
 
     /**
      * Crafts the Quest element with set data and configuration and returns it.
@@ -236,7 +261,8 @@ public class QuestCreator {
     public Quest craftQuest() {
         if (quest_in_preparation) {
             quest_in_preparation = false;
-            return new Quest(categories, requirements, source, text, comments, rule_ids, conf, public_conf);
+            return new Quest(
+                    categories, requirements, source, text, comments, rule_ids, conf, public_conf);
         } else return null;
     }
 
@@ -276,12 +302,20 @@ public class QuestCreator {
      * @see Game
      * @see Quest
      */
-    public void startNewQuest(int category, String text, int level, Integer player, Integer partner, Integer friendship_level, Integer skip, Integer allow_delete) {
-        categories = new ArrayList<Integer>(1);
+    public void startNewQuest(
+            int category,
+            String text,
+            int level,
+            Integer player,
+            Integer partner,
+            Integer friendship_level,
+            Integer skip,
+            Integer allow_delete) {
+        categories = new ArrayList<>(1);
         categories.add(category);
-        this.text = new ArrayList<String>(1);
+        this.text = new ArrayList<>(1);
         this.text.add(text);
-        conf = new ArrayList<QuestConfiguration>(1);
+        conf = new ArrayList<>(1);
         conf.add(new QuestConfiguration(
                 level,
                 (player == null) ? Settings.DEFAULT_PLAYER : player,

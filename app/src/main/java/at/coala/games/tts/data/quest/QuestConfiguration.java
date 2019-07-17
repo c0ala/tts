@@ -18,7 +18,7 @@ public class QuestConfiguration {
     /**
      * A public field containing one of the final Game.FRIENDS_ flags.
      *
-     * @see at.coala.games.tts.data.Game
+     * @see Game
      */
     public final int friendship_level;
 
@@ -60,9 +60,10 @@ public class QuestConfiguration {
      * @param skip takes a final Quest.SKIP_ flag.
      * @param allow_delete takes a final Quest.DELETE_ flag.
      * @see Quest
-     * @see at.coala.games.tts.data.Game
+     * @see Game
      */
-    QuestConfiguration(int level, int player, int partner, int friendship_level, int skip, int allow_delete) {
+    QuestConfiguration(
+            int level, int player, int partner, int friendship_level, int skip, int allow_delete) {
         this.level = level;
         this.player = player;
         this.partner = partner;

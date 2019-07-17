@@ -144,7 +144,9 @@ public class User {
 	 * @return true if the user reached a new level; false otherwise.
 	 */
 	private boolean addPoints(double avg_points, int quest_level, boolean full_points) {
-		points += ( ((avg_points * (1.0 + ((double)quest_level / (double)level))) / (double)(level + 1)) /(full_points ? 1 : 4) );
+		points += (
+				((avg_points * (1.0 + ((double)quest_level / (double)level))) / (double)(level + 1))
+						/ (full_points ? 1 : 4) );
 		if (points >= 100.0) {
 			level += 1;
 			points = 0.0;
@@ -162,7 +164,7 @@ public class User {
 	 */
 	@Override
 	public boolean equals(Object obj) {
-		return obj != null && obj instanceof User && equals((User) obj);
+		return obj instanceof User && equals((User) obj);
 	}
 
 	/**
@@ -172,9 +174,7 @@ public class User {
 	 * @return true if this User is the same as the input argument; false
 	 * otherwise.
 	 */
-	public boolean equals(User that) {
-		return that != null && this.name.equals(that.name);
-	}
+	public boolean equals(User that) { return that != null && this.name.equals(that.name); }
 
 	/**
 	 * Returns the rounds since the last call of this category for this player.
@@ -198,7 +198,9 @@ public class User {
 		double weight = 0.0;
 		for (int category : categories) {
 			if (category == Quest.CATEGORY_STRIP_CLOTHES) {
-				int current_clothes = (sex == User.SEX_FEMALE ? AVG_CLOTHES_COUNT_F : AVG_CLOTHES_COUNT_M) + clothes;
+				int current_clothes =
+						(sex == User.SEX_FEMALE ? AVG_CLOTHES_COUNT_F : AVG_CLOTHES_COUNT_M)
+						+ clothes;
 				if (current_clothes > 0) {
 					weight += last_call[category] * (double) current_clothes;
 				} else if (current_clothes < 0) {
@@ -277,7 +279,8 @@ public class User {
 	 * @return true if the user reached a new level; false otherwise.
 	 * @see Quest
 	 */
-	boolean setPoints(List<Integer> categories, int quest_level, boolean full_points, boolean success) {
+	boolean setPoints(
+			List<Integer> categories, int quest_level, boolean full_points, boolean success) {
 		double points = 0.0;
 		for (int category : categories) {
 			/**
@@ -330,7 +333,5 @@ public class User {
 	/**
 	 * TODO documentation
 	 */
-	void startDrunk() {
-		level = level > 4 ? level : 4;
-	}
+	void startDrunk() { level = level > 4 ? level : 4; }
 }

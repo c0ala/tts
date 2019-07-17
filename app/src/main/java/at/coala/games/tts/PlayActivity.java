@@ -90,7 +90,8 @@ public class PlayActivity extends Activity implements OnClickListener {
 		this.go_button = (Button)findViewById(R.id.go_button);
 		this.go_button.setOnClickListener(this);
 
-		findViewById(R.id.title).startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_blink));
+		findViewById(R.id.title).startAnimation(
+				AnimationUtils.loadAnimation(this, R.anim.fade_blink));
 
 		go_button_activation = new Runnable() {
 			@Override
@@ -121,7 +122,8 @@ public class PlayActivity extends Activity implements OnClickListener {
 		((TextView)findViewById(R.id.title)).setText(GameDataManager.getTitle(this));
 
 		((TextView)findViewById(R.id.main_text)).setText(GameDataManager.getMainText(this));
-		findViewById(R.id.main_text).startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in_0_5));
+		findViewById(R.id.main_text).startAnimation(
+				AnimationUtils.loadAnimation(this, R.anim.fade_in_0_5));
 
 		no_button.setEnabled(false);
 		String no = GameDataManager.getNoButtonText(this);
@@ -138,8 +140,10 @@ public class PlayActivity extends Activity implements OnClickListener {
 		go_button.postDelayed(go_button_activation, 1000);
 
 		((TextView) findViewById(R.id.sub_text)).setText(GameDataManager.getSubText(this));
-		findViewById(R.id.head_layout).setBackgroundResource(Background.getBackground(getResources().getConfiguration().orientation));
+		findViewById(R.id.head_layout).setBackgroundResource(
+				Background.getBackground(getResources().getConfiguration().orientation));
 
-		findViewById(R.id.sub_text).startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in_1));
+		findViewById(R.id.sub_text).startAnimation(
+				AnimationUtils.loadAnimation(this, R.anim.fade_in_1));
 	}
 }

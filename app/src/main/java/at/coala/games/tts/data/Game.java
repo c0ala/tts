@@ -1,9 +1,5 @@
 package at.coala.games.tts.data;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -22,7 +18,9 @@ import at.coala.games.tts.game.GameDataManager;
 public class Game {
 
     /**
-     * TODO
+     * A boolean that is false per default but can be set true if the game
+     * should already start on a higher level - e.g. the players already drank
+     * before beginning with this game.
      */
     private boolean already_drunk = false;
 
@@ -83,7 +81,7 @@ public class Game {
     private static final String FRIENDS_LOOSE_STRING = "LOOSE";
 
     /**
-     * A local array counting the rounds since the last time a quest was part
+     * A local array counting the rounds since the last time a player was part
      * of a quest of the specific category. Each position can be accessed with
      * the Quest.CATEGORY_ flag.
      *
@@ -102,52 +100,25 @@ public class Game {
     public static final int LOCATION_PUBLIC = LOCATION_PRIVATE + 1;
 
     /**
-     * A local variable containing the player count.
-     */
-    @Deprecated
-    private double player_count = 0.0;
-
-    /**
-     * TODO
+     * A local List containing all players;
      */
     private List<User> player_all = new LinkedList<>();
 
     /**
-     * A local list of all female players
-     *
-     * @see List
-     * @see User
-     */
-    @Deprecated
-    private List<User> player_f = new LinkedList<>();
-
-    /**
-     * A local list of all female players
-     *
-     * @see List
-     * @see User
-     */
-    @Deprecated
-    private List<User> player_m = new LinkedList<>();
-
-    /**
-     * TODO
-     */
-    private int[] adjustment;
-
-    /**
-     * TODO
+     * A local List storing these users whose data has changed (game points
+     * e.g.) This list can be retrieved via getChangedUserList() and is reset
+     * after each call.
      */
     private List<User> changedUserList = new LinkedList<>();
 
     /**
      * Create a new Game and set the category_probability to default values.
      *
-     * @param probability TODO
+     * @param probability takes a integer array with as many positions as there
+     *                    are categories in the game.
      */
     public Game(int[] probability) {
         for (int i = 0; i < last_call.length; i++) last_call[i] = probability[i];
-        adjustment = new int[Quest.CATEGORY_SUM];
     }
 
     /**
@@ -157,13 +128,6 @@ public class Game {
      * @see User
      */
     public void addPlayer(User player) {
-        /**
-        if (player.sex == User.SEX_FEMALE) {
-            if (!player_f.contains(player)) player_f.add(player);
-        } else {
-            if (!player_m.contains(player)) player_m.add(player);
-        }
-         */
         if (!player_all.contains(player)) player_all.add(player);
     }
 
@@ -177,15 +141,6 @@ public class Game {
      * @see User
      */
     public Integer allPlayersAre() {
-        /**
-        if (player_f.size() < 1) {
-            if (player_m.size() > 0) {
-                return User.SEX_MALE;
-            }
-        } else if (player_m.size() < 1) {
-            return User.SEX_FEMALE;
-        }
-         */
         int fem_count = 0;
         for (User u : player_all)
             if (u.sex == User.SEX_FEMALE) fem_count++;
@@ -204,10 +159,6 @@ public class Game {
      * @see User
      */
     public boolean containsUser(User user) {
-        /**
-        if (user.sex == User.SEX_FEMALE) return player_f.contains(user);
-        else return player_m.contains(user);
-         */
         return player_all.contains(user);
     }
 
@@ -217,20 +168,14 @@ public class Game {
      *
      * @return true if enough players are in the game; false otherwise.
      */
-    public boolean enoughPlayer() {
-        return getPlayerCount() >= 2;
-    }
+    public boolean enoughPlayer() { return getPlayerCount() >= 2; }
 
     /**
-     * TODO
+     * Returns the number of players currently in the game.
      *
-     * @return
+     * @return the number of players.
      */
     public int getPlayerCount() {
-        /**
-        player_count = player_f.size() + player_m.size();
-        return (int)Math.round(player_count);
-         */
         return player_all.size();
     }
 
@@ -240,6 +185,8 @@ public class Game {
      *
      * @param categories takes a list of final Quest.CATEGORY_ flags.
      * @param conf takes a quest configuration.
+     * @return false if no suitable player-combination was found, true
+     * otherwise
      * @see List
      * @see Quest
      * @see QuestConfiguration
@@ -247,21 +194,22 @@ public class Game {
     public boolean findPlayer(List<Integer> categories, QuestConfiguration conf) {
         for (int i : categories) last_call[i] = 0.0;
         this.conf = conf;
-        setPlayer(categories);
-        if (currentPlayer == null) {
-            currentPartner = null;
-            return true;
-        } else {
-            setPartner(categories);
-            return (currentPlayer != currentPartner);
-        }
+        if (setPlayer(categories)) {
+            if (currentPlayer == null) {
+                currentPartner = null;
+                return true;
+            } else {
+                if (setPartner(categories)) return (currentPlayer != currentPartner);
+                else return false;
+            }
+        } else return false;
     }
 
     /**
-     * TODO
+     * Maps and returns the Integer representation to the correlating FRIENDS_-String.
      *
-     * @param friends_string
-     * @return
+     * @param friends_string one of FRIENDS_ flags as String.
+     * @return one of FRIENDS_ flags as Integer.
      */
     public static Integer getFriendsField(String friends_string) {
         if (friends_string == null) return null;
@@ -282,9 +230,7 @@ public class Game {
      *
      * @return a level.
      */
-    public int getAvgLevel() {
-        return (int) Math.round(avg_level);
-    }
+    public int getAvgLevel() { return (int) Math.round(avg_level); }
 
     /**
      * Get the current Partner.
@@ -297,8 +243,9 @@ public class Game {
     }
 
     /**
+     * Returns the value of the current players partner.
      *
-     * @return
+     * @return a User.SEX_ flag.
      */
     public Integer getPartnerSex() {
         if (currentPartner == null) return null;
@@ -326,13 +273,18 @@ public class Game {
     }
 
     /**
+     * Returns the level of the current quest.
      *
      * @return the level defined in the current quest configuration.
      */
-    public int getQuestLevel() {
-        return conf.level;
-    }
+    public int getQuestLevel() { return conf.level; }
 
+    /**
+     * Returns a list of all Users where data changes should be stored.
+     *
+     * @return a Collections.unmodifiableList();
+     * @see Collections
+     */
     public List<User> getChangedUserList() {
         List<User> returnList = Collections.unmodifiableList(new ArrayList<>(changedUserList));
         changedUserList.clear();
@@ -362,10 +314,6 @@ public class Game {
      * @see User
      */
     public void removePlayer(User player) {
-        /**
-        if (player.sex == User.SEX_FEMALE) player_f.remove(player);
-        else player_m.remove(player);
-         */
         while (player_all.contains(player)) player_all.remove(player);
     }
 
@@ -424,7 +372,7 @@ public class Game {
     /**
      * Returns a new category applying to the category probabilities.
      *
-     * @param category_probability
+     * @param category_probability takes a int[] with as many positions as categories exist
      * @return a final Quest.CATEGORY_ flag.
      * @see Quest
      */
@@ -438,18 +386,23 @@ public class Game {
         for (int c = 0; c < weight.length; c++) {
             if (weight[c] >= random) return c;
         }
-        /**
-         * should never ever happen.
-         */
+        //should never happen
         return -1;
     }
 
     /**
-     * TODO
+     * This class searches for a user fitting the profile for a category.
+     * Therefore weights depending on User.getLastCall() and the position in
+     * the players queue (first players get more weight) are calculated to
+     * determine a not uniformly distributed random user.
      *
-     * @param categories
-     * @param user_sex
-     * @return
+     * @param categories a list with Quest.CATEGORY_ flags that the user should
+     *                   want to attend.
+     * @param user_sex takes a User.SEX_ flag, or null if the sex is not
+     *                 relevant.
+     * @return a User, or null of no one could be found.
+     * @see Quest
+     * @see User
      */
     private User searchUser(List<Integer> categories, Integer user_sex) {
         if (player_all.size() > 0) {
@@ -459,77 +412,14 @@ public class Game {
             else weight[0] = 0;
             for (int i = 1; i < player_all.size(); i++) {
                 if (user_sex == null || user_sex == player_all.get(i).sex)
-                    weight[i] = weight[i - 1] + Math.pow(player_all.get(i).getLastCall(categories)+2, Math.max(Math.round(5 - i), 1));
+                    weight[i] = weight[i - 1] + Math.pow(
+                            player_all.get(i).getLastCall(categories)+2,
+                            Math.max(Math.round(5 - i), 1));
                 else weight[i] = weight[i - 1];
             }
             double random = GameDataManager.getRandom() * weight[weight.length -1];
             for (int i = 0; i < weight.length; i++) {
                 if (random < weight[i]) return player_all.get(i);
-            }
-        }
-        return null;
-    }
-
-    /**
-     * This method finds the user who needs a quest of this category most. To
-     * look for a user in two different lists, user
-     * searchUser(category, list, list, double) which provides the same
-     * functionality.
-     *
-     * @param categories takes a list of final Quest.CATEGORY_ flag.
-     * @param players a list of users to choose from.
-     * @return the chosen user, or null if no suitable player was found.
-     * @see List
-     * @see Quest
-     * @see User
-     */
-    @Deprecated
-    private User searchUser(List<Integer> categories, List<User> players) {
-        if (players.size() > 0) {
-            double[] weight = new double[players.size()];
-            weight[0] = Math.pow(players.get(0).getLastCall(categories)+2, 5);
-            for (int i = 1; i < players.size(); i++) {
-                weight[i] = weight[i - 1] + Math.pow(players.get(i).getLastCall(categories)+2, Math.max(Math.round(5 - i), 1));
-            }
-            double random = GameDataManager.getRandom() * weight[weight.length -1];
-            for (int i = 0; i < weight.length; i++) {
-                if (random < weight[i]) return players.get(i);
-            }
-        }
-        return null;
-    }
-
-    /**
-     * This method finds the user who needs a quest of this category most. To
-     * look for a user in two different lists, user
-     * searchUser(category, list, list, double) which provides the same
-     * functionality.
-     *
-     * @param categories takes a list of final Quest.CATEGORY_ flags.
-     * @param players1 a list of users to choose from.
-     * @param players2 a second list of users to choose from.
-     * @return the chosen user, or null if no suitable player was found.
-     * @see List
-     * @see Quest
-     * @see User
-     */
-    @Deprecated
-    private User searchUser(List<Integer> categories, List<User> players1, List<User> players2) {
-        if (players1.size() < 1) return searchUser(categories, players2);
-        else if (players2.size() < 1) return searchUser(categories, players1);
-        double[] weight = new double[players1.size() + players2.size()];
-        weight[0] = Math.pow(players1.get(0).getLastCall(categories)+2, 5);
-        for (int i = 1; i < players1.size(); i++) {
-            weight[i] = weight[i - 1] + Math.pow(players1.get(i).getLastCall(categories)+2, Math.max(Math.round(5 - i), 1));
-        }
-        for (int i = 0; i < players2.size(); i++) {
-            weight[i + players1.size()] = weight[i - 1 + players1.size()] + Math.pow(players2.get(i).getLastCall(categories)+2, Math.max(Math.round(5 - i), 1));
-        }
-        double random = GameDataManager.getRandom() * weight[weight.length -1];
-        for (int i = 0; i < weight.length; i++) {
-            if (random < weight[i]) {
-                if (i < players1.size()) return  players1.get(i);
-                return players2.get(i - players1.size());
             }
         }
         return null;
@@ -544,10 +434,6 @@ public class Game {
      * @see List
      */
     private void setLastCall(List<Integer> categories, boolean reset) {
-        /**
-        for (User f : player_f) f.setLastCall(categories, reset, false);
-        for (User m : player_m) m.setLastCall(categories, reset, false);
-         */
         for (User u : player_all) u.setLastCall(categories, reset, false);
     }
 
@@ -557,13 +443,13 @@ public class Game {
      * method needs the configurations set through findUser(), so make sure to
      * call that method first.
      *
-     * TODO exception if partner is needed but not found
-     *
      * @param categories takes a list of final Quest.CATEGORY_ flags.
+     * @return false if a single partner is needed, but not found, true
+     * otherwise
      * @see List
      * @see Quest
      */
-    private void setPartner(List<Integer> categories) {
+    private boolean setPartner(List<Integer> categories) {
         switch (conf.partner) {
             case Quest.PARTNER_NO:
             case Quest.PARTNER_GIRLS:
@@ -573,25 +459,27 @@ public class Game {
                 currentPartner = null;
                 break;
             case Quest.PARTNER_FEMALE:
-                //currentPartner = searchUser(categories, player_f);
                 currentPartner = searchUser(categories, User.SEX_FEMALE);
+                if (currentPartner == null) return false;
                 break;
             case Quest.PARTNER_MALE:
-                //currentPartner = searchUser(categories, player_m);
                 currentPartner = searchUser(categories, User.SEX_MALE);
+                if (currentPartner == null) return false;
                 break;
             case Quest.PARTNER_OPPOSITE_SEX:
-                //currentPartner = searchUser(categories, (currentPlayer.sex == User.SEX_FEMALE ? player_m : player_f));
-                currentPartner = searchUser(categories, (currentPlayer.sex == User.SEX_FEMALE ? User.SEX_MALE : User.SEX_FEMALE));
+                currentPartner = searchUser(categories, (
+                        currentPlayer.sex == User.SEX_FEMALE ? User.SEX_MALE : User.SEX_FEMALE));
+                if (currentPartner == null) return false;
                 break;
             case Quest.PARTNER_YES:
-                //currentPartner = searchUser(categories, player_f, player_m);
-                currentPartner = searchUser(categories, (Integer)null);
+                currentPartner = searchUser(categories, null);
+                if (currentPartner == null) return false;
                 break;
         }
-        if (conf.partner != Quest.PARTNER_NO) {
+        if (currentPartner != null) {
             resetLastCall(categories, currentPartner, true);
         }
+        return true;
     }
 
     /**
@@ -600,25 +488,25 @@ public class Game {
      * method needs the configurations set through findUser(), so make sure to
      * call that method first.
      *
-     * TODO exception if partner is needed but not found
-     *
      * @param categories takes a list of final Quest.CATEGORY_ flags.
+     * @return false if a single player is needed, but not found, true
+     * otherwise
      * @see List
      * @see Quest
      */
-    private void setPlayer(List<Integer> categories) {
+    private boolean setPlayer(List<Integer> categories) {
         switch (conf.player) {
             case Quest.PLAYER_A_FEMALE:
-                //currentPlayer = searchUser(categories, player_f);
                 currentPlayer = searchUser(categories, User.SEX_FEMALE);
+                if (currentPlayer == null) return false;
                 break;
             case Quest.PLAYER_A_MALE:
-                //currentPlayer = searchUser(categories, player_m);
                 currentPlayer = searchUser(categories, User.SEX_MALE);
+                if (currentPlayer == null) return false;
                 break;
             case Quest.PLAYER_ONE:
-                //currentPlayer = searchUser(categories, player_f, player_m);
-                currentPlayer = searchUser(categories, (Integer)null);
+                currentPlayer = searchUser(categories, null);
+                if (currentPlayer == null) return false;
                 break;
             case Quest.PLAYER_GIRLS:
             case Quest.PLAYER_BOYS:
@@ -631,6 +519,7 @@ public class Game {
             removePlayer(currentPlayer);
             addPlayer(currentPlayer);
         }
+        return true;
     }
 
     /**
@@ -651,36 +540,30 @@ public class Game {
         double level_up = 0.0;
         if (currentPlayer != null && (currentPartner != null || conf.partner == Quest.PARTNER_NO)) {
             changedUserList.add(currentPlayer);
-            if (currentPlayer.setPoints(categories, conf.level, true, success)) level_up++;
+            if (currentPlayer.setPoints(categories, conf.level, true, success))
+                level_up++;
             if (currentPartner != null) {
                 changedUserList.add(currentPartner);
-                if (currentPartner.setPoints(categories, conf.level, true, success)) level_up++;
+                if (currentPartner.setPoints(categories, conf.level, true, success))
+                    level_up++;
             }
         } else {
-            /**
-            for (User f : player_f) {
-                if (f.setPoints(categories, conf.level, false, success)) level_up++;
-            }
-            for (User m : player_m) {
-                if (m.setPoints(categories, conf.level, false, success)) level_up++;
-            }
-             */
             changedUserList.addAll(player_all);
             for (User u : player_all) {
                 if (u.setPoints(categories, conf.level, false, success)) level_up++;
             }
         }
-        //avg_level += (level_up / player_count);
         avg_level += (level_up / player_all.size());
 
         for (int i = 0; i < last_call.length; i++) {
             if (categories.contains(i)) last_call[i] = 0.0;
-            last_call[i] += category_probability[i] + adjustment[i];
+            last_call[i] += category_probability[i];
         }
     }
 
     /**
-     * TODO documentation
+     * This method allows the game to start at a higher level. Therefore a flag
+     * is set and startDrunk() for all Players is called.
      */
     public void startDrunk() {
         already_drunk = true;

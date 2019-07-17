@@ -37,6 +37,7 @@ public class SettingsActivity extends Activity {
 
 	/**
 	 * A CheckBox checked if new players start wth a higher level.
+	 * This button currently is not saved inside DataAccess.
 	 *
 	 * @see CheckBox
 	 */
@@ -80,6 +81,20 @@ public class SettingsActivity extends Activity {
 	RadioButton friends_loose;
 
 	/**
+	 * Listener listening on RadioButtons describing the friendship level.
+	 *
+	 * @see OnCheckedChangeListener
+	 */
+	OnCheckedChangeListener friendshipLevelChangeListener;
+
+	/**
+	 * Listener listening on RadioButtons describing the location.
+	 *
+	 * @see OnCheckedChangeListener
+	 */
+	OnCheckedChangeListener locationChangeListener;
+
+	/**
 	 * A button to go to the game.
 	 *
 	 * @see Button
@@ -100,16 +115,46 @@ public class SettingsActivity extends Activity {
 	 */
 	RadioButton radio_public_game;
 
-	CheckBox requirement_ice_cube;
-
+	/**
+	 * A Checkbox for Quest.REQUIREMENT_CREAM requirement
+	 *
+	 * @see Checkbox, Quest
+	 */
 	CheckBox requirement_cream;
 
-	CheckBox requirement_pool;
-
+	/**
+	 * A Checkbox for Quest.REQUIREMENT_DANCE requirement
+	 *
+	 * @see Checkbox, Quest
+	 */
 	CheckBox requirement_dance;
 
-	OnCheckedChangeListener locationChangeListener;
-	OnCheckedChangeListener friendshipLevelChangeListener;
+	/**
+	 * A Checkbox for Quest.REQUIREMENT_ICE_CUBE requirement
+	 *
+	 * @see Checkbox, Quest
+	 */
+	CheckBox requirement_ice_cube;
+
+	/**
+	 * A Checkbox for Quest.PENCIL requirement
+	 *
+	 * @see Checkbox, Quest
+	 */
+	CheckBox requirement_pencil;
+
+	/**
+	 * A Checkbox for Quest.REQUIREMENT_POOL requirement
+	 *
+	 * @see Checkbox, Quest
+	 */
+	CheckBox requirement_pool;
+
+	/**
+	 * Listener listening on RadioButtons describing the requirements.
+	 *
+	 * @see OnCheckedChangeListener
+	 */
 	OnCheckedChangeListener requirementsChangeListener;
 
 	/**
@@ -132,7 +177,8 @@ public class SettingsActivity extends Activity {
 		 */
 		this.radio_private_game = (RadioButton)findViewById(R.id.radio_private_game);
 		this.radio_public_game = (RadioButton)findViewById(R.id.radio_public_game);
-		int location = DataAccess.getSetting(this, Settings.ATTRIBUTE_GAME_LOCATION, Settings.DEFAULT_LOCATION);
+		int location = DataAccess.getSetting(
+				this, Settings.ATTRIBUTE_GAME_LOCATION, Settings.DEFAULT_LOCATION);
 		if (location == Game.LOCATION_PRIVATE) this.radio_private_game.setChecked(true);
 		else this.radio_public_game.setChecked(true);
 		GameDataManager.setGameLocation(location);
@@ -168,7 +214,7 @@ public class SettingsActivity extends Activity {
 		this.already_drunk = (CheckBox)findViewById(R.id.already_drunk);
 		if (DataAccess.getSetting(
 				this, Settings.ATTRIBUTE_ALREADY_DRUNK, false)) {
-			this.requirement_ice_cube.setChecked(true);
+			this.already_drunk.setChecked(true);
 		}
 		this.collapsible_options.add(this.already_drunk);
 
@@ -178,7 +224,8 @@ public class SettingsActivity extends Activity {
 		this.friends_loose = (RadioButton)findViewById(R.id.friends_loose);
 		this.friends_good = (RadioButton)findViewById(R.id.friends_good);
 		this.friends_benefits = (RadioButton)findViewById(R.id.friends_benefits);
-		int friendship_level = DataAccess.getSetting(this, Settings.ATTRIBUTE_FRIENDSHIP_LEVEL, Settings.DEFAULT_FRIENDS);
+		int friendship_level = DataAccess.getSetting(
+				this, Settings.ATTRIBUTE_FRIENDSHIP_LEVEL, Settings.DEFAULT_FRIENDS);
 		if (friendship_level == Game.FRIENDS_LOOSE) {
 			this.friends_loose.setChecked(true);
 			this.friends_benefits.setVisibility(View.GONE);
@@ -221,29 +268,45 @@ public class SettingsActivity extends Activity {
 		 * Requirements Checkboxes
 		 */
 		List<Integer> defaultRequirements = Settings.getRequirementsDefault();
-		this.requirement_ice_cube = (CheckBox)findViewById(R.id.requirement_ice_cube);
 		this.requirement_cream = (CheckBox)findViewById(R.id.requirement_cream);
-		this.requirement_pool = (CheckBox)findViewById(R.id.requirement_pool);
 		this.requirement_dance = (CheckBox)findViewById(R.id.requirement_dance);
+		this.requirement_ice_cube = (CheckBox)findViewById(R.id.requirement_ice_cube);
+		this.requirement_pencil = (CheckBox)findViewById(R.id.requirement_pencil);
+		this.requirement_pool = (CheckBox)findViewById(R.id.requirement_pool);
 		if (DataAccess.getSetting(
-				this, Settings.ATTRIBUTE_REQUIREMENT_ICE_CUBE, defaultRequirements.contains(Quest.REQUIREMENT_ICE_CUBE))) {
-			this.requirement_ice_cube.setChecked(true);
-			GameDataManager.addRequirement(Quest.REQUIREMENT_ICE_CUBE);
-		}
-		if (DataAccess.getSetting(
-				this, Settings.ATTRIBUTE_REQUIREMENT_CREAM, defaultRequirements.contains(Quest.REQUIREMENT_CREAM))) {
+				this,
+				Settings.ATTRIBUTE_REQUIREMENT_CREAM,
+				defaultRequirements.contains(Quest.REQUIREMENT_CREAM))) {
 			this.requirement_cream.setChecked(true);
 			GameDataManager.addRequirement(Quest.REQUIREMENT_CREAM);
 		}
 		if (DataAccess.getSetting(
-				this, Settings.ATTRIBUTE_REQUIREMENT_POOL, defaultRequirements.contains(Quest.REQUIREMENT_POOL))) {
-			this.requirement_pool.setChecked(true);
-			GameDataManager.addRequirement(Quest.REQUIREMENT_POOL);
-		}
-		if (DataAccess.getSetting(
-				this, Settings.ATTRIBUTE_REQUIREMENT_DANCE, defaultRequirements.contains(Quest.REQUIREMENT_DANCE))) {
+				this,
+				Settings.ATTRIBUTE_REQUIREMENT_DANCE,
+				defaultRequirements.contains(Quest.REQUIREMENT_DANCE))) {
 			this.requirement_dance.setChecked(true);
 			GameDataManager.addRequirement(Quest.REQUIREMENT_DANCE);
+		}
+		if (DataAccess.getSetting(
+				this,
+				Settings.ATTRIBUTE_REQUIREMENT_ICE_CUBE,
+				defaultRequirements.contains(Quest.REQUIREMENT_ICE_CUBE))) {
+			this.requirement_ice_cube.setChecked(true);
+			GameDataManager.addRequirement(Quest.REQUIREMENT_ICE_CUBE);
+		}
+		if (DataAccess.getSetting(
+				this,
+				Settings.ATTRIBUTE_REQUIREMENT_PENCIL,
+				defaultRequirements.contains(Quest.REQUIREMENT_PENCIL))) {
+			this.requirement_pencil.setChecked(true);
+			GameDataManager.addRequirement(Quest.REQUIREMENT_PENCIL);
+		}
+		if (DataAccess.getSetting(
+				this,
+				Settings.ATTRIBUTE_REQUIREMENT_POOL,
+				defaultRequirements.contains(Quest.REQUIREMENT_POOL))) {
+			this.requirement_pool.setChecked(true);
+			GameDataManager.addRequirement(Quest.REQUIREMENT_POOL);
 		}
 		requirementsChangeListener = new OnCheckedChangeListener() {
 
@@ -260,25 +323,29 @@ public class SettingsActivity extends Activity {
 			 */
 			@Override
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				if (buttonView == requirement_ice_cube) {
-					onRequirementChange(Quest.REQUIREMENT_ICE_CUBE, isChecked);
-				} else if (buttonView == requirement_cream) {
+				if (buttonView == requirement_cream) {
 					onRequirementChange(Quest.REQUIREMENT_CREAM, isChecked);
-				} else if (buttonView == requirement_pool) {
-					onRequirementChange(Quest.REQUIREMENT_POOL, isChecked);
 				} else if (buttonView == requirement_dance) {
 					onRequirementChange(Quest.REQUIREMENT_DANCE, isChecked);
+				} else if (buttonView == requirement_ice_cube) {
+					onRequirementChange(Quest.REQUIREMENT_ICE_CUBE, isChecked);
+				} else if (buttonView == requirement_pencil) {
+					onRequirementChange(Quest.REQUIREMENT_PENCIL, isChecked);
+				} else if (buttonView == requirement_pool) {
+					onRequirementChange(Quest.REQUIREMENT_POOL, isChecked);
 				}
 			}
 		};
-		this.requirement_ice_cube.setOnCheckedChangeListener(requirementsChangeListener);
 		this.requirement_cream.setOnCheckedChangeListener(requirementsChangeListener);
-		this.requirement_pool.setOnCheckedChangeListener(requirementsChangeListener);
 		this.requirement_dance.setOnCheckedChangeListener(requirementsChangeListener);
-		this.collapsible_options.add(this.requirement_ice_cube);
+		this.requirement_ice_cube.setOnCheckedChangeListener(requirementsChangeListener);
+		this.requirement_pencil.setOnCheckedChangeListener(requirementsChangeListener);
+		this.requirement_pool.setOnCheckedChangeListener(requirementsChangeListener);
 		this.collapsible_options.add(this.requirement_cream);
-		this.collapsible_options.add(this.requirement_pool);
 		this.collapsible_options.add(this.requirement_dance);
+		this.collapsible_options.add(this.requirement_ice_cube);
+		this.collapsible_options.add(this.requirement_pencil);
+		this.collapsible_options.add(this.requirement_pool);
 
 		/**
 		 * Custom Settings Checkbox
@@ -305,17 +372,22 @@ public class SettingsActivity extends Activity {
 					radio_private_game.setChecked(true);
 					friends_loose.setChecked(true);
 					already_drunk.setChecked(false);
-					requirement_ice_cube.setChecked(false);
 					requirement_cream.setChecked(false);
-					requirement_pool.setChecked(false);
 					requirement_dance.setChecked(false);
+					requirement_ice_cube.setChecked(false);
+					requirement_pencil.setChecked(false);
+					requirement_pool.setChecked(false);
 
 					for (View v : collapsible_options) v.setVisibility(View.GONE);
 				}
-				DataAccess.updateSetting(SettingsActivity.this, Settings.ATTRIBUTE_CUSTOM_SETTINGS, isChecked);
+				DataAccess.updateSetting(
+						SettingsActivity.this,
+						Settings.ATTRIBUTE_CUSTOM_SETTINGS,
+						isChecked);
 			}
 		});
-		this.custom_options.setChecked(!DataAccess.getSetting(this, Settings.ATTRIBUTE_CUSTOM_SETTINGS, false));
+		this.custom_options.setChecked(!DataAccess.getSetting(
+				this, Settings.ATTRIBUTE_CUSTOM_SETTINGS, false));
 		this.custom_options.performClick();
 
 		/**
@@ -339,20 +411,19 @@ public class SettingsActivity extends Activity {
 				startActivity(new Intent(SettingsActivity.this, PlayActivity.class));
 			}
 		});
-		this.play_button.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_blink));
+		this.play_button.startAnimation(
+				AnimationUtils.loadAnimation(this, R.anim.fade_blink));
 
 		/**
 		 * other initialisation
 		 */
 		setQuestCount();
-		findViewById(R.id.head_layout).setBackgroundResource(Background.getBackground(getResources().getConfiguration().orientation));
+		findViewById(R.id.head_layout).setBackgroundResource(
+				Background.getBackground(getResources().getConfiguration().orientation));
 
 		if (DataAccess.getGameData(this, GameDataManager.ATTRIBUTE_GAME_DATA_LAST_GAME_ACTION_TIMESTAMP, 0L)
 				> System.currentTimeMillis() - Settings.MAX_MILLIS_TO_RESUME_GAME)
 			GameDataManager.toResume();
-
-		System.out.println(DataAccess.getGameData(this, GameDataManager.ATTRIBUTE_GAME_DATA_LAST_GAME_ACTION_TIMESTAMP, 0L));
-		System.out.println(System.currentTimeMillis() - Settings.MAX_MILLIS_TO_RESUME_GAME);
 	}
 
 	/**
@@ -407,7 +478,10 @@ public class SettingsActivity extends Activity {
 	private void onRequirementChange(int requirement, boolean isChecked) {
 		if (isChecked) GameDataManager.addRequirement(requirement);
 		else GameDataManager.removeRequirement(requirement);
-		DataAccess.updateSetting(this, Settings.getSettingsAttributeRequirementInt(requirement), isChecked);
+		DataAccess.updateSetting(
+				this,
+				Settings.getSettingsAttributeRequirementInt(requirement),
+				isChecked);
 		setQuestCount();
 	}
 }

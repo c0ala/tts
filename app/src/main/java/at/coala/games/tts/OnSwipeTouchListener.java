@@ -1,13 +1,13 @@
 package at.coala.games.tts;
 
 import android.content.Context;
-import android.support.v4.view.ViewConfigurationCompat;
 import android.util.DisplayMetrics;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewConfiguration;
 import android.view.WindowManager;
+
+import java.util.Objects;
 
 /**
  * http://stackoverflow.com/questions/4139288/android-how-to-handle-right-to-left-swipe-gestures
@@ -58,7 +58,9 @@ public abstract class OnSwipeTouchListener implements View.OnTouchListener {
 			distanceX = e2.getX() - e1.getX();
 			distanceY = e2.getY() - e1.getY();
 			DisplayMetrics metrics = new DisplayMetrics();
-			((WindowManager)context.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay().getMetrics(metrics);
+			((WindowManager)Objects.requireNonNull(
+					context.getSystemService(Context.WINDOW_SERVICE)))
+					.getDefaultDisplay().getMetrics(metrics);
 
 			if (scrollStartX != e1.getX() || scrollStartY != e1.getY()) {
 				scrollStartX = e1.getX();

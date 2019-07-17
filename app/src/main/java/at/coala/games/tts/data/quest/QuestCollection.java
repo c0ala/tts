@@ -2,6 +2,7 @@ package at.coala.games.tts.data.quest;
 
 import java.util.List;
 
+import at.coala.games.tts.data.Game;
 import at.coala.games.tts.game.GameDataManager;
 
 /**
@@ -21,7 +22,7 @@ public class QuestCollection {
      * category. Each position can be accessed with the Quest.CATEGORY_ flag.
      *
      * @see Quest
-     * @see at.coala.games.tts.data.quest.QuestCollection.QuestCollectionElement
+     * @see QuestCollectionElement
      */
     private QuestCollectionElement[] firstLinked = new QuestCollectionElement[Quest.CATEGORY_SUM];
 
@@ -30,7 +31,7 @@ public class QuestCollection {
      * category. Each position can be accessed with the Quest.CATEGORY_ flag.
      *
      * @see Quest
-     * @see at.coala.games.tts.data.quest.QuestCollection.QuestCollectionElement
+     * @see QuestCollectionElement
      */
     private QuestCollectionElement[] firstValid = new QuestCollectionElement[Quest.CATEGORY_SUM];
 
@@ -39,7 +40,7 @@ public class QuestCollection {
      * Each position can be accessed with the Quest.CATEGORY_ flag.
      *
      * @see Quest
-     * @see at.coala.games.tts.data.quest.QuestCollection.QuestCollectionElement
+     * @see QuestCollectionElement
      */
     private QuestCollectionElement[] head = new QuestCollectionElement[Quest.CATEGORY_SUM];
 
@@ -48,14 +49,14 @@ public class QuestCollection {
      * position can be accessed with the Quest.CATEGORY_ flag.
      *
      * @see Quest
-     * @see at.coala.games.tts.data.quest.QuestCollection.QuestCollectionElement
+     * @see QuestCollectionElement
      */
     private QuestCollectionElement[] last = new QuestCollectionElement[Quest.CATEGORY_SUM];
 
     /**
      * The quest last returned.
      *
-     * @see at.coala.games.tts.data.quest.QuestCollection.QuestCollectionElement
+     * @see QuestCollectionElement
      */
     private QuestCollectionElement last_returned = null;
 
@@ -161,7 +162,8 @@ public class QuestCollection {
     private void linkCollection() {
         for (int i = 0; i <  firstLinked.length; i++) {
             QuestCollectionElement next = firstValid[i];
-            while (next != null && (next.elem.getMinLevel() > level || next.deleted)) next = next.valid[i];
+            while (next != null && (next.elem.getMinLevel() > level || next.deleted))
+                next = next.valid[i];
             if (next != null) {
                 firstLinked[i] = next;
                 linked_size[i] = 1;
@@ -198,15 +200,23 @@ public class QuestCollection {
     /**
      * Validates these collection against the settings.
      *
-     * @param location
-     * @param friendship_level
-     * @param all_players_are
-     * @param requirements
+     * @param location takes a final Game.GAME_ flag.
+     * @param friendship_level takes a final Game.FRIENDS_ flag.
+     * @param all_players_are null, or a restriction to valid against only one
+    *                           sex set with a final User.SEX_ flag.
+     * @param requirements true if it is a valid Quest; false if not.
+     * @see Game
+     * @see Quest
      */
-    public void validateCollection(int location, int friendship_level, Integer all_players_are, List<Integer> requirements) {
+    public void validateCollection(
+            int location,
+            int friendship_level,
+            Integer all_players_are,
+            List<Integer> requirements) {
         for (int i = 0; i <  firstValid.length; i++) {
             QuestCollectionElement next = head[i];
-            while (next != null && !next.elem.isValid(location, friendship_level, all_players_are, requirements)) {
+            while (next != null && !next.elem.isValid(
+                            location, friendship_level, all_players_are, requirements)) {
                 next = next.next[i];
             }
             if (next != null) {
@@ -215,7 +225,8 @@ public class QuestCollection {
                 QuestCollectionElement lastValid = next;
                 while (next.next[i] != null) {
                     next = next.next[i];
-                    if (next.elem.isValid(location, friendship_level, all_players_are, requirements)) {
+                    if (next.elem.isValid(
+                            location, friendship_level, all_players_are, requirements)) {
                         lastValid.valid[i] = next;
                         lastValid = next;
                         valid_quest_text_count[i] += next.elem.quest_texts.size();
@@ -272,8 +283,6 @@ public class QuestCollection {
          * @param elem a Quest.
          * @see Quest
          */
-        QuestCollectionElement(Quest elem) {
-            this.elem = elem;
-        }
+        QuestCollectionElement(Quest elem) { this.elem = elem; }
     }
 }

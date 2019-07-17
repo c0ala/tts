@@ -1,7 +1,6 @@
 package at.coala.games.tts.game;
 
 import android.content.Context;
-import android.text.Html;
 
 import at.coala.games.tts.R;
 import at.coala.games.tts.data.User;
@@ -46,9 +45,7 @@ class GameStateReady extends GameState {
      * @see Context
      */
     @Override
-    String getGoButtonText(Context context) {
-        return context.getString(R.string.go);
-    }
+    String getGoButtonText(Context context) { return context.getString(R.string.go); }
 
     /**
      * Returns the quest text.
@@ -63,9 +60,13 @@ class GameStateReady extends GameState {
             String main_text = context.getString(R.string.one_ready);
             if (GameDataManager.game.getPartner() != null) {
                 main_text += context.getString(R.string.nn)
-                        + (GameDataManager.game.getPartnerSex() == User.SEX_FEMALE ?
-                        String.format(context.getString(R.string.partner_f), GameDataManager.game.getPartner())
-                        : String.format(context.getString(R.string.partner_m),GameDataManager.game.getPartner()));
+                        + (GameDataManager.game.getPartnerSex() == User.SEX_FEMALE
+                            ? String.format(
+                                    context.getString(R.string.partner_f),
+                                    GameDataManager.game.getPartner())
+                            : String.format(
+                                    context.getString(R.string.partner_m),
+                                    GameDataManager.game.getPartner()));
             }
             return main_text;
         }
@@ -109,18 +110,25 @@ class GameStateReady extends GameState {
         String sub_text = "";
         if (GameDataManager.game.getAvgLevel() > level) {
             new_level = GameDataManager.game.getAvgLevel();
-            sub_text += ((new_level == 1 || level == -1) ? "" : context.getString(R.string.new_game_level) + " ")
-                    + String.format(
-                    context.getString(R.string.quests_are_available), GameDataManager.getLinkedQuestTextCount())
+            sub_text += ((new_level == 1 || level == -1)
+                    ? "" : context.getString(R.string.new_game_level) + " ")
+                    + String.format(context.getString(
+                            R.string.quests_are_available),
+                            GameDataManager.getLinkedQuestTextCount())
                     + context.getString(R.string.n);
         }
-        sub_text += String.format(context.getString(R.string.avg_level), GameDataManager.game.getAvgLevel());
+        sub_text +=String.format(
+                context.getString(R.string.avg_level), GameDataManager.game.getAvgLevel());
         if (GameDataManager.game.getPlayer() != null) {
             sub_text += context.getString(R.string.n)
-                    + String.format(context.getString(R.string.player_level), GameDataManager.game.getPlayerLevel());
+                    + String.format(
+                            context.getString(R.string.player_level),
+                            GameDataManager.game.getPlayerLevel());
         }
         sub_text += context.getString(R.string.n)
-                + String.format(context.getString(R.string.quest_level), GameDataManager.game.getQuestLevel());
+                + String.format(
+                        context.getString(R.string.quest_level),
+                        GameDataManager.game.getQuestLevel());
         return sub_text;
     }
 
@@ -149,10 +157,17 @@ class GameStateReady extends GameState {
         return super.onState();
     }
 
-    //TODO
+    /**
+     * TODO
+     *
+     * @param context
+     */
     @Override
     void saveGameData(Context context) {
         DataAccess.updateUserList(context, GameDataManager.game.getChangedUserList());
-        DataAccess.updateGameData(context, GameDataManager.ATTRIBUTE_GAME_DATA_LAST_GAME_ACTION_TIMESTAMP, System.currentTimeMillis());
+        DataAccess.updateGameData(
+                context,
+                GameDataManager.ATTRIBUTE_GAME_DATA_LAST_GAME_ACTION_TIMESTAMP,
+                System.currentTimeMillis());
     }
 }

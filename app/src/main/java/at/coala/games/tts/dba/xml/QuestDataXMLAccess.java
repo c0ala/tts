@@ -22,8 +22,6 @@ import at.coala.games.tts.data.quest.RuleMap;
  * TODO Validate XML file against schema.
  *
  * @author Klaus
- * @version 1.1
- * @since 16.07.2015.
  */
 public class QuestDataXMLAccess {
 
@@ -182,21 +180,19 @@ public class QuestDataXMLAccess {
      * @see QuestCollection
      * @see RuleMap
      */
-    public void getQuests(QuestCollection quests, RuleMap rules, String lang_code, InputStream fileStream) throws IOException {
+    public void getQuests(
+            QuestCollection quests, RuleMap rules, String lang_code, InputStream fileStream)
+            throws IOException {
         try {
             XMLReader xr = SAXParserFactory.newInstance().newSAXParser().getXMLReader();
             xr.setContentHandler(new QuestDataXMLHandler(quests, rules, lang_code));
             xr.parse(new InputSource(fileStream));
         } catch (SAXException e) {
-            /**
-             * It is ok to ignore this exception. This app will not collapse
-             * without parsing this file.
-             */
+            // It is ok to ignore this exception. This app will not collapse
+            // without parsing this file.
         } catch (ParserConfigurationException e) {
-            /**
-             * It is ok to ignore this exception. This app will not collapse
-             * without parsing this file.
-             */
+            // It is ok to ignore this exception. This app will not collapse
+            // without parsing this file.
         }
     }
 
@@ -212,15 +208,15 @@ public class QuestDataXMLAccess {
      * @see RuleMap
      * @see XmlPullParser
      */
-    public void getQuests(QuestCollection quests, RuleMap rules, String lang_code, XmlPullParser parser) throws IOException {
+    public void getQuests(
+            QuestCollection quests, RuleMap rules, String lang_code, XmlPullParser parser)
+            throws IOException {
         TwoWayHandler qdxHandler = new QuestDataXMLHandler(quests, rules, lang_code);
         try {
             qdxHandler.read(parser);
         } catch (XmlPullParserException e) {
-            /**
-             * It is ok to ignore this exception. This app will not collapse
-             * without parsing this file.
-             */
+            // It is ok to ignore this exception. This app will not collapse
+            // without parsing this file.
         }
     }
 }

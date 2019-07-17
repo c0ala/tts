@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!-- @author Klaus -->
-<!-- @version 2 -->
-<!-- @since 12.07.2015. -->
 
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<!-- tts_data contains two sections. -->
@@ -248,6 +246,8 @@
 			<xsd:enumeration value="DANCE" />
 			<!-- Flag to use ice cubes. -->
 			<xsd:enumeration value="ICE_CUBE" />
+			<!-- Flag to use a pencil. -->
+			<xsd:enumeration value="PENCIL" />
 			<!-- Flag to use something you can swim in. -->
 			<xsd:enumeration value="POOL" />
 		</xsd:restriction>
