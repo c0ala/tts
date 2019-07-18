@@ -22,86 +22,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cadbd20-d5f0-4878-880d-2837682f5c34" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_android_29.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_annotation_annotation_1_0_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_common_2_0_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_asynclayoutinflater_asynclayoutinflater_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_collection_collection_1_0_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_coordinatorlayout_coordinatorlayout_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_core_core_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_cursoradapter_cursoradapter_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_customview_customview_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_documentfile_documentfile_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_drawerlayout_drawerlayout_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_interpolator_interpolator_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_ui_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_core_utils_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_legacy_legacy_support_v4_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_0_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_loader_loader_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_media_media_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_print_print_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_slidingpanelayout_slidingpanelayout_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_swiperefreshlayout_swiperefreshlayout_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_versionedparcelable_versionedparcelable_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_viewpager_viewpager_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_android_extensions_runtime_1_3_31_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_31_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_31_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app-release.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/LinearSwipeLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/LinearSwipeLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/OnSwipeTouchListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/OnSwipeTouchListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/PlayActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/PlayActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/SettingsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/SettingsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/UserAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/UserAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/Background.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/quest/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/quest/Quest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/quest/QuestCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/quest/QuestCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/quest/QuestConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/quest/QuestConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/quest/QuestCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/quest/QuestCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/quest/RuleMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/data/quest/RuleMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/DataAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/UserDataSQLHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/UserDataSQLHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/xml/QuestDataXMLAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/xml/QuestDataXMLAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/xml/helper/ElementXMLHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/xml/helper/ElementXMLHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/xml/helper/LanguageElementXMLHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/xml/helper/LanguageElementXMLHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/xml/helper/QuestElementXMLHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/xml/helper/QuestElementXMLHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/xml/helper/QuestTextElementXMLHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/xml/helper/QuestTextElementXMLHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/xml/helper/RuleConfSourceElementsXMLHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/xml/helper/RuleConfSourceElementsXMLHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/xml/helper/RuleElementXMLHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/xml/helper/RuleElementXMLHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/xml/helper/RuleTextElementXMLHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/dba/xml/helper/RuleTextElementXMLHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/game/GameDataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/game/GameDataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/game/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/game/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/game/GameStateError.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/game/GameStateError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/game/GameStateQuest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/game/GameStateQuest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/game/GameStateReady.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/game/GameStateReady.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/game/GameStateResume.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/game/GameStateResume.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/game/GameStateStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/at/coala/games/tts/game/GameStateStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/quest_schema.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/quest_schema.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/tts_data.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/tts_data.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <ignored path="tts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -702,7 +623,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1456" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10174881" />
       <window_info id="Structure" order="1" weight="0.24920508" />
